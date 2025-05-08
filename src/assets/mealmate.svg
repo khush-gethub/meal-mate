@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg viewBox="0 0 500 200" xmlns="http://www.w3.org/2000/svg">
+  <!-- Background Rectangle (optional, can be removed for transparent background) -->
+  <rect width="500" height="200" fill="transparent"/>
+  
+  <!-- Main Logo Text -->
+  <text x="250" y="110" font-family="Bungee Shade, sans-serif" font-size="68" text-anchor="middle" fill="#FF6B35">
+    meal
+  </text>
+  <text x="385" y="110" font-family="Paytone One, sans-serif" font-size="68" text-anchor="middle" fill="#00A676">
+    mate
+  </text>
+  
+  <!-- Horizontal Line -->
+  <line x1="100" y1="140" x2="400" y2="140" stroke="#4E342E" stroke-width="3" stroke-linecap="round"/>
+  
+  <!-- Tagline -->
+  <text x="250" y="165" font-family="Montserrat, sans-serif" font-size="16" font-weight="700" text-anchor="middle" letter-spacing="3" fill="#4E342E">
+    DELICIOUSLY SIMPLE
+  </text>
+  
+  <!-- Decorative Elements -->
+  <g transform="translate(100, 140)">
+    <!-- Stylized Fork -->
+    <path d="M0,0 L0,-15 M-5,-7 L5,-7" stroke="#4E342E" stroke-width="2" stroke-linecap="round"/>
+  </g>
+  
+  <g transform="translate(400, 140)">
+    <!-- Stylized Spoon -->
+    <path d="M0,0 L0,-15 M-5,-7 L5,-7" stroke="#4E342E" stroke-width="2" stroke-linecap="round"/>
+  </g>
+</svg>

@@ -1,0 +1,558 @@
+[
+  {
+    "id": 1,
+    "title": "Classic Margherita Pizza",
+    "image": "https://plus.unsplash.com/premium_photo-1733306588881-0411931d4fed?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8NXx8Q2xhc3NpYyUyME1hcmdoZXJpdGElMjBQaXp6YXxlbnwwfHwwfHx8MA%3D%3D",
+    "description": "A traditional Italian pizza topped with tomato sauce, fresh mozzarella, basil, and olive oil.",
+    "ingredients": [
+      "1 pizza dough",
+      "3/4 cup tomato sauce",
+      "8 oz fresh mozzarella, sliced",
+      "Fresh basil leaves",
+      "2 tbsp olive oil",
+      "Salt and pepper to taste"
+    ],
+    "steps": [
+      "Preheat oven to 475°F (245°C).",
+      "Roll out the pizza dough on a floured surface.",
+      "Spread tomato sauce evenly over the dough.",
+      "Arrange mozzarella slices on top.",
+      "Bake for 10-12 minutes until crust is golden.",
+      "Remove from oven and top with fresh basil leaves.",
+      "Drizzle with olive oil, season with salt and pepper."
+    ]
+  },
+  {
+    "id": 2,
+    "title": "Chicken Alfredo Pasta",
+    "image": "https://media.istockphoto.com/id/1282544273/photo/homemade-chicken-fettuccine-alfredo-pasta.webp?a=1&b=1&s=612x612&w=0&k=20&c=cS0gOM26VKDqEZ5NmDeXL-StnEiiEnMIO57i-Gx015I=",
+    "description": "Creamy fettuccine pasta with grilled chicken and homemade Alfredo sauce.",
+    "ingredients": [
+      "8 oz fettuccine pasta",
+      "2 boneless, skinless chicken breasts",
+      "2 tbsp olive oil",
+      "2 cloves garlic, minced",
+      "1 cup heavy cream",
+      "1 cup grated Parmesan cheese",
+      "2 tbsp butter",
+      "Salt and pepper to taste",
+      "Fresh parsley for garnish"
+    ],
+    "steps": [
+      "Cook pasta according to package instructions.",
+      "Season chicken with salt and pepper, then grill until cooked through. Slice into strips.",
+      "In a large skillet, heat olive oil and sauté garlic until fragrant.",
+      "Add heavy cream and bring to a simmer.",
+      "Stir in Parmesan cheese until melted and sauce thickens.",
+      "Add butter and stir until melted.",
+      "Toss cooked pasta in the sauce.",
+      "Add sliced chicken on top.",
+      "Garnish with fresh parsley and extra Parmesan if desired."
+    ]
+  },
+  {
+    "id": 3,
+    "title": "Vegetable Stir Fry",
+    "image": "https://images.unsplash.com/photo-1599297915779-0dadbd376d49?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8Nnx8VmVnZXRhYmxlJTIwU3RpciUyMEZyeXxlbnwwfHwwfHx8MA%3D%3D",
+    "description": "A quick and healthy stir fry with colorful vegetables and a savory sauce.",
+    "ingredients": [
+      "2 tbsp vegetable oil",
+      "1 onion, sliced",
+      "2 carrots, julienned",
+      "1 red bell pepper, sliced",
+      "1 yellow bell pepper, sliced",
+      "2 cups broccoli florets",
+      "1 cup snap peas",
+      "2 cloves garlic, minced",
+      "1 tbsp ginger, grated",
+      "3 tbsp soy sauce",
+      "1 tbsp honey",
+      "1 tsp sesame oil",
+      "Sesame seeds for garnish"
+    ],
+    "steps": [
+      "Heat vegetable oil in a wok or large skillet over high heat.",
+      "Add onion and stir fry for 1 minute.",
+      "Add carrots and cook for 2 minutes.",
+      "Add bell peppers, broccoli, and snap peas. Stir fry for 3-4 minutes until vegetables are crisp-tender.",
+      "Add garlic and ginger, cook for 30 seconds until fragrant.",
+      "In a small bowl, mix soy sauce, honey, and sesame oil. Pour over vegetables.",
+      "Toss to coat and cook for another minute.",
+      "Garnish with sesame seeds and serve over rice if desired."
+    ]
+  },
+  {
+    "id": 4,
+    "title": "Classic French Onion Soup",
+    "image": "https://images.unsplash.com/photo-1745653418014-76dd881db5ea?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8NHx8Q2xhc3NpYyUyMEZyZW5jaCUyME9uaW9uJTIwU291cHxlbnwwfHwwfHx8MA%3D%3D",
+    "description": "Rich, flavorful onion soup topped with crusty bread and melted Gruyère cheese.",
+    "ingredients": [
+      "4 large onions, thinly sliced",
+      "3 tbsp butter",
+      "1 tbsp olive oil",
+      "1 tsp sugar",
+      "2 cloves garlic, minced",
+      "1 tbsp flour",
+      "1 cup dry white wine",
+      "6 cups beef broth",
+      "2 bay leaves",
+      "1 tsp thyme",
+      "Salt and pepper to taste",
+      "Baguette slices",
+      "2 cups grated Gruyère cheese"
+    ],
+    "steps": [
+      "In a large pot, melt butter with olive oil over medium heat.",
+      "Add sliced onions and sugar, cook for 25-30 minutes, stirring occasionally until deeply caramelized.",
+      "Add garlic and cook for 1 minute.",
+      "Sprinkle flour over onions and cook for 1-2 minutes.",
+      "Pour in wine and scrape up any browned bits from the pot.",
+      "Add beef broth, bay leaves, and thyme. Bring to a simmer.",
+      "Reduce heat and simmer for 25-30 minutes. Season with salt and pepper.",
+      "Preheat broiler. Ladle soup into oven-safe bowls.",
+      "Top each bowl with a slice of baguette and generous amount of Gruyère cheese.",
+      "Broil until cheese is melted and bubbly, about 2-3 minutes."
+    ]
+  },
+  {
+    "id": 5,
+    "title": "Guacamole",
+    "image": "https://images.unsplash.com/photo-1595016111459-799a195e7452?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8M3x8R3VhY2Ftb2xlfGVufDB8fDB8fHww",
+    "description": "Fresh homemade guacamole with ripe avocados, lime, and cilantro.",
+    "ingredients": [
+      "3 ripe avocados",
+      "1 lime, juiced",
+      "1/2 red onion, finely diced",
+      "2 Roma tomatoes, diced",
+      "1/4 cup cilantro, chopped",
+      "1 jalapeño, seeded and minced",
+      "1 clove garlic, minced",
+      "1/2 tsp salt",
+      "1/4 tsp ground cumin"
+    ],
+    "steps": [
+      "Halve and pit the avocados, then scoop into a bowl.",
+      "Mash avocados with a fork, leaving some chunks.",
+      "Add lime juice and stir to combine.",
+      "Mix in onion, tomatoes, cilantro, jalapeño, and garlic.",
+      "Season with salt and cumin.",
+      "Taste and adjust seasoning as needed.",
+      "Serve immediately with tortilla chips or refrigerate with plastic wrap pressed directly on the surface to prevent browning."
+    ]
+  },
+  {
+    "id": 6,
+    "title": "Chocolate Chip Cookies",
+    "image": "https://images.unsplash.com/photo-1584847801423-852691e41bc7?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8NHx8Q2hvY29sYXRlJTIwQ2hpcCUyMENvb2tpZXN8ZW58MHx8MHx8fDA%3D",
+    "description": "Classic homemade chocolate chip cookies with a perfect chewy center and crisp edges.",
+    "ingredients": [
+      "2 1/4 cups all-purpose flour",
+      "1 tsp baking soda",
+      "1 tsp salt",
+      "1 cup unsalted butter, softened",
+      "3/4 cup granulated sugar",
+      "3/4 cup packed brown sugar",
+      "2 large eggs",
+      "2 tsp vanilla extract",
+      "2 cups semi-sweet chocolate chips",
+      "1 cup chopped walnuts (optional)"
+    ],
+    "steps": [
+      "Preheat oven to 375°F (190°C).",
+      "In a small bowl, mix flour, baking soda, and salt.",
+      "In a large bowl, cream together butter, granulated sugar, and brown sugar until fluffy.",
+      "Beat in eggs one at a time, then stir in vanilla.",
+      "Gradually blend in the dry ingredients.",
+      "Stir in chocolate chips and walnuts if using.",
+      "Drop by rounded tablespoons onto ungreased baking sheets.",
+      "Bake for 9-11 minutes or until golden brown.",
+      "Let stand on baking sheet for 2 minutes, then transfer to wire racks to cool completely."
+    ]
+  },
+  {
+    "id": 7,
+    "title": "chicken Tacos",
+    "image": "https://images.unsplash.com/photo-1734771041787-af3ed5ef75b5?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MjB8fEJlZWYlMjBUYWNvc3xlbnwwfHwwfHx8MA%3D%3D",
+    "description": "Flavorful ground beef tacos with fresh toppings and homemade seasoning.",
+    "ingredients": [
+      "1 lb ground chicken",
+      "1 onion, diced",
+      "2 cloves garlic, minced",
+      "1 tbsp chili powder",
+      "1 tsp ground cumin",
+      "1/2 tsp paprika",
+      "1/4 tsp dried oregano",
+      "1/4 tsp cayenne pepper",
+      "1/2 tsp salt",
+      "1/2 cup tomato sauce",
+      "8 taco shells",
+      "Lettuce, shredded",
+      "Tomatoes, diced",
+      "Cheddar cheese, shredded",
+      "Sour cream",
+      "Avocado, sliced"
+    ],
+    "steps": [
+      "In a large skillet, cook ground beef over medium-high heat until browned.",
+      "Add onion and cook until softened, about 5 minutes.",
+      "Add garlic and cook for 1 minute more.",
+      "Stir in chili powder, cumin, paprika, oregano, cayenne pepper, and salt.",
+      "Add tomato sauce and simmer for 5 minutes.",
+      "Heat taco shells according to package directions.",
+      "Fill shells with beef mixture and top with lettuce, tomatoes, cheese, sour cream, and avocado."
+    ]
+  },
+  {
+    "id": 8,
+    "title": "Greek Salad",
+    "image": "https://images.unsplash.com/photo-1636654931290-418d20865e03?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MTB8fEdyZWVrJTIwU2FsYWR8ZW58MHx8MHx8fDA%3D",
+    "description": "Fresh Mediterranean salad with cucumbers, tomatoes, olives, and feta cheese.",
+    "ingredients": [
+      "1 English cucumber, chopped",
+      "4 Roma tomatoes, chopped",
+      "1 red onion, thinly sliced",
+      "1 green bell pepper, chopped",
+      "1/2 cup kalamata olives",
+      "4 oz feta cheese, cubed",
+      "2 tbsp fresh parsley, chopped",
+      "1/4 cup olive oil",
+      "2 tbsp red wine vinegar",
+      "1 tsp dried oregano",
+      "Salt and pepper to taste"
+    ],
+    "steps": [
+      "In a large bowl, combine cucumber, tomatoes, red onion, bell pepper, and olives.",
+      "Add feta cheese and parsley.",
+      "In a small bowl, whisk together olive oil, red wine vinegar, oregano, salt, and pepper.",
+      "Pour dressing over salad and toss gently to combine.",
+      "Let sit for 10 minutes before serving to allow flavors to meld."
+    ]
+  },
+  {
+    "id": 9,
+    "title": "Mushroom Risotto",
+    "image": "https://media.istockphoto.com/id/937898858/photo/risotto-with-chanterelle-mushrooms-and-parmesan.webp?a=1&b=1&s=612x612&w=0&k=20&c=pMznkpEps0Bo1P6cghSuT6mMQsJAxzFSTNgBkw6xhgo=",
+    "description": "Creamy Italian rice dish with sautéed mushrooms and Parmesan cheese.",
+    "ingredients": [
+      "6 cups vegetable or chicken broth",
+      "3 tbsp olive oil",
+      "1 onion, finely chopped",
+      "2 cloves garlic, minced",
+      "8 oz mushrooms, sliced (cremini, shiitake, or mixed)",
+      "1 1/2 cups Arborio rice",
+      "1/2 cup dry white wine",
+      "1/2 cup grated Parmesan cheese",
+      "2 tbsp butter",
+      "2 tbsp fresh parsley, chopped",
+      "Salt and pepper to taste"
+    ],
+    "steps": [
+      "In a saucepan, bring broth to a simmer, then keep warm.",
+      "In a large, wide pan, heat olive oil over medium heat.",
+      "Add onion and cook until softened, about 5 minutes.",
+      "Add garlic and mushrooms, cook until mushrooms are tender, about 5 minutes.",
+      "Add Arborio rice and stir to coat with oil, cook for 1-2 minutes.",
+      "Pour in wine and stir until absorbed.",
+      "Begin adding warm broth, one ladle at a time, stirring frequently.",
+      "Wait until each addition is mostly absorbed before adding more broth.",
+      "Continue until rice is creamy and tender, about 20-25 minutes.",
+      "Remove from heat, stir in Parmesan cheese and butter.",
+      "Season with salt and pepper, garnish with parsley before serving."
+    ]
+  },
+  {
+    "id": 10,
+    "title": "Banana Bread",
+    "image": "https://images.unsplash.com/photo-1497534547324-0ebb3f052e88?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8N3x8QmFuYW5hJTIwQnJlYWR8ZW58MHx8MHx8fDA%3D",
+    "description": "Moist and delicious banana bread with walnuts and a hint of cinnamon.",
+    "ingredients": [
+      "3 ripe bananas, mashed",
+      "1/3 cup melted butter",
+      "1 tsp baking soda",
+      "Pinch of salt",
+      "3/4 cup sugar",
+      "1 large egg, beaten",
+      "1 tsp vanilla extract",
+      "1 1/2 cups all-purpose flour",
+      "1/2 tsp ground cinnamon",
+      "1/2 cup chopped walnuts (optional)"
+    ],
+    "steps": [
+      "Preheat oven to 350°F (175°C). Grease a 4x8-inch loaf pan.",
+      "In a mixing bowl, mash the ripe bananas with a fork.",
+      "Stir in melted butter.",
+      "Mix in baking soda and salt.",
+      "Stir in sugar, beaten egg, and vanilla extract.",
+      "Mix in flour and cinnamon.",
+      "Fold in chopped walnuts if using.",
+      "Pour batter into prepared loaf pan.",
+      "Bake for 50-60 minutes or until a toothpick inserted comes out clean.",
+      "Let cool in the pan for 10 minutes, then remove and cool completely on a wire rack."
+    ]
+  },
+  {
+    "id": 11,
+    "title": "Lemon Garlic Salmon",
+    "image": "https://media.istockphoto.com/id/1487018281/photo/roasted-salmon-in-iron-pan.webp?a=1&b=1&s=612x612&w=0&k=20&c=kcoFNRhd2_eto8lDAwbAV5CsJO3hgrAZbQ4sWjWd9Tk=",
+    "description": "Baked salmon fillets with a refreshing lemon garlic butter sauce.",
+    "ingredients": [
+      "4 salmon fillets (6 oz each)",
+      "4 tbsp butter, melted",
+      "4 cloves garlic, minced",
+      "2 tbsp lemon juice",
+      "1 tbsp lemon zest",
+      "1 tbsp fresh dill, chopped",
+      "1 tsp dried oregano",
+      "Salt and pepper to taste",
+      "Lemon slices for garnish"
+    ],
+    "steps": [
+      "Preheat oven to 375°F (190°C).",
+      "Line a baking sheet with parchment paper or foil.",
+      "Place salmon fillets on the prepared baking sheet.",
+      "In a small bowl, mix melted butter, garlic, lemon juice, lemon zest, dill, and oregano.",
+      "Pour sauce over salmon fillets, ensuring they're well coated.",
+      "Season with salt and pepper.",
+      "Top with lemon slices.",
+      "Bake for 15-20 minutes, until salmon flakes easily with a fork.",
+      "Spoon pan juices over salmon before serving."
+    ]
+  },
+  {
+    "id": 12,
+    "title": "Vegetable Curry",
+    "image": "https://media.istockphoto.com/id/1278584350/photo/veg-kolhapuri-in-black-bowl-on-dark-slate-table-top-indian-vegetable-curry-dish-vegetarian.webp?a=1&b=1&s=612x612&w=0&k=20&c=O9tXE4uFBKx4VfIKKNnQDzAc28CaCeobaPxrPFAAAWE=",
+    "description": "Hearty vegetable curry with aromatic spices and coconut milk.",
+    "ingredients": [
+      "2 tbsp vegetable oil",
+      "1 onion, chopped",
+      "3 cloves garlic, minced",
+      "1 tbsp ginger, grated",
+      "2 tbsp curry powder",
+      "1 tsp ground cumin",
+      "1 tsp ground coriander",
+      "1/2 tsp turmeric",
+      "1/4 tsp cayenne pepper",
+      "1 can (14 oz) diced tomatoes",
+      "1 can (14 oz) coconut milk",
+      "1 cup vegetable broth",
+      "2 carrots, sliced",
+      "1 potato, diced",
+      "1 bell pepper, chopped",
+      "1 cup cauliflower florets",
+      "1 cup frozen peas",
+      "Salt to taste",
+      "Fresh cilantro for garnish"
+    ],
+    "steps": [
+      "Heat oil in a large pot over medium heat.",
+      "Add onion and cook until softened, about 5 minutes.",
+      "Add garlic and ginger, cook for 1 minute until fragrant.",
+      "Stir in curry powder, cumin, coriander, turmeric, and cayenne pepper. Cook for 30 seconds.",
+      "Add diced tomatoes, coconut milk, and vegetable broth. Stir to combine.",
+      "Add carrots, potato, and cauliflower. Bring to a simmer.",
+      "Cover and cook for 15 minutes.",
+      "Add bell pepper and peas. Cook for another 5-7 minutes until all vegetables are tender.",
+      "Season with salt to taste.",
+      "Garnish with fresh cilantro and serve with rice or naan bread."
+    ]
+  },
+  {
+    "id": 13,
+    "title": "Beef Stroganoff",
+    "image": "https://media.istockphoto.com/id/1308780804/photo/beef-stroganoff-with-cremini-and-champignons-on-a-frying-pan.webp?a=1&b=1&s=612x612&w=0&k=20&c=hby7WnYrBuqccm8Oz9ZdTYhAG6RYJZ31FUnFgpPDf_o=",
+    "description": "Classic Russian dish with tender beef strips in a creamy mushroom sauce.",
+    "ingredients": [
+      "1 1/2 lbs beef sirloin, thinly sliced",
+      "2 tbsp vegetable oil",
+      "2 tbsp butter",
+      "1 onion, thinly sliced",
+      "8 oz mushrooms, sliced",
+      "2 cloves garlic, minced",
+      "2 tbsp all-purpose flour",
+      "1 1/2 cups beef broth",
+      "1 tbsp Dijon mustard",
+      "1 cup sour cream",
+      "2 tbsp fresh parsley, chopped",
+      "Salt and pepper to taste",
+      "12 oz egg noodles, cooked"
+    ],
+    "steps": [
+      "Season beef strips with salt and pepper.",
+      "Heat oil in a large skillet over high heat. Add beef in batches and cook until browned, about 1-2 minutes per side. Remove and set aside.",
+      "In the same skillet, add butter, onion, and mushrooms. Cook until softened, about 5-7 minutes.",
+      "Add garlic and cook for 30 seconds.",
+      "Sprinkle flour over the vegetables and stir to coat.",
+      "Gradually add beef broth, stirring constantly to prevent lumps.",
+      "Bring to a simmer and cook until sauce thickens, about 5 minutes.",
+      "Stir in Dijon mustard.",
+      "Reduce heat to low, add sour cream, and stir until combined. Do not boil.",
+      "Return beef to the skillet and heat through.",
+      "Garnish with parsley and serve over cooked egg noodles."
+    ]
+  },
+  {
+    "id": 14,
+    "title": "Apple Pie",
+    "image": "https://media.istockphoto.com/id/1741040559/photo/traditional-autumn-apple-pie.jpg?s=612x612&w=0&k=20&c=weuAwaJ99M1nzjvkzQKWW--Lx8cQBXEHCbYkNn6xh8g=",
+    "description": "Classic American apple pie with a flaky crust and cinnamon-spiced filling.",
+    "ingredients": [
+      "For the crust:",
+      "2 1/2 cups all-purpose flour",
+      "1 tsp salt",
+      "1 tbsp sugar",
+      "1 cup cold unsalted butter, cubed",
+      "1/4 to 1/2 cup ice water",
+      "For the filling:",
+      "6-7 medium apples (Granny Smith or mixed varieties), peeled and sliced",
+      "3/4 cup sugar",
+      "2 tbsp all-purpose flour",
+      "1 tbsp lemon juice",
+      "1 tsp ground cinnamon",
+      "1/4 tsp ground nutmeg",
+      "1/4 tsp salt",
+      "2 tbsp unsalted butter, cut into small pieces",
+      "1 egg, beaten (for egg wash)",
+      "1 tbsp sugar (for topping)"
+    ],
+    "steps": [
+      "For the crust: In a food processor, combine flour, salt, and sugar. Add butter and pulse until mixture resembles coarse meal.",
+      "Gradually add ice water, 1 tablespoon at a time, pulsing until dough begins to form a ball.",
+      "Divide dough in half, form into disks, wrap in plastic, and refrigerate for at least 1 hour.",
+      "Preheat oven to 425°F (220°C).",
+      "Roll out one disk of dough on a floured surface to fit a 9-inch pie plate. Transfer to pie plate.",
+      "For the filling: In a large bowl, combine sliced apples, sugar, flour, lemon juice, cinnamon, nutmeg, and salt.",
+      "Pour apple mixture into pie crust. Dot with butter pieces.",
+      "Roll out second disk of dough and place over filling. Trim, seal, and crimp edges. Cut slits in top crust for steam to escape.",
+      "Brush top with beaten egg and sprinkle with sugar.",
+      "Bake for 45-50 minutes, or until crust is golden brown and filling is bubbly.",
+      "Cool on a wire rack for at least 2 hours before serving."
+    ]
+  },
+  {
+    "id": 15,
+    "title": "Caesar Salad",
+    "image": "https://media.istockphoto.com/id/1199607353/photo/fresh-chicken-salad.jpg?s=612x612&w=0&k=20&c=7ve5H1SoEc358Ng1Nmce8X2iX4sYPlLI1hP62frrWmY=",
+    "description": "Classic Caesar salad with romaine lettuce, croutons, Parmesan, and creamy dressing.",
+    "ingredients": [
+      "For the dressing:",
+      "1/2 cup mayonnaise",
+      "2 tbsp lemon juice",
+      "2 cloves garlic, minced",
+      "1 tsp Worcestershire sauce",
+      "1 tsp Dijon mustard",
+      "1/2 cup grated Parmesan cheese",
+      "Salt and pepper to taste",
+      "For the salad:",
+      "2 heads romaine lettuce, chopped",
+      "2 cups croutons",
+      "1/2 cup shaved Parmesan cheese",
+      "Fresh ground black pepper"
+    ],
+    "steps": [
+      "For the dressing: In a bowl, whisk together mayonnaise, lemon juice, garlic, Worcestershire sauce, and Dijon mustard.",
+      "Stir in grated Parmesan cheese. Season with salt and pepper.",
+      "In a large bowl, toss romaine lettuce with enough dressing to coat.",
+      "Add croutons and toss gently.",
+      "Top with shaved Parmesan cheese and fresh ground black pepper.",
+      "Serve immediately."
+    ]
+  },
+  {
+    "id": 16,
+    "title": "Spaghetti Carbonara",
+    "image": "https://media.istockphoto.com/id/177413384/photo/pasta-with-carbonara.webp?a=1&b=1&s=612x612&w=0&k=20&c=aYHeEY57QZF9dLgCM4pr66P9hRIT9YASaJ_KvrXa0vk=",
+    "description": "Classic Italian pasta dish with eggs, cheese, pancetta, and black pepper.",
+    "ingredients": [
+      "1 lb spaghetti",
+      "8 oz pancetta or bacon, diced",
+      "4 large eggs",
+      "1 cup freshly grated Pecorino Romano cheese",
+      "1 cup freshly grated Parmesan cheese",
+      "1 tbsp olive oil",
+      "4 cloves garlic, minced",
+      "Freshly ground black pepper",
+      "Salt to taste",
+      "Fresh parsley, chopped (for garnish)"
+    ],
+    "steps": [
+      "Bring a large pot of salted water to boil. Cook spaghetti according to package directions until al dente.",
+      "While pasta cooks, heat olive oil in a large skillet over medium heat. Add pancetta and cook until crispy, about 5-7 minutes.",
+      "Add minced garlic and cook for 30 seconds, being careful not to burn it.",
+      "In a bowl, whisk together eggs, Pecorino Romano, and Parmesan cheese.",
+      "Reserve 1 cup of pasta water, then drain pasta.",
+      "Working quickly, add hot pasta to the skillet with pancetta and garlic. Toss to combine.",
+      "Remove skillet from heat. Pour egg and cheese mixture over pasta, stirring continuously to create a creamy sauce. If too thick, add reserved pasta water a little at a time.",
+      "Season generously with freshly ground black pepper and salt to taste.",
+      "Garnish with chopped parsley and serve immediately."
+    ]
+  },
+  {
+    "id": 17,
+    "title": "Blueberry Pancakes",
+    "image": "https://media.istockphoto.com/id/1199607352/photo/sweet-pancakes.webp?a=1&b=1&s=612x612&w=0&k=20&c=lbPPoXi7jK0du5R_ntOHzNEBLvYrO6AoNBRW4t2aVWU=",
+    "description": "Fluffy homemade pancakes studded with fresh blueberries.",
+    "ingredients": [
+      "2 cups all-purpose flour",
+      "2 tbsp sugar",
+      "2 tsp baking powder",
+      "1/2 tsp baking soda",
+      "1/2 tsp salt",
+      "2 cups buttermilk",
+      "2 large eggs",
+      "1/4 cup unsalted butter, melted",
+      "1 tsp vanilla extract",
+      "1 1/2 cups fresh blueberries",
+      "Additional butter or oil for cooking",
+      "Maple syrup for serving"
+    ],
+    "steps": [
+      "In a large bowl, whisk together flour, sugar, baking powder, baking soda, and salt.",
+      "In another bowl, whisk together buttermilk, eggs, melted butter, and vanilla extract.",
+      "Pour wet ingredients into dry ingredients and stir until just combined. Some lumps are okay.",
+      "Gently fold in blueberries.",
+      "Heat a griddle or non-stick skillet over medium heat. Add a small amount of butter or oil.",
+      "Pour 1/4 cup of batter onto the griddle for each pancake.",
+      "Cook until bubbles form on the surface, about 2-3 minutes.",
+      "Flip and cook until the other side is golden brown, about 1-2 minutes more.",
+      "Serve warm with maple syrup."
+    ]
+  },
+  {
+    "id": 18,
+    "title": "Pad Thai",
+    "image": "https://media.istockphoto.com/id/926663774/photo/pad-thai-vegetarian-vegetables-udon-noodles-in-a-dark-background-top-view-vegetarian-food-in.webp?a=1&b=1&s=612x612&w=0&k=20&c=1Uc06e6n2nbUmBSUB2FRsYdQfUK_EX5QEtpyMPa7GJQ=",
+    "description": "Classic Thai stir-fried noodle dish with a perfect balance of sweet, sour, and savory flavors.",
+    "ingredients": [
+      "8 oz rice noodles",
+      "3 tbsp vegetable oil",
+      "2 cloves garlic, minced",
+      "8 oz chicken breast or tofu, sliced (optional)",
+      "2 eggs, lightly beaten",
+      "1 cup bean sprouts",
+      "3 green onions, chopped",
+      "1/4 cup roasted peanuts, chopped",
+      "Lime wedges for serving",
+      "Fresh cilantro for garnish",
+      "For the sauce:",
+      "3 tbsp fish sauce (or soy sauce for vegetarian)",
+      "3 tbsp brown sugar",
+      "2 tbsp tamarind paste",
+      "1 tbsp sriracha sauce (optional)",
+      "2 tbsp lime juice"
+    ],
+    "steps": [
+      "Soak rice noodles in hot water according to package directions until softened but still firm. Drain and set aside.",
+      "In a small bowl, whisk together sauce ingredients: fish sauce, brown sugar, tamarind paste, sriracha (if using), and lime juice.",
+      "Heat oil in a large wok or skillet over medium-high heat.",
+      "Add garlic and cook for 30 seconds until fragrant.",
+      "If using chicken or tofu, add now and cook until done, about 3-4 minutes.",
+      "Push ingredients to one side of the pan and pour beaten eggs into the empty side. Scramble until set, then mix with other ingredients.",
+      "Add drained noodles to the pan and pour sauce over them. Toss everything together.",
+      "Cook for 2-3 minutes, stirring frequently until noodles are tender and have absorbed the sauce.",
+      "Add bean sprouts and half the green onions. Toss for another minute.",
+      "Remove from heat and garnish with remaining green onions, chopped peanuts, and cilantro.",
+      "Serve with lime wedges on the side."
+    ]
+  }
+]
