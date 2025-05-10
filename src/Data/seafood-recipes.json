@@ -2,7 +2,7 @@
   {
     "id": 1,
     "title": "Garlic Butter Shrimp Pasta",
-    "image": "garlic-butter-shrimp.jpg",
+    "image": "https://media.istockphoto.com/id/1352567176/photo/homemade-cooked-shrimp-scampi-with-pasta.jpg?s=612x612&w=0&k=20&c=tnsG6m4i8IgZ3wdJ57f8tGivJ-BQwv8OslolWq1KciI=",
     "description": "A quick and luxurious pasta dish featuring juicy shrimp cooked in a rich garlic butter sauce, ready in just 20 minutes.",
     "ingredients": [
       "1 lb linguine pasta",
@@ -30,7 +30,7 @@
   {
     "id": 2,
     "title": "Grilled Salmon with Lemon-Dill Sauce",
-    "image": "grilled-salmon.jpg",
+    "image": "https://media.istockphoto.com/id/1622783414/photo/grilled-salmon-with-green-beans-shimeji-mushrooms-and-dill-sauce.jpg?s=612x612&w=0&k=20&c=qU-xQwH-fx6gWcWzf4yAr3YuO24bYtAc8nebHouwuyU=",
     "description": "Perfectly grilled salmon fillets topped with a fresh lemon-dill sauce for a healthy and flavorful main dish.",
     "ingredients": [
       "4 salmon fillets (6 oz each)",
@@ -56,7 +56,7 @@
   {
     "id": 3,
     "title": "New England Clam Chowder",
-    "image": "clam-chowder.jpg",
+    "image": "https://media.istockphoto.com/id/1352319314/photo/new-england-style-seafood-chowder-in-a-sourdough-bread-bowl.jpg?s=612x612&w=0&k=20&c=bTH6wlBRguMw0VfDEDtQOngAzelePTGO8Uk7sgEGq8k=",
     "description": "A creamy classic soup filled with clams, potatoes, and bacon for a comforting seafood dish.",
     "ingredients": [
       "4 slices bacon, diced",
@@ -88,7 +88,7 @@
   {
     "id": 4,
     "title": "Crispy Fish Tacos",
-    "image": "fish-tacos.jpg",
+    "image": "https://media.istockphoto.com/id/185101854/photo/closeup-of-fish-tacos-on-plate.jpg?s=612x612&w=0&k=20&c=_ADDYezHX1Ht5yNAwBQhEZTHQaPROskjK1KiASwkxxI=",
     "description": "Baja-style tacos with crispy fish, tangy slaw, and spicy crema for a perfect lunch or dinner option.",
     "ingredients": [
       "1 lb firm white fish (cod, tilapia, or halibut)",
@@ -124,7 +124,7 @@
   {
     "id": 5,
     "title": "Lobster Risotto",
-    "image": "lobster-risotto.jpg",
+    "image": "https://media.istockphoto.com/id/506298498/photo/crayfish.jpg?s=612x612&w=0&k=20&c=4ZGbpIWdFKQJ81J3ZsqbSihqHQIAv4rw4qoMJxUjR3k=",
     "description": "A luxurious Italian rice dish featuring tender lobster meat, Parmesan cheese, and a touch of lemon for brightness.",
     "ingredients": [
       "2 lobster tails",
@@ -156,7 +156,7 @@
   {
     "id": 6,
     "title": "Mediterranean Grilled Octopus",
-    "image": "grilled-octopus.jpg",
+    "image": "https://media.istockphoto.com/id/1731671400/photo/grilled-octopus-with-potatoes-and-vegetables.jpg?s=612x612&w=0&k=20&c=ZmgcCbKiNuUN_17T9B_fvT_ulcwP0wMsuFtMTDSgy5I=",
     "description": "Tender octopus marinated in olive oil and herbs, then charred to perfection for a classic Mediterranean delicacy.",
     "ingredients": [
       "2 lbs fresh or frozen octopus, cleaned",
@@ -187,7 +187,7 @@
   {
     "id": 7,
     "title": "Tuna Poke Bowl",
-    "image": "tuna-poke.jpg",
+    "image": "https://media.istockphoto.com/id/1304027187/photo/hawaiian-tuna-poke-bowl-with-seaweed-avocado-mango-cucumber.jpg?s=612x612&w=0&k=20&c=kUfPqMxAP0LggJHdqBGFNtE0ThL4jaSe1HKScsII-3c=",
     "description": "A refreshing Hawaiian-inspired bowl featuring fresh raw tuna, rice, avocado, and vegetables with a sesame-soy dressing.",
     "ingredients": [
       "1 lb sushi-grade tuna, cubed",
@@ -218,7 +218,7 @@
   {
     "id": 8,
     "title": "Seafood Paella",
-    "image": "seafood-paella.jpg",
+    "image": "https://media.istockphoto.com/id/614873048/photo/paella-on-a-table.jpg?s=612x612&w=0&k=20&c=S3kfgi5IfNHuSPtCp-6o6_6URYsnP5HUHryOiqkycRk=",
     "description": "A classic Spanish rice dish loaded with various seafood, saffron, and vegetables, cooked to perfection in a wide pan.",
     "ingredients": [
       "1 1/2 cups Bomba or Arborio rice",
@@ -255,7 +255,7 @@
   {
     "id": 9,
     "title": "Crab Cakes with Remoulade",
-    "image": "crab-cakes.jpg",
+    "image": "https://media.istockphoto.com/id/1478004286/photo/crab-cakes-with-sauce-lettuce-tomatoes-lemon.jpg?s=612x612&w=0&k=20&c=RQQ59MDHA1-UAHoPAoZypomRcYBAU7dkYiTirw-P7eA=",
     "description": "Golden-brown crab cakes made with lump crab meat and minimal fillers, served with a tangy remoulade sauce.",
     "ingredients": [
       "1 lb lump crab meat, picked over for shells",
@@ -294,7 +294,7 @@
   {
     "id": 10,
     "title": "Cioppino (Seafood Stew)",
-    "image": "cioppino.jpg",
+    "image": "https://media.istockphoto.com/id/454998735/photo/cioppino.jpg?s=612x612&w=0&k=20&c=yKOu_g4cpFUGF77XC8oJBLPhjFAcGjpPTGKNPvVwJ4s=",
     "description": "A hearty Italian-American fish stew with a tomato and wine broth, loaded with a variety of seafood.",
     "ingredients": [
       "1/4 cup olive oil",
@@ -333,7 +333,7 @@
   {
     "id": 11,
     "title": "Lemon Butter Scallops",
-    "image": "lemon-scallops.jpg",
+    "image": "https://media.istockphoto.com/id/2207045835/photo/fried-scallops-with-butter-lemon-parsley-on-rustic-yellow-wooden-table.jpg?s=612x612&w=0&k=20&c=1W-Ryzd0fmbq0x4L8CEdGiAVed6rY7exX6Jy08aPQsY=",
     "description": "Perfectly seared sea scallops in a simple lemon butter sauce, elegant yet quick enough for a weeknight dinner.",
     "ingredients": [
       "1 lb large sea scallops",
@@ -361,7 +361,7 @@
   {
     "id": 12,
     "title": "Shrimp and Grits",
-    "image": "shrimp-grits.jpg",
+    "image": "https://media.istockphoto.com/id/509351012/photo/homemade-shrimp-and-grits.jpg?s=612x612&w=0&k=20&c=0yE-NCnH5cXaOa231khU9TySllPXvCXVUHAlyZoGHFE=",
     "description": "A Southern classic featuring creamy cheese grits topped with spicy shrimp and bacon for a comforting meal any time of day.",
     "ingredients": [
       "1 cup stone-ground grits",
@@ -395,7 +395,7 @@
   {
     "id": 13,
     "title": "Miso-Glazed Cod",
-    "image": "miso-cod.jpg",
+    "image": "https://media.istockphoto.com/id/2154744064/photo/eating-miso-glazed-black-cod-butterfish.jpg?s=612x612&w=0&k=20&c=IZnQC4rr9LuNt-VNxdIgQERvkN3QbNMwu94NO8WCOTA=",
     "description": "A Japanese-inspired fish dish with a sweet and savory miso glaze, perfectly caramelized under the broiler.",
     "ingredients": [
       "4 cod fillets (6 oz each)",
@@ -425,7 +425,7 @@
   {
     "id": 14,
     "title": "Thai Coconut Curry Mussels",
-    "image": "curry-mussels.jpg",
+    "image": "https://media.istockphoto.com/id/516370768/photo/mussels-asian-style.jpg?s=612x612&w=0&k=20&c=nUZihX5ONWcx_hGyio1b_qVmTY6DVpUpNFu31EH2NMs=",
     "description": "Fresh mussels steamed in a spicy Thai coconut curry broth for an impressive yet simple seafood dish.",
     "ingredients": [
       "2 lbs mussels, scrubbed and debearded",
@@ -461,7 +461,7 @@
   {
     "id": 15,
     "title": "Ceviche",
-    "image": "ceviche.jpg",
+    "image": "https://media.istockphoto.com/id/1152155481/photo/delicious-peruvian-seafood-ceviche-dish.jpg?s=612x612&w=0&k=20&c=OfjWIqTH6zVbZR71g2NnAms8VqxSOvajwl8AwMleH0Y=",
     "description": "A refreshing Latin American dish of raw fish marinated in citrus juices and mixed with fresh vegetables and herbs.",
     "ingredients": [
       "1 lb fresh firm white fish (sea bass, halibut, or snapper), diced",
@@ -490,7 +490,7 @@
   {
     "id": 16,
     "title": "Fish en Papillote",
-    "image": "fish-papillote.jpg",
+    "image": "https://media.istockphoto.com/id/501279787/photo/fish-baked-in-parchment-paper.jpg?s=612x612&w=0&k=20&c=vkIQehpgD6uVN0OGhoXxaFjcEN8-0VrMHjllYi_6Uuo=",
     "description": "A healthy method of cooking fish in parchment paper packets with vegetables and herbs, creating a flavorful steam bath.",
     "ingredients": [
       "4 white fish fillets (6 oz each), such as tilapia or cod",
@@ -519,7 +519,7 @@
   {
     "id": 17,
     "title": "Seared Ahi Tuna",
-    "image": "ahi-tuna.jpg",
+    "image": "https://media.istockphoto.com/id/2193414792/photo/asian-sesame-crusted-tuna.jpg?s=612x612&w=0&k=20&c=gTevoh3TNyFM4zG0tRb76SAS1rgUu4JZxBUHIIc6tTw=",
     "description": "Quickly seared ahi tuna steaks with a sesame crust, rare in the center and served with a zesty ponzu dipping sauce.",
     "ingredients": [
       "4 ahi tuna steaks (6 oz each), about 1-inch thick",

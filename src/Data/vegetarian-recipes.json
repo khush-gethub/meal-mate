@@ -2,7 +2,7 @@
   {
     "id": 1,
     "title": "Spinach and Feta Stuffed Mushrooms",
-    "image": "spinach-feta-mushrooms.jpg",
+    "image": "https://media.istockphoto.com/id/155283140/photo/stuffed-mushrooms.jpg?s=612x612&w=0&k=20&c=D4oJts_nHVbHrELYP2vfRt9zAXIbt5H4u0AJaw5WOik=",
     "description": "Savory portobello mushrooms stuffed with a creamy spinach and feta filling, baked to perfection.",
     "ingredients": [
       "8 large portobello mushrooms",
@@ -28,7 +28,7 @@
   {
     "id": 2,
     "title": "Coconut Curry Lentil Soup",
-    "image": "coconut-curry-lentil-soup.jpg",
+    "image": "https://media.istockphoto.com/id/2207219046/photo/indian-homemade-coconut-lentil-curry.jpg?s=612x612&w=0&k=20&c=3i1oFGAkjCA0my9YUIDkx5fJYJ89iErO5zUgGnpOFU8=",
     "description": "A warming, protein-rich soup with red lentils, coconut milk, and aromatic spices.",
     "ingredients": [
       "1 cup red lentils, rinsed",
@@ -60,7 +60,7 @@
   {
     "id": 3,
     "title": "Mediterranean Quinoa Salad",
-    "image": "mediterranean-quinoa-salad.jpg",
+    "image": "https://media.istockphoto.com/id/530184316/photo/homemade-southwestern-mexican-quinoa-salad.jpg?s=612x612&w=0&k=20&c=ef_ahI__DRPraB8CJSAVtIoXICrgJjN7uoP_xVzueNc=",
     "description": "A refreshing and protein-packed salad with quinoa, fresh vegetables, and a zesty lemon dressing.",
     "ingredients": [
       "1 cup quinoa, rinsed",
@@ -89,7 +89,7 @@
   {
     "id": 4,
     "title": "Roasted Vegetable Lasagna",
-    "image": "roasted-vegetable-lasagna.jpg",
+    "image": "https://media.istockphoto.com/id/1981685489/photo/close-up-of-a-specially-prepared-entree-called-pumpkin-amaretti-lasagna-pistachio-mustard.jpg?s=612x612&w=0&k=20&c=_IPVPTW4YcRPMLnbV99a3IiTk-EV9yDrMkV_dc_h8HI=",
     "description": "Layers of pasta, roasted vegetables, rich tomato sauce, and creamy ricotta create this hearty vegetarian lasagna.",
     "ingredients": [
       "1 eggplant, sliced",
@@ -125,7 +125,7 @@
   {
     "id": 5,
     "title": "Black Bean and Sweet Potato Tacos",
-    "image": "black-bean-sweet-potato-tacos.jpg",
+    "image": "https://media.istockphoto.com/id/941659340/photo/vegetarian-tacos-made-with-corn-tortillas-with-black-beans-corn-pepper-and-spicy-sauce-served.jpg?s=612x612&w=0&k=20&c=wQwHMPQLoYdtD0aS5PJ1AIKmj_dQeUcYVQLeUSVbD0M=",
     "description": "Hearty tacos filled with spiced black beans, roasted sweet potatoes, and fresh toppings.",
     "ingredients": [
       "2 medium sweet potatoes, peeled and diced",
@@ -158,7 +158,7 @@
   {
     "id": 6,
     "title": "Mushroom Risotto",
-    "image": "mushroom-risotto.jpg",
+    "image": "https://media.istockphoto.com/id/1218905269/photo/healthy-vegan-mushroom-risotto.jpg?s=612x612&w=0&k=20&c=7k6DWSsn3j7FFRD162EFPgHZ2NSC28qwoiZOVrzTdpI=",
     "description": "Creamy Italian rice dish with sautéed mushrooms, white wine, and Parmesan cheese.",
     "ingredients": [
       "1 1/2 cups Arborio rice",
@@ -190,7 +190,7 @@
   {
     "id": 7,
     "title": "Thai Red Curry with Tofu",
-    "image": "thai-red-curry-tofu.jpg",
+    "image": "https://media.istockphoto.com/id/615075106/photo/cooking-vegetable-curry-with-pork.jpg?s=612x612&w=0&k=20&c=EWSKkWMvB47WRoODwiyzAgsD9FwbPJg1Z5Z5Ip1cqU0=",
     "description": "Spicy and aromatic Thai curry with tofu, vegetables, and coconut milk served over steamed rice.",
     "ingredients": [
       "1 block (14 oz) firm tofu, pressed and cubed",
@@ -225,7 +225,7 @@
   {
     "id": 8,
     "title": "Eggplant Parmesan",
-    "image": "eggplant-parmesan.jpg",
+    "image": "https://media.istockphoto.com/id/1174567146/photo/baked-eggplant-with-cheese-on-a-dark-wooden-table-parmigiana-melanzane-top-view-italian.jpg?s=612x612&w=0&k=20&c=pjUwkmf3EV1r2nho_1fy9I3J7q4Mjba7MKcSv47dhKk=",
     "description": "Classic Italian dish with breaded eggplant slices, marinara sauce, and melted cheese.",
     "ingredients": [
       "2 large eggplants, sliced into 1/4 inch rounds",
@@ -257,7 +257,7 @@
   {
     "id": 9,
     "title": "Vegetable Pad Thai",
-    "image": "vegetable-pad-thai.jpg",
+    "image": "https://media.istockphoto.com/id/1361821718/photo/homemade-asian-chicken-pad-thai.jpg?s=612x612&w=0&k=20&c=HgD28XbxpqKbAIzzWlUSrEgeG-NzUjTh1dGVG-Crg9c=",
     "description": "Thai stir-fried rice noodles with tofu, vegetables, and a tangy-sweet sauce topped with crushed peanuts.",
     "ingredients": [
       "8 oz rice noodles",
@@ -295,7 +295,7 @@
   {
     "id": 10,
     "title": "Butternut Squash Soup",
-    "image": "butternut-squash-soup.jpg",
+    "image": "https://media.istockphoto.com/id/157504469/photo/white-bowl-of-pumpkin-soup-with-garnish.jpg?s=612x612&w=0&k=20&c=G09D0XDemAmV0d7f3qS-rAf0nV1f05VHkQFSCsFYL-o=",
     "description": "Velvety soup made with roasted butternut squash, aromatic spices, and a touch of cream.",
     "ingredients": [
       "1 large butternut squash, peeled, seeded, and cubed",
@@ -329,7 +329,7 @@
   {
     "id": 11,
     "title": "Cauliflower Buffalo Wings",
-    "image": "cauliflower-buffalo-wings.jpg",
+    "image": "https://media.istockphoto.com/id/1170127123/photo/healthy-vegan-cauliflower-buffalo-wings-with-celery-and-ranch-dip-top-view-on-a-wood-paddle.jpg?s=612x612&w=0&k=20&c=F7awgSDqpbjbFUQt5CgQ0sUnaZuDiemKq9O9-WRgj68=",
     "description": "Crispy baked cauliflower florets coated in spicy buffalo sauce for a vegetarian take on buffalo wings.",
     "ingredients": [
       "1 large head cauliflower, cut into florets",
@@ -360,7 +360,7 @@
   {
     "id": 12,
     "title": "Vegetable Biryani",
-    "image": "vegetable-biryani.jpg",
+    "image": "https://media.istockphoto.com/id/980135772/photo/indian-vegetable-pulav-or-biryani-made-using-basmati-rice-served-in-terracotta-bowl-selective.webp?a=1&b=1&s=612x612&w=0&k=20&c=QWr22yWn6PxXW7Cp1TYG8h1VnBy8Lrj3ElKIMiqQN1c=",
     "description": "Aromatic Indian rice dish layered with spiced vegetables, herbs, and fragrant basmati rice.",
     "ingredients": [
       "2 cups basmati rice, soaked for 30 minutes",
@@ -402,7 +402,7 @@
   {
     "id": 13,
     "title": "Caprese Stuffed Portobello Mushrooms",
-    "image": "caprese-stuffed-mushrooms.jpg",
+    "image": "https://media.istockphoto.com/id/1345979202/photo/stuffed-portobello-mushroom-with-mozzarella-cheese.jpg?s=612x612&w=0&k=20&c=Zrd78UB5B-5wY6A-skFBWzZ5X3UkZ1Xb_ssO_Aj_irg=",
     "description": "Portobello mushrooms filled with fresh tomatoes, mozzarella, and basil, drizzled with balsamic glaze.",
     "ingredients": [
       "4 large portobello mushrooms, stems removed",
@@ -430,7 +430,7 @@
   {
     "id": 14,
     "title": "Vegetable Enchiladas",
-    "image": "vegetable-enchiladas.jpg",
+    "image": "https://media.istockphoto.com/id/671779884/photo/spicy-beef-enchilada.jpg?s=612x612&w=0&k=20&c=vnOQ_vZAscXlj6uW_Q8sDukuZZkA3O_TtluGTdhlg0k=",
     "description": "Corn tortillas filled with roasted vegetables and beans, topped with enchilada sauce and melted cheese.",
     "ingredients": [
       "8 corn tortillas",
@@ -469,7 +469,7 @@
   {
     "id": 15,
     "title": "Vegetarian Shepherd's Pie",
-    "image": "vegetarian-shepherds-pie.jpg",
+    "image": "https://media.istockphoto.com/id/1363639092/photo/vegan-shepherd-pie-plant-based-recipe.jpg?s=612x612&w=0&k=20&c=QswQx-GE99y2vLxGYoprmhjZkKOBLXFeu5y5xFFxooM=",
     "description": "Hearty lentil and vegetable filling topped with creamy mashed potatoes and baked until golden.",
     "ingredients": [
       "2 cups brown or green lentils, cooked",
@@ -510,7 +510,7 @@
   {
     "id": 16,
     "title": "Vegetable Sushi Rolls",
-    "image": "vegetable-sushi-rolls.jpg",
+    "image": "https://media.istockphoto.com/id/1147944352/photo/rice-roll-wrapped-in-a-plate.jpg?s=612x612&w=0&k=20&c=E70bS2qSw32rBzz3fy2idPa-HoH3WV9JSwviNMXsMLQ=",
     "description": "Colorful sushi rolls filled with fresh vegetables and creamy avocado.",
     "ingredients": [
       "2 cups sushi rice",

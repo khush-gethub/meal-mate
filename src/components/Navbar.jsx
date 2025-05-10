@@ -40,7 +40,7 @@ const Navbar = () => {
 
                 {/* Desktop Nav */}
                 <div className="hidden md:flex items-center gap-8">
-                    <a href="/">Home</a>
+                    <Link to="/">Home</Link>
 
                     <Menu>
                         <MenuHandler>
@@ -71,8 +71,8 @@ const Navbar = () => {
                         </MenuList>
                     </Menu>
 
-                    <a href="./Recipe">Recipe</a>
-                    <a href="./About">About</a>
+                    <Link to="./Recipe">Recipe</Link>
+                    <Link to="./About">About</Link>
                 </div>
 
                 {/* Desktop Login Button */}

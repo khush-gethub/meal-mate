@@ -2,7 +2,7 @@
   {
     "id": 1,
     "title": "Classic Roast Chicken",
-    "image": "https://example.com/images/roast-chicken.jpg",
+    "image": "https://plus.unsplash.com/premium_photo-1669245207961-0281fd9396eb?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MXx8Q2xhc3NpYyUyMFJvYXN0JTIwQ2hpY2tlbnxlbnwwfHwwfHx8MA%3D%3D",
     "description": "A simple and delicious roast chicken with crispy skin and juicy meat. Perfect for Sunday dinner.",
     "ingredients": [
       "1 whole chicken (4-5 pounds)",
@@ -27,7 +27,7 @@
   {
     "id": 2,
     "title": "Chicken Parmesan",
-    "image": "https://example.com/images/chicken-parmesan.jpg",
+    "image": "https://media.istockphoto.com/id/1371304605/photo/frying-pan-with-freshly-cooked-chicken-parmesan.webp?a=1&b=1&s=612x612&w=0&k=20&c=YG5iJo3p3pQWgoqzN7UdAFZox3Nbvfa494oxHVGNAjQ=",
     "description": "Breaded chicken cutlets topped with marinara sauce and melted cheese. An Italian-American favorite!",
     "ingredients": [
       "4 boneless, skinless chicken breasts",
@@ -55,7 +55,7 @@
   {
     "id": 3,
     "title": "Butter Chicken",
-    "image": "https://example.com/images/butter-chicken.jpg",
+    "image": "https://media.istockphoto.com/id/1539948342/photo/closeup-of-butter-chicken-in-plate-punjabi-food.jpg?s=612x612&w=0&k=20&c=E5-x3es0MtC9VRFP5Gjebddz7Ki77gRyFopomzugrXg=",
     "description": "Tender chicken in a rich, creamy tomato sauce with aromatic Indian spices.",
     "ingredients": [
       "2 lbs boneless chicken thighs, cut into bite-sized pieces",
@@ -87,7 +87,7 @@
   {
     "id": 4,
     "title": "Chicken Stir-Fry",
-    "image": "https://example.com/images/chicken-stir-fry.jpg",
+    "image": "https://media.istockphoto.com/id/1181468945/photo/spicy-hot-thai-noodles-with-chicken-chinese-broccoli-and-egg-close-up-on-a-plate-horizontal.jpg?s=612x612&w=0&k=20&c=R0e64lrK-iRHRz85JaDdBdrUOaEZgAVS1D6b9Ve2rp0=",
     "description": "Quick and healthy chicken stir-fry with colorful vegetables in a savory sauce.",
     "ingredients": [
       "1 lb boneless chicken breast, thinly sliced",
@@ -119,7 +119,7 @@
   {
     "id": 5,
     "title": "Chicken Enchiladas",
-    "image": "https://example.com/images/chicken-enchiladas.jpg",
+    "image": "https://media.istockphoto.com/id/1124444587/photo/traditional-mexican-enchiladas.jpg?s=612x612&w=0&k=20&c=MucE71XjxIhvLauKT6pH89WLcNc4BkJ5rMYxAqj_Qgg=",
     "description": "Tender shredded chicken rolled in tortillas, topped with enchilada sauce and melted cheese.",
     "ingredients": [
       "3 cups cooked, shredded chicken",
@@ -149,7 +149,7 @@
   {
     "id": 6,
     "title": "Chicken Noodle Soup",
-    "image": "https://example.com/images/chicken-noodle-soup.jpg",
+    "image": "https://images.unsplash.com/photo-1617093727343-374698b1b08d?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8N3x8Q2hpY2tlbiUyME5vb2RsZSUyMFNvdXB8ZW58MHx8MHx8fDA%3D",
     "description": "Comforting homemade chicken soup with tender chunks of chicken, vegetables, and egg noodles.",
     "ingredients": [
       "1 whole chicken (3-4 pounds), cut into pieces",
@@ -181,7 +181,7 @@
   {
     "id": 7,
     "title": "Chicken Tikka Masala",
-    "image": "https://example.com/images/chicken-tikka-masala.jpg",
+    "image": "https://media.istockphoto.com/id/2152686945/photo/selective-focus-of-famous-indian-dish-paneer-tikka-masala-tandoor-or-paneer-kebab-with-a-dark.jpg?s=612x612&w=0&k=20&c=gJC8ooRPmIDiL9dahARXTUSxn56vquRHzEVOi8Y6Ie4=",
     "description": "Grilled marinated chicken chunks in a creamy, spiced tomato sauce. A popular Indian dish with British roots.",
     "ingredients": [
       "2 lbs boneless chicken breasts, cut into 1-inch cubes",
@@ -217,7 +217,7 @@
   {
     "id": 8,
     "title": "Grilled Lemon Herb Chicken",
-    "image": "https://example.com/images/lemon-herb-chicken.jpg",
+    "image": "https://media.istockphoto.com/id/1359435538/photo/top-view-of-tandoori-chicken-with-chutney-and-onion-in-plate-famous-indian-food-tandoori-murg.jpg?s=612x612&w=0&k=20&c=ar2Gs-fJeRB_5oVcaxt0BqHUuvGycABLpU4NE8kij8Q=",
     "description": "Fresh and zesty grilled chicken marinated in lemon, garlic, and herbs. Perfect for summer cookouts.",
     "ingredients": [
       "4 boneless, skinless chicken breasts",
@@ -246,7 +246,7 @@
   {
     "id": 9,
     "title": "Chicken Fajitas",
-    "image": "https://example.com/images/chicken-fajitas.jpg",
+    "image": "https://images.unsplash.com/photo-1666025959702-2974283fcbd8?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MTB8fENoaWNrZW4lMjBGYWppdGFzfGVufDB8fDB8fHww",
     "description": "Sizzling spiced chicken strips with bell peppers and onions, served with warm tortillas and toppings.",
     "ingredients": [
       "1.5 lbs boneless, skinless chicken breasts, sliced into strips",
@@ -279,7 +279,7 @@
   {
     "id": 10,
     "title": "Chicken Pot Pie",
-    "image": "https://example.com/images/chicken-pot-pie.jpg",
+    "image": "https://media.istockphoto.com/id/495328376/photo/hearty-homemade-chicken-pot-pie.webp?a=1&b=1&s=612x612&w=0&k=20&c=QtzhleXnQs_ELl450Xm-q5YEf1jXkvl15ct_CJZV0hg=",
     "description": "A comforting classic with tender chicken, vegetables, and creamy sauce baked under a flaky crust.",
     "ingredients": [
       "1 lb boneless, skinless chicken breasts, diced",
@@ -313,7 +313,7 @@
   {
     "id": 11,
     "title": "Honey Garlic Chicken",
-    "image": "https://example.com/images/honey-garlic-chicken.jpg",
+    "image": "https://media.istockphoto.com/id/2197595292/photo/easy-teriyaki-chicken-on-plate.jpg?s=612x612&w=0&k=20&c=HdbILOWMjnW6qESeskxSkIMdCubWhtcLVCft7Z3PgtQ=",
     "description": "Sweet and sticky chicken with a delicious honey garlic glaze. Quick, easy, and irresistible!",
     "ingredients": [
       "1.5 lbs boneless, skinless chicken thighs",
@@ -343,7 +343,7 @@
   {
     "id": 12,
     "title": "Buffalo Chicken Wings",
-    "image": "https://example.com/images/buffalo-wings.jpg",
+    "image": "https://media.istockphoto.com/id/485599156/photo/spicy-homemade-buffalo-wings.jpg?s=612x612&w=0&k=20&c=dF0shjkws4bh4Isx7vBTw-tc5-C3ereRe4cDRG-5kLo=",
     "description": "Spicy, tangy chicken wings tossed in classic buffalo sauce. Perfect for game day!",
     "ingredients": [
       "2 lbs chicken wings, split at joints, tips removed",
@@ -371,7 +371,7 @@
   {
     "id": 13,
     "title": "Chicken Caesar Salad",
-    "image": "https://example.com/images/chicken-caesar.jpg",
+    "image": "https://media.istockphoto.com/id/991861846/photo/homemade-cesar-salad-with-chicken-lettuce-and-parmesan.webp?a=1&b=1&s=612x612&w=0&k=20&c=lGzBXd30zY4RMPpD9JGG8XL8ii_2e2g2xzJqC71uzoY=",
     "description": "Crisp romaine lettuce with grilled chicken, Parmesan cheese, croutons, and creamy Caesar dressing.",
     "ingredients": [
       "2 boneless, skinless chicken breasts",
@@ -405,7 +405,7 @@
   {
     "id": 14,
     "title": "Chicken Biryani",
-    "image": "https://example.com/images/chicken-biryani.jpg",
+    "image": "https://plus.unsplash.com/premium_photo-1694141251673-1758913ade48?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8NXx8Q2hpY2tlbiUyMEJpcnlhbml8ZW58MHx8MHx8fDA%3D",
     "description": "Fragrant Indian rice dish with spiced chicken, caramelized onions, and aromatic herbs.",
     "ingredients": [
       "2 cups basmati rice",
@@ -446,7 +446,7 @@
   {
     "id": 15,
     "title": "Chicken Alfredo Pasta",
-    "image": "https://example.com/images/chicken-alfredo.jpg",
+    "image": "https://media.istockphoto.com/id/506916161/photo/homemade-fettucini-aflredo-pasta.jpg?s=612x612&w=0&k=20&c=Pa3dwlsqnPfOKgldMXuHVy5Aqmtbp8wThbj6V_4u5us=",
     "description": "Creamy pasta with tender chicken in a rich Parmesan cream sauce. A restaurant-quality dish made at home.",
     "ingredients": [
       "1 lb fettuccine pasta",
@@ -477,7 +477,7 @@
   {
     "id": 16,
     "title": "Teriyaki Chicken",
-    "image": "https://example.com/images/teriyaki-chicken.jpg",
+    "image": "https://media.istockphoto.com/id/183811108/photo/chicken-teriyaki-bowl.jpg?s=612x612&w=0&k=20&c=JRcoAtO6brXue6NarOckZECwQOtIMwXgsADdXTyTFbI=",
     "description": "Sweet and savory Japanese-inspired chicken glazed with homemade teriyaki sauce.",
     "ingredients": [
       "1.5 lbs boneless, skinless chicken thighs",
