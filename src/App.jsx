@@ -7,8 +7,7 @@ import DisplayData from './components/DisplayData'
 import Login from './components/Login'
 import Signup from './components/Signup'
 import Recipeimage from './components/Recipeimage'
-
-
+import ErrorPage from './Pages/ErrorPage'
 
 const App = () => {
   return (
@@ -23,6 +22,7 @@ const App = () => {
             <Route path='/Signup' element={<Signup/>}/>
             <Route path='/Recipeimage' element={<Recipeimage/>}/>
             <Route path="/recipe/:id" element={<Recipeimage />} />
+            <Route path="*" element={<ErrorPage />} />
           </Routes>
       </BrowserRouter>
     </>

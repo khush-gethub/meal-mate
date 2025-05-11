@@ -3,7 +3,7 @@ import React from 'react'
 const DessertHero = () => {
     return (
         <>
-            <div className="px-5 md:px-10 lg:px-20 py-5 bg-[#FFF6F0]">
+            <div className="px-5 md:px-10 lg:px-20 py-5 bg-[#FFF6F0] mb-10 w-full">
                 <div
                     className="w-8xl bg-cover bg-center bg-no-repeat min-h-[300px] md:min-h-[400px] lg:min-h-[500px] flex items-center justify-center rounded-lg md:mx-20"
                     style={{

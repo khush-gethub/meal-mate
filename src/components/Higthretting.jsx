@@ -3,7 +3,7 @@ import React from 'react'
 const Higthretting = () => {
     return (
         <>
-            <div className="px-5 md:px-10 lg:px-20 py-5 bg-[#FFF6F0] text-white">
+            <div className="px-5 md:px-10 lg:px-20 py-5 bg-[#FFF6F0] text-white md:py-16">
                 <div
                     className="w-8xl bg-cover bg-center bg-no-repeat min-h-[300px] md:min-h-[400px] lg:min-h-[500px] rounded-lg md:mx-20 flex items-center flex-col text-center md:text-left justify-center"
                     style={{

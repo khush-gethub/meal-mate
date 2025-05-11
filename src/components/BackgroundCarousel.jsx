@@ -1,10 +1,10 @@
 import React, { useState, useEffect } from 'react';
 
 const images = [
-    "https://media.istockphoto.com/id/1208340233/photo/crispy-skin.jpg?s=612x612&w=0&k=20&c=l-Lc3vjiAati_MJmRyvZuqjBWj_A358APsksVGMvhp0=",
-    "https://media.istockphoto.com/id/973780048/photo/corn-flakes-breaded-deep-fried-crispy-shrimps.jpg?s=612x612&w=0&k=20&c=LW08-b0N8TdAMIAz2D1583g2smULKG11vDR_zWeeQCY=",
-    "https://media.istockphoto.com/id/2183032089/photo/chicharron-de-pollo-is-dominican-fried-chicken.jpg?s=612x612&w=0&k=20&c=UPss7oklc6R1ObeTwC7AIzbD2oGTCrV8YSsEyaYZPkg=",
-    "https://media.istockphoto.com/id/2208487240/photo/fried-chicken-skin-with-herb-and-various-sauce.jpg?s=612x612&w=0&k=20&c=bSQe2fC2PqphB82vxdJHx9-FPtn_e9psUj7Y1wj0r5Q="
+    "https://media.istockphoto.com/id/1443602402/photo/chicken-karahi-korma-msala-served-in-dish-isolated-on-table-top-view-of-asian-and-indian-food.jpg?s=612x612&w=0&k=20&c=Ir7YJfthuCg-nVxVStgSvV217pYSbvHVFTwFXTFtfmU=",
+    "https://media.istockphoto.com/id/1007313694/photo/rice-stewed-vegetables-egg-teriyaki-chicken-healthy-balanced-lunch-box-on-a-dark-background.jpg?s=612x612&w=0&k=20&c=Lq94ffBWsHw8ZEEaqoyGV4201FtbmyEhIt0XkzlaccI=",
+    "https://media.istockphoto.com/id/1638296596/photo/jali-kabab-or-shami-kebab-tikki-served-in-dish-isolated-on-background-top-view-of-bangladesh.jpg?s=612x612&w=0&k=20&c=3hBxUgBqQvWuHDCX9MQaL42xgsGPWvY9zcL06LnusCc=",
+    "https://media.istockphoto.com/id/1181240435/photo/grilled-chicken-salad.jpg?s=612x612&w=0&k=20&c=qdbyUnoUbxGJXAk3eGAxt5OQdKOhiLepab5XgW6wN1k="
 ];
 
 const BackgroundCarousel = () => {

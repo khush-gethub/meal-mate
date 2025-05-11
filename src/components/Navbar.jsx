@@ -18,7 +18,7 @@ const Navbar = () => {
         <div className="bg-[#FFA94D] text-[#4E342E] px-5 py-5 relative z-20">
             <div className="flex justify-between items-center">
                 {/* Logo */}
-                <div className="text-4xl lobster ">MealMate</div>
+                <div className="text-4xl lobster">MealMate</div>
 
                 {/* Hamburger Icon */}
                 <div className="md:hidden">
@@ -71,8 +71,8 @@ const Navbar = () => {
                         </MenuList>
                     </Menu>
 
-                    <Link to="./Recipe">Recipe</Link>
-                    <Link to="./About">About</Link>
+                    <Link to="/Recipe">Recipe</Link>
+                    <Link to="/About">About</Link>
                 </div>
 
                 {/* Desktop Login Button */}

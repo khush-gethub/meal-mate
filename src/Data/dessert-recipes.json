@@ -2,7 +2,7 @@
   {
     "id": 1,
     "title": "Classic Chocolate Chip Cookies",
-    "image": "chocolate_chip_cookies.jpg",
+    "image": "https://media.istockphoto.com/id/2186294878/photo/chocolate-chip-cookies-beautifully-arranged-in-bowl.jpg?s=612x612&w=0&k=20&c=fhX6iT9wzqGdQizvhEmH1czFw_tuXWDaEHqPFvD2hLc=",
     "description": "Soft and chewy chocolate chip cookies with crisp edges and melty chocolate chips.",
     "ingredients": [
       "2 1/4 cups all-purpose flour",
@@ -30,7 +30,7 @@
   {
     "id": 2,
     "title": "New York Cheesecake",
-    "image": "ny_cheesecake.jpg",
+    "image": "https://media.istockphoto.com/id/1167344045/photo/cheesecake-slice-new-york-style-classical-cheese-cake.jpg?s=612x612&w=0&k=20&c=y3eh7cFEefAYxB_5Ow2n1OJZML_PqFOdnB5Z9nvXdgw=",
     "description": "Creamy, smooth, and rich classic New York style cheesecake with a graham cracker crust.",
     "ingredients": [
       "2 cups graham cracker crumbs",
@@ -58,7 +58,7 @@
   {
     "id": 3,
     "title": "Apple Pie",
-    "image": "apple_pie.jpg",
+    "image": "https://media.istockphoto.com/id/516185850/photo/classic-american-apple-pie.jpg?s=612x612&w=0&k=20&c=CSJ8u8CiyfOK_L4HjMJ6ejdQiXxycAjvSbPYfTnrlyE=",
     "description": "Traditional American apple pie with a flaky butter crust and cinnamon-spiced apple filling.",
     "ingredients": [
       "2 1/2 cups all-purpose flour",
@@ -93,7 +93,7 @@
   {
     "id": 4,
     "title": "Tiramisu",
-    "image": "tiramisu.jpg",
+    "image": "https://media.istockphoto.com/id/1422163265/photo/tiramisu.jpg?s=612x612&w=0&k=20&c=c5uxhh5Ba8gFraWI1e09E0hW-LYbsP_DZaIqDL9ThDI=",
     "description": "Elegant Italian dessert with layers of coffee-soaked ladyfingers and mascarpone cream.",
     "ingredients": [
       "6 large egg yolks",
@@ -127,7 +127,7 @@
   {
     "id": 5,
     "title": "Lemon Bars",
-    "image": "lemon_bars.jpg",
+    "image": "https://media.istockphoto.com/id/505142371/photo/luscious-bliss-lemon-bars.jpg?s=612x612&w=0&k=20&c=BG0cDekitSGA2COP_94Tc2X4oYgTLe6ay0jOBDWVOPQ=",
     "description": "Tangy lemon custard on a buttery shortbread crust, dusted with powdered sugar.",
     "ingredients": [
       "2 cups all-purpose flour",
@@ -155,7 +155,7 @@
   {
     "id": 6,
     "title": "Strawberry Shortcake",
-    "image": "strawberry_shortcake.jpg",
+    "image": "https://media.istockphoto.com/id/2157936535/photo/strawberry-cake.jpg?s=612x612&w=0&k=20&c=2LsG0dyFj-9Xnl8PQgbZobBcDIB0ZJcKY1lA9Cw9ddo=",
     "description": "Sweet biscuits topped with fresh strawberries and whipped cream.",
     "ingredients": [
       "2 cups all-purpose flour",
@@ -187,7 +187,7 @@
   {
     "id": 7,
     "title": "Chocolate Mousse",
-    "image": "chocolate_mousse.jpg",
+    "image": "https://media.istockphoto.com/id/1907446545/photo/chocolate-strawberry-custard-chocolate-custard-served-with-fresh-chopped-strawberries-a-quick.jpg?s=612x612&w=0&k=20&c=6Kbct9LXg2sPtYj-bsaxsrRNKJTh80RUfIaI82wjPc4=",
     "description": "Light and airy chocolate dessert with intense chocolate flavor.",
     "ingredients": [
       "8 oz semi-sweet chocolate, chopped",
@@ -214,7 +214,7 @@
   {
     "id": 8,
     "title": "Crème Brûlée",
-    "image": "creme_brulee.jpg",
+    "image": "https://media.istockphoto.com/id/488525050/photo/creme-brulee-with-fresh-fruit.jpg?s=612x612&w=0&k=20&c=7JWejUUCa78Z-ACfsol6nCR0kc_Ubg6JYJuwADVvYcw=",
     "description": "Creamy vanilla custard with a crackable caramelized sugar top.",
     "ingredients": [
       "2 cups heavy cream",
@@ -241,7 +241,7 @@
   {
     "id": 9,
     "title": "Blueberry Muffins",
-    "image": "blueberry_muffins.jpg",
+    "image": "https://images.unsplash.com/photo-1607958996333-41aef7caefaa?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8Mnx8Qmx1ZWJlcnJ5JTIwTXVmZmluc3xlbnwwfHwwfHx8MA%3D%3D",
     "description": "Tender and moist muffins bursting with fresh blueberries.",
     "ingredients": [
       "2 cups all-purpose flour",
@@ -271,7 +271,7 @@
   {
     "id": 10,
     "title": "Carrot Cake",
-    "image": "carrot_cake.jpg",
+    "image": "https://media.istockphoto.com/id/530888025/photo/carrot-cake.webp?a=1&b=1&s=612x612&w=0&k=20&c=2zILnEoTDPnltw1IdFwIPrfH4rkzc1RbLfw2yAzyqLA=",
     "description": "Moist spiced cake with grated carrots and cream cheese frosting.",
     "ingredients": [
       "2 cups all-purpose flour",
@@ -310,7 +310,7 @@
   {
     "id": 11,
     "title": "Red Velvet Cupcakes",
-    "image": "red_velvet_cupcakes.jpg",
+    "image": "https://media.istockphoto.com/id/1169935120/photo/red-velvet-cupcakes.jpg?s=612x612&w=0&k=20&c=p7jI3IdBhv46Sn28N23zFq24myA7tcVrgpkwSPW7b2Q=",
     "description": "Rich cocoa-flavored cupcakes with a distinctive red color and cream cheese frosting.",
     "ingredients": [
       "2 1/2 cups all-purpose flour",
@@ -348,7 +348,7 @@
   {
     "id": 12,
     "title": "Peach Cobbler",
-    "image": "peach_cobbler.jpg",
+    "image": "https://media.istockphoto.com/id/182745867/photo/peach-cobbler-on-a-plate.jpg?s=612x612&w=0&k=20&c=OH3RHpl7ZezX2ku5svXQ2HPNruWD1TuGiNiZHduHIzg=",
     "description": "Sweet, juicy peaches baked under a golden buttery crust.",
     "ingredients": [
       "8 ripe peaches, peeled and sliced",
@@ -384,7 +384,7 @@
   {
     "id": 13,
     "title": "Key Lime Pie",
-    "image": "key_lime_pie.jpg",
+    "image": "https://media.istockphoto.com/id/1357320931/photo/slice-of-key-lime-pie-with-whipped-cream-and-lime-zest-on-a-plate.jpg?s=612x612&w=0&k=20&c=msS_gDi_RiPmexljdBBxe4_YabI-wOfBKSue8FoZ3tc=",
     "description": "Tart and sweet pie with a creamy lime filling and graham cracker crust.",
     "ingredients": [
       "1 1/2 cups graham cracker crumbs",
@@ -415,7 +415,7 @@
   {
     "id": 14,
     "title": "Bread Pudding",
-    "image": "bread_pudding.jpg",
+    "image": "https://media.istockphoto.com/id/530200167/photo/sweet-homemade-bread-pudding.jpg?s=612x612&w=0&k=20&c=3xkpC1o0gWBQnAt7ZlBQvXrcDKkGzrXBTfHD9xHsEkY=",
     "description": "Comforting dessert made with stale bread soaked in a sweet custard mixture.",
     "ingredients": [
       "8 cups day-old bread, cubed",
@@ -454,7 +454,7 @@
   {
     "id": 15,
     "title": "Panna Cotta",
-    "image": "panna_cotta.jpg",
+    "image": "https://media.istockphoto.com/id/1297190231/photo/close-up-panna-cotta-dessert.jpg?s=612x612&w=0&k=20&c=8i2dFkpiUS4TRpkaeRdm6AhqnZh8QWj8SOWSGp_yPng=",
     "description": "Silky Italian dessert made with sweetened cream set with gelatin.",
     "ingredients": [
       "4 cups heavy cream",
@@ -480,7 +480,7 @@
   {
     "id": 16,
     "title": "Baklava",
-    "image": "baklava.jpg",
+    "image": "https://media.istockphoto.com/id/1195774604/photo/walnut-pistachio-turkish-style-antep-baklava-presentation-baklava-from-turkish-cuisine.jpg?s=612x612&w=0&k=20&c=-1R--ikfVod4vV1FBQE3PCRILdOK1ahwPCzqCM87qYE=",
     "description": "Sweet pastry made of layers of phyllo dough filled with chopped nuts and sweetened with honey syrup.",
     "ingredients": [
       "1 (16 oz) package phyllo dough, thawed",
@@ -518,7 +518,7 @@
   {
     "id": 17,
     "title": "Flan",
-    "image": "flan.jpg",
+    "image": "https://media.istockphoto.com/id/1011604828/photo/sweet-homemade-spanish-flan-dessert.jpg?s=612x612&w=0&k=20&c=M3u-sR-0_BB7IEtUdthJYpWdW60G3upnXYePkQw_dQg=",
     "description": "Smooth caramel custard dessert with a layer of clear caramel sauce.",
     "ingredients": [
       "1 cup granulated sugar",
@@ -545,7 +545,7 @@
   {
     "id": 18,
     "title": "Pavlova",
-    "image": "pavlova.jpg",
+    "image": "https://media.istockphoto.com/id/615736056/photo/berry-pavlova-cake-with-strawberries-and-raspberries.jpg?s=612x612&w=0&k=20&c=y_S1Nw3e1gTnGsyBHFR56MCvWshQUhuUlJkUDECbV_w=",
     "description": "Crisp meringue dessert with a soft, marshmallow-like center, topped with whipped cream and fresh fruit.",
     "ingredients": [
       "4 large egg whites, at room temperature",

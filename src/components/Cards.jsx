@@ -4,7 +4,7 @@ import rdata from '../Data/recipe-data.json'
 
 const Cards = () => {
     return (
-        <div className="p-4 md:p-10 bg-[#FFF6F0] text-[#4E342E] min-h-screen">
+        <div className="p-4 md:px-42 bg-[#FFF6F0] text-[#4E342E] min-h-screen">
             <h1 className="text-4xl md:text-6xl font-semibold mb-8 font-poppins text-center md:text-left">
                 The Recipes
             </h1>
