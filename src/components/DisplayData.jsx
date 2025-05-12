@@ -12,7 +12,7 @@ const allData = {
     chicken,
     seafood,
     veg,
-    dessert
+    dessert,
 }
 const DisplayData = () => {
     const { category } = useParams()
@@ -42,7 +42,8 @@ const DisplayData = () => {
                                 <div className="mt-6 mb-2">
                                     <h2 className="text-xl font-semibold tracking-wide">
                                         <Link
-                                            to={`/recipe/${food.id}`}
+                                            to={`/recipe/:category/:id${food.id}`}
+                                            state={{ recipe: food }}
                                             className="hover:text-orange-600 transition-colors"
                                         >
                                             {food.title}

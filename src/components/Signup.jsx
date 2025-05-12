@@ -36,6 +36,7 @@ const Signup = () => {
                 <form className="space-y-4">
                     {/* Full Name Input */}
                     <input
+                        required
                         type="text"
                         placeholder="Full Name"
                         className="w-full border rounded-lg px-4 py-2 focus:outline-none focus:ring-2 focus:ring-[#FFF3C4]"
@@ -43,6 +44,7 @@ const Signup = () => {
 
                     {/* Email Input */}
                     <input
+                        required
                         type="email"
                         placeholder="Email Address"
                         className="w-full border rounded-lg px-4 py-2 focus:outline-none focus:ring-2 focus:ring-[#FFF3C4]"
@@ -50,6 +52,7 @@ const Signup = () => {
 
                     {/* Password Input */}
                     <input
+                        required
                         type="password"
                         placeholder="Password"
                         className="w-full border rounded-lg px-4 py-2 focus:outline-none focus:ring-2 focus:ring-[#FFF3C4]"
@@ -57,6 +60,7 @@ const Signup = () => {
 
                     {/* Confirm Password Input */}
                     <input
+                        required
                         type="password"
                         placeholder="Confirm Password"
                         className="w-full border rounded-lg px-4 py-2 focus:outline-none focus:ring-2 focus:ring-[#FFF3C4]"
@@ -66,6 +70,7 @@ const Signup = () => {
                     <div>
                         <label className="block text-gray-700 mb-2">Profile Picture (Optional)</label>
                         <input
+                            required
                             type="file"
                             accept="image/*"
                             className="w-full border rounded-lg px-4 py-2"
@@ -75,6 +80,7 @@ const Signup = () => {
                     {/* Terms and Conditions Checkbox */}
                     <div className="flex items-center">
                         <input
+                            required
                             type="checkbox"
                             className="mr-2"
                         />
