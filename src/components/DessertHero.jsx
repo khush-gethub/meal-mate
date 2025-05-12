@@ -3,26 +3,32 @@ import React from 'react'
 const DessertHero = () => {
     return (
         <>
-            <div className="px-5 md:px-10 lg:px-20 py-5 bg-[#FFF6F0] mb-10 w-full">
+            <div className="px-4 sm:px-10 lg:px-24 py-10 bg-[#FFF6F0] w-full mb-12">
                 <div
-                    className="w-8xl bg-cover bg-center bg-no-repeat min-h-[300px] md:min-h-[400px] lg:min-h-[500px] flex items-center justify-center rounded-lg md:mx-20"
+                    className="relative bg-cover bg-center rounded-3xl overflow-hidden min-h-[300px] sm:min-h-[400px] lg:min-h-[500px] flex items-center justify-center"
                     style={{
                         backgroundImage:
-                            "url('https://images.unsplash.com/photo-1578985545062-69928b1d9587?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8NHx8Y2FrZXxlbnwwfHwwfHx8MA%3D%3D')",
+                            "url('https://images.unsplash.com/photo-1578985545062-69928b1d9587?w=800&auto=format&fit=crop&q=60')",
                     }}
                 >
-                    <div className="bg-[#FFF6F0] p-6 md:p-8 rounded-lg text-center shadow-md max-w-sm w-full m-8">
-                        <h2 className="text-2xl md:text-5xl font-bold text-black">Dessert</h2>
-                        <p className="mt-2 text-black text-base md:text-3xl">
-                            the dessert
-                            <br />
-                            you want is here
+                    {/* Overlay */}
+                    <div className="absolute inset-0 bg-[#FFF6F0]/20 backdrop-blur-sm"></div>
+
+                    {/* Content Card */}
+                    <div className="relative z-10 text-center px-6 py-8 bg-white/80 rounded-xl shadow-lg max-w-md w-full">
+                        <h2 className="text-3xl sm:text-5xl font-extrabold text-[#4E342E] tracking-tight">Dessert</h2>
+                        <p className="mt-4 text-[#4E342E]/90 text-lg sm:text-2xl leading-relaxed">
+                            The dessert you’ve been craving is right here 🍰
                         </p>
-                        <button className="w-56 bg-[#FFF3C4] hover:bg-[#FFE082] transition rounded-lg py-3 text-[#4E342E]  text-2xl mt-4"><a href="/menu/dessert">Get Recipes</a></button>
+                        <a
+                            href="/menu/dessert"
+                            className="inline-block mt-6 px-6 py-3 bg-[#FFF3C4] hover:bg-[#FFE082] text-[#4E342E] font-semibold text-lg rounded-2xl transition-all duration-300"
+                        >
+                            Get Recipes
+                        </a>
                     </div>
                 </div>
             </div>
-
 
         </>
     )

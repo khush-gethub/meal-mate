@@ -12,7 +12,7 @@ const Hero = () => {
                     <p className="md:w-2xl text-[#4E342E] mb-4 md:text-3xl text-2xl">
                         Discover delicious recipes, plan your meals with ease, and bring joy to your kitchen every day! Whether you're craving quick dinners, healthy lunches, or sweet desserts, we have something for every taste. Start exploring today and make every meal memorable. Your perfect kitchen companion is just a click away!
                     </p>
-                    <button className="bg-[#FFF3C4] hover:bg-[#FFE082] transition rounded-lg text-[#4E342E] px-10 py-2 text-2xl"><a href="./Recipe">Get Recipes</a></button>
+                    <button className="bg-[#FFF3C4] hover:bg-[#FFE082] transition rounded-2xl text-[#4E342E] px-10 py-3 text-2xl"><a href="./Recipe">Get Recipes</a></button>
                 </div>
 
                 {/* Right Images */}

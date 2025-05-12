@@ -77,7 +77,7 @@ const Navbar = () => {
 
                 {/* Desktop Login Button */}
                 <Link to="/Login">
-                    <button className="hidden md:block px-5 py-1 bg-[#FFF3C4] rounded hover:bg-[#ffeaa0] transition">
+                    <button className="hidden md:block px-6 py-2 text-[1.2rem] bg-[#FFF3C4] rounded-lg hover:bg-[#ffeaa0] transition">
                         Login
                     </button>
                 </Link>
