@@ -27,7 +27,7 @@ const BackgroundCarousel = () => {
     };
 
     return (
-        <div className="w-full max-w-6xl mx-auto relative overflow-hidden rounded-lg shadow-lg mt-10 mb-10">
+        <div className="w-full max-w-6xl mx-auto relative overflow-hidden sm:rounded-lg shadow-lg mt-10 mb-10">
             <div
                 className="flex transition-transform duration-500"
                 style={{ transform: `translateX(-${current * 100}%)` }}

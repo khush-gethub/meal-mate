@@ -15,7 +15,7 @@ const DessertHero = () => {
                     <div className="absolute inset-0 bg-[#222121]/20 backdrop-blur-sm"></div>
 
                     {/* Content Card */}
-                    <div className="relative z-10 text-center px-6 py-8 bg-white/80 rounded-xl shadow-lg max-w-md w-full">
+                    <div className="relative z-10 text-center px-6 py-8 bg-white/80 rounded-xl shadow-lg max-w-md w-full max-sm:h-[18.8rem] flex flex-col items-center justify-center">
                         <h2 className="text-3xl sm:text-5xl font-extrabold text-[#4E342E] tracking-tight">Dessert</h2>
                         <p className="mt-4 text-[#4E342E]/90 text-lg sm:text-2xl leading-relaxed">
                             The dessert you’ve been craving is right here for you!

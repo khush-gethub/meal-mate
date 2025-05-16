@@ -1,8 +1,19 @@
-import React from 'react'
+import React, { useContext } from 'react'
 import { Link } from 'react-router-dom'
 import rdata from '../Data/recipe-data.json'
+import { LikeContext } from '../context/LikeContext' // Import the likeContext
 
 const Cards = () => {
+    const { likedCards, addLike, removeLike } = useContext(LikeContext) // Destructure context values
+
+    const handleLikeToggle = (id) => {
+        if (likedCards.includes(id)) {
+            removeLike(id) // Remove like if already liked
+        } else {
+            addLike(id) // Add like if not liked
+        }
+    }
+
     return (
         <div className="p-4 md:px-42 bg-[#FFF6F0] text-[#4E342E] min-h-screen">
             <h1 className="text-4xl md:text-6xl font-semibold mb-8 font-poppins text-center md:text-left">
@@ -15,23 +26,45 @@ const Cards = () => {
                         key={index}
                         className="bg-white rounded-lg shadow-md overflow-hidden hover:shadow-lg transition-shadow duration-300 recipe-card"
                     >
-                        <div className="recipe-image">
-                            <img
-                                src={food.image}
-                                alt={food.title}
-                                className="w-full h-64 object-cover"
-                            />
-                        </div>
-                        <div className="p-6">
-                            <h2 className="text-2xl font-bold mb-2">
-                                <Link
-                                    to={`/recipe/${food.id}`}
-                                    className="hover:text-orange-600 transition-colors"
-                                >
-                                    {food.title}
-                                </Link>
-                            </h2>
-                            <p className="text-gray-700">{food.description}</p>
+                        <div className="grid-span-8 select-none">
+                            <div className="recipe-image">
+                                <img
+                                    src={food.image}
+                                    alt={food.title}
+                                    className="w-full h-64 object-cover"
+                                />
+                            </div>
+                            <div className="p-6">
+                                <h2 className="text-2xl font-bold mb-2">
+                                    <Link
+                                        to={`/recipe/${food.id}`}
+                                        className="hover:text-orange-600 transition-colors"
+                                    >
+                                        {food.title}
+                                    </Link>
+                                </h2>
+                                <p className="text-gray-700">{food.description}</p>
+                                <div className="flex justify-end">
+                                    <label
+                                        className="cursor-pointer relative"
+                                        onClick={() => handleLikeToggle(food.id)} // Toggle like on click
+                                    >
+                                        <svg
+                                            className={`w-6 h-6 fill-transparent stroke-[#FFA94D] ${
+                                                likedCards.includes(food.id) ? 'fill-[#FFA94D]' : ''
+                                            } transition duration-200`}
+                                            viewBox="0 0 24 24"
+                                        >
+                                            <path
+                                                d="M12 21C12 21 4 13.5455 4 8.72727C4 6.10048 6.01472 4 8.5 4C10.0706 4 11.5 5.09091 12 6.18182C12.5 5.09091 13.9294 4 15.5 4C17.9853 4 20 6.10048 20 8.72727C20 13.5455 12 21 12 21Z"
+                                                strokeWidth="2"
+                                                strokeLinecap="round"
+                                                strokeLinejoin="round"
+                                            />
+                                        </svg>
+                                    </label>
+                                </div>
+                            </div>
                         </div>
                     </div>
                 ))}
