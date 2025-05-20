@@ -1,69 +1,46 @@
-import { createContext, useContext, useState, useCallback, useEffect } from 'react'
+import { createContext, useContext, useState, useEffect } from 'react'
 
-// This context is used to manage the likes in the application
 const LikeContext = createContext()
 
-// Custom hook to use the LikeContext
 export const useLikeContext = () => {
-  try {
-    return useContext(LikeContext)
-  } catch (error) {
-    console.error('Error using LikeContext:', error)
-    return null
+  const context = useContext(LikeContext)
+  if (!context) {
+    throw new Error('useLikeContext must be used within a LikeProvider')
   }
+  return context
 }
 
-// Local storage helper for setting likes array
-const setLocalStorage = (likesArray) => {
-  try {
-    localStorage.setItem('likes', JSON.stringify(likesArray))
-  } catch (error) {
-    console.error('Error setting local storage:', error)
-  }
-}
-
-// Provider component
 export const LikeProvider = ({ children }) => {
-  // State to hold the likes
-  const [likes, setLikes] = useState([])
-
-  // Function to load likes from local storage
-  const loadLikes = useCallback(() => {
+  const [likes, setLikes] = useState(() => {
     try {
-      const storedLikes = JSON.parse(localStorage.getItem('likes')) || []
-      setLikes(storedLikes)
-    } catch (error) {
-      console.error('Error loading likes from local storage:', error)
+      return JSON.parse(localStorage.getItem('likes')) || []
+    } catch {
+      return []
     }
-  }, [])
+  })
 
-  // Load likes from local storage when the component mounts
   useEffect(() => {
-    loadLikes()
-  }, [loadLikes])
-
-  // Update local storage whenever likes change
-  useEffect(() => {
-    setLocalStorage(likes)
+    localStorage.setItem('likes', JSON.stringify(likes))
   }, [likes])
 
-  const addLike = (like) => {
-    setLikes((prevLikes) => [...prevLikes, like])
+  const addLike = (id) => {
+    setLikes((prevLikes) => {
+      if (!prevLikes.includes(id)) {
+        return [...prevLikes, id]
+      }
+      return prevLikes
+    })
   }
 
-  const removeLike = (likeId) => {
-    setLikes((prevLikes) => prevLikes.filter((like) => like.id !== likeId))
-  }
-
-  const likeData = {
-    likes,
-    addLike,
-    removeLike,
+  const removeLike = (id) => {
+    setLikes((prevLikes) => prevLikes.filter((likeId) => likeId !== id))
   }
 
   return (
-    <LikeContext.Provider value={likeData}>
+    <LikeContext.Provider value={{ likedCards: likes, addLike, removeLike }}>
       {children}
     </LikeContext.Provider>
   )
 }
+
+export default LikeContext

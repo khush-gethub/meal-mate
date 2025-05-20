@@ -5,19 +5,20 @@ import { Link } from 'react-router-dom';
 
 const Login = () => {
   return (
-    <div className="flex justify-center items-center min-h-screen bg-[#F5F5F5]">
-      <div className="flex md:w-[1200px] shadow-2xl rounded-2xl overflow-hidden w-full">
+    <div className="flex justify-center items-center min-h-screen bg-[#F5F5F5] mx-6">
+      <div className="flex md:w-[1100px] shadow-2xl rounded-2xl overflow-hidden w-full">
         {/* Image Section */}
         <div className="w-1/2 hidden md:flex">
           <img
             src="https://images.unsplash.com/photo-1555939594-58d7cb561ad1?w=800&auto=format&fit=crop&q=60"
             alt="Food Background"
-            className="w-full h-full object-cover "
+            className="w-full h-full object-cover xl:h-[40rem]"
+            id='login'
           />
         </div>
 
         {/* Login Details Section */}
-        <div className="md:w-1/2 w-full bg-white p-12 flex flex-col justify-center">
+        <div className="md:w-1/2 w-full bg-white p-8 flex flex-col justify-center">
           <h2 className="text-4xl font-bold text-[#4E342E] mb-8 text-center">Welcome Back</h2>
 
           {/* Social Login Options */}
@@ -61,7 +62,7 @@ const Login = () => {
             />
 
             <div className="flex justify-between items-center">
-              <label className="flex items-center">
+              <label className="flex items-center select-none">
                 <input
                   required
                   type="checkbox"

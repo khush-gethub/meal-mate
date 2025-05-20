@@ -1,17 +1,91 @@
 <!doctype html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>MealMate</title>
-    <style>
-      body{
-        background-color: #FFF6F0;
-      }
-    </style>
-  </head>
-  <body>
-    <div id="root"></div>
-    <script type="module" src="/src/main.jsx"></script>
-  </body>
+
+<head>
+  <!-- Essential Meta Tags for SEO -->
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+
+  <!-- Primary Meta Tags -->
+  <meta name="title" content="MealMate - Discover Delicious Recipes" />
+  <meta name="description"
+    content="MealMate: Your ultimate recipe companion. Discover delicious recipes, cooking tips, and culinary inspiration for every meal." />
+  <meta name="keywords" content="recipes, cooking, food, meal planning, culinary, recipe hub" />
+  <meta name="author" content="Khush@Dev" />
+
+  <!-- Color Theme Meta Tags -->
+  <meta name="theme-color" content="#FFA94D" />
+  <meta name="msapplication-TileColor" content="#FFA94D" />
+
+  <!-- Apple Specific Meta Tags for Colors -->
+  <meta name="apple-mobile-web-app-capable" content="yes" />
+  <meta name="apple-mobile-web-app-status-bar-style" content="default" />
+  <meta name="apple-mobile-web-app-title" content="MealMate" />
+
+  <!-- Open Graph / Facebook Meta Tags -->
+  <meta property="og:type" content="website" />
+  <meta property="og:url" content="https://www.mealmate.com" />
+  <meta property="og:title" content="MealMate - Discover Delicious Recipes" />
+  <meta property="og:description"
+    content="Explore a world of culinary delights with MealMate. Find easy-to-follow recipes for every taste and occasion." />
+  <meta property="og:image" content="/public/mealmate-logo.png" />
+
+  <!-- Colors for Open Graph -->
+  <meta property="og:color" content="#FFA94D" />
+
+  <!-- Professional Profiles -->
+  <meta name="github:profile" content="https://github.com/khush-gethub" />
+
+  <!-- Twitter Card Meta Tags -->
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="MealMate - Discover Delicious Recipes" />
+  <meta name="twitter:description"
+    content="Explore a world of culinary delights with MealMate. Find easy-to-follow recipes for every taste and occasion." />
+  <meta name="twitter:image" content="/public/mealmate-logo.png" />
+
+  <!-- Web App Capabilities -->
+  <meta name="mobile-web-app-capable" content="yes" />
+  <link rel="manifest" href="/manifest.json" />
+
+  <!-- Favicon and App Icons -->
+  <link rel="icon" type="image/png" href="/public/mealmate-logo.jpeg" />
+  <link rel="apple-touch-icon" href="/public/mealmate-logo.jpeg" />
+
+  <!-- Performance Optimization -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+
+  <!-- Critical CSS Inline -->
+  <style>
+
+    body {
+      background-color: #FFF6F0;
+      font-display: swap;
+      scroll-behavior: smooth;
+    }
+
+    #root {
+      min-height: 100vh;
+      display: flex;
+      flex-direction: column;
+    }
+  </style>
+
+  <!-- Canonical URL for SEO -->
+  <link rel="canonical" href="https://www.mealmate.com" />
+
+  <!-- Accessibility and Performance -->
+  <title>MealMate - Discover Delicious Recipes</title>
+
+  <!-- Preload Critical Assets -->
+  <link rel="preload" href="/src/main.jsx" as="script" />
+</head>
+
+<body>
+  <div id="root"></div>
+
+  <!-- Performance Optimization: Defer Script Loading -->
+  <script type="module" src="/src/main.jsx" defer async></script>
+</body>
+
 </html>

@@ -4,7 +4,7 @@ import Facebook from '../assets/facebook.png';
 
 const Signup = () => {
     return (
-        <div className="min-h-screen flex items-center justify-center bg-[#F5F5F5] p-4">
+        <div className="min-h-screen flex items-center justify-center bg-[#F5F5F5] p-4 xl:h-[36rem]">
             <div className="w-full max-w-md bg-white rounded-xl shadow-2xl p-8">
                 <h2 className="text-3xl font-bold text-center mb-6 text-[#4E342E]">
                     Create Your Account or Join Cookings Today!
@@ -79,12 +79,12 @@ const Signup = () => {
 
                     {/* Terms and Conditions Checkbox */}
                     <div className="flex items-center">
-                        <input
-                            required
-                            type="checkbox"
-                            className="mr-2"
-                        />
-                        <label className="text-sm">
+                        <label className="text-sm select-none flex items-center">
+                            <input
+                                required
+                                type="checkbox"
+                                className="mr-2"
+                            />
                             I agree to the Terms & Conditions
                         </label>
                     </div>

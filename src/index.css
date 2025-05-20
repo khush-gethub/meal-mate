@@ -40,14 +40,18 @@
     opacity: 0.8;
 }
 
-@keyframes textReveal {
-    from {
-        opacity: 0;
-        transform: translateY(20px);
-    }
+svg {
+  transition: fill 0.3s ease, stroke 0.3s ease;
+}
 
-    to {
-        opacity: 1;
-        transform: translateY(0);
+/* @media screen and (max-width: 1500px) {
+    #login {
+        height: 50rem;
+    }
+} */
+
+@media screen and (min-width: 1549px) {
+    #login {
+        height: 50rem; /* Adjust as needed */
     }
 }

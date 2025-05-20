@@ -10,26 +10,28 @@ import Recipeimage from './components/Recipeimage'
 import ErrorPage from './Pages/ErrorPage'
 import Recipedata from './components/recipedata'
 import { LikeProvider } from './context/LikeContext'
+import FavoriteRecipePage from './Pages/FavoriteRecipePage'
 
 const App = () => {
   return (
     <>
-      <BrowserRouter>
-        <LikeProvider>
+      <LikeProvider>
+        <BrowserRouter>
           <Routes>
             <Route path='/' element={<Home />} />
             <Route path="/menu/:category" element={<DisplayData />} />
-            <Route path='/Recipe' element={<Recipe />} />
-            <Route path='/About' element={<About />} />
-            <Route path='/Login' element={<Login />} />
-            <Route path='/Signup' element={<Signup />} />
-            <Route path='/Recipeimage' element={<Recipeimage />} />
+            <Route path='/recipe' element={<Recipe />} />
+            <Route path='/about' element={<About />} />
+            <Route path='/login' element={<Login />} />
+            <Route path='/signup' element={<Signup />} />
+            <Route path='/recipeimage' element={<Recipeimage />} />
             <Route path="/recipe/:id" element={<Recipeimage />} />
             <Route path="/recipe/:category/:id" element={<Recipedata />} />
+            <Route path='/favorite' element={<FavoriteRecipePage />} />
             <Route path="*" element={<ErrorPage />} />
           </Routes>
-        </LikeProvider>
-      </BrowserRouter>
+        </BrowserRouter>
+      </LikeProvider>
     </>
   )
 }

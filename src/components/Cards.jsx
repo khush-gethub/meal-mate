@@ -1,16 +1,16 @@
 import React, { useContext } from 'react'
 import { Link } from 'react-router-dom'
 import rdata from '../Data/recipe-data.json'
-import { LikeContext } from '../context/LikeContext' // Import the likeContext
+import LikeContext from '../context/LikeContext'
 
 const Cards = () => {
-    const { likedCards, addLike, removeLike } = useContext(LikeContext) // Destructure context values
+    const { likedCards, addLike, removeLike } = useContext(LikeContext)
 
     const handleLikeToggle = (id) => {
         if (likedCards.includes(id)) {
-            removeLike(id) // Remove like if already liked
+            removeLike(id)
         } else {
-            addLike(id) // Add like if not liked
+            addLike(id)
         }
     }
 
@@ -47,12 +47,11 @@ const Cards = () => {
                                 <div className="flex justify-end">
                                     <label
                                         className="cursor-pointer relative"
-                                        onClick={() => handleLikeToggle(food.id)} // Toggle like on click
+                                        onClick={() => handleLikeToggle(food.id)}
                                     >
                                         <svg
-                                            className={`w-6 h-6 fill-transparent stroke-[#FFA94D] ${
-                                                likedCards.includes(food.id) ? 'fill-[#FFA94D]' : ''
-                                            } transition duration-200`}
+                                            className={`w-6 h-6 fill-transparent stroke-[#FFA94D] ${likedCards.includes(food.id) ? 'fill-[#FFA94D]' : ''
+                                                } transition duration-200`}
                                             viewBox="0 0 24 24"
                                         >
                                             <path

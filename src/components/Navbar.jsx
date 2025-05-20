@@ -18,13 +18,13 @@ const Navbar = () => {
         <div className="bg-[#FFA94D] text-[#4E342E] px-5 py-5 relative z-20">
             <div className="flex justify-between items-center">
                 {/* Logo */}
-                <div className="text-4xl lobster">MealMate</div>
+                <Link to="/" className="text-4xl lobster">MealMate</Link>
 
                 {/* Hamburger Icon */}
                 <div className="md:hidden">
                     <button
                         onClick={() => setMobileOpen(!mobileOpen)}
-                        className="focus:outline-none ms-28"
+                        className="focus:outline-none ms-44"
                     >
                         {mobileOpen ? (
                             <svg className="w-6 h-6 " fill="none" stroke="currentColor" strokeWidth="2" viewBox="0 0 24 24">
@@ -44,7 +44,7 @@ const Navbar = () => {
 
                     <Menu>
                         <MenuHandler>
-                            <Button variant="text" className="text-md text-[#4E342E] flex items-center gap-1">
+                            <Button variant="text" className="text-md text-[#4E342E] flex items-center gap-1 p-0">
                                 Meal
                                 <svg xmlns="http://www.w3.org/2000/svg" fill="currentColor" className="size-5">
                                     <path fillRule="evenodd" d="M12.53 16.28a.75.75 0 0 1-1.06 0l-7.5-7.5a.75.75 0 0 1 1.06-1.06L12 14.69l6.97-6.97a.75.75 0 1 1 1.06 1.06l-7.5 7.5Z" clipRule="evenodd" />
@@ -71,12 +71,13 @@ const Navbar = () => {
                         </MenuList>
                     </Menu>
 
-                    <Link to="/Recipe">Recipe</Link>
-                    <Link to="/About">About</Link>
+                    <Link to="/recipe">Recipe</Link>
+                    <Link to="/favorite">Favorite</Link>
+                    <Link to="/about">About</Link>
                 </div>
 
                 {/* Desktop Login Button */}
-                <Link to="/Login">
+                <Link to="/login">
                     <button className="hidden md:block px-6 py-2 text-[1.2rem] bg-[#FFF3C4] rounded-lg hover:bg-[#ffeaa0] transition">
                         Login
                     </button>
@@ -126,10 +127,13 @@ const Navbar = () => {
                         </div>
 
                         <Link to="/recipe">Recipe</Link>
+                        <Link to="/favorite">Favorite</Link>
                         <Link to="/about">About</Link>
-                        <button className="w-full px-5 py-1 bg-[#FFF3C4] rounded hover:bg-[#ffeaa0] transition">
-                            Login
-                        </button>
+                        <Link to="/login">
+                            <button className="w-full px-5 py-1 bg-[#FFF3C4] rounded hover:bg-[#ffeaa0] transition">
+                                Login
+                            </button>
+                        </Link>
                     </motion.div>
                 )}
             </AnimatePresence>
