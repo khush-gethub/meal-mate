@@ -8,7 +8,7 @@ import Login from './components/Login'
 import Signup from './components/Signup'
 import Recipeimage from './components/Recipeimage'
 import ErrorPage from './Pages/ErrorPage'
-import Recipedata from './components/recipedata'
+import Recipedata from './components/Recipedata'
 import { LikeProvider } from './context/LikeContext'
 import FavoriteRecipePage from './Pages/FavoriteRecipePage'
 
