@@ -1,6 +1,6 @@
 import React from 'react'
 import Home from './Pages/Home'
-import { BrowserRouter, Route, Routes } from 'react-router-dom'
+import { HashRouter, Route, Routes } from 'react-router-dom'
 import Recipe from './Pages/Recipe'
 import About from './Pages/About'
 import DisplayData from './components/DisplayData'
@@ -16,7 +16,7 @@ const App = () => {
   return (
     <>
       <LikeProvider>
-        <BrowserRouter>
+        <HashRouter>
           <Routes>
             <Route path='/' element={<Home />} />
             <Route path="/menu/:category" element={<DisplayData />} />
@@ -30,7 +30,7 @@ const App = () => {
             <Route path='/favorite' element={<FavoriteRecipePage />} />
             <Route path="*" element={<ErrorPage />} />
           </Routes>
-        </BrowserRouter>
+        </HashRouter>
       </LikeProvider>
     </>
   )
