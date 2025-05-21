@@ -1,6 +1,7 @@
 import React from 'react';
 import Google from '../assets/google.png';
 import Facebook from '../assets/facebook.png';
+import { Link } from 'react-router-dom';
 
 const Signup = () => {
     return (
@@ -101,9 +102,9 @@ const Signup = () => {
                 {/* Login Link */}
                 <div className="text-center mt-4">
                     Already have an account?{' '}
-                    <a href="/login" className="text-[#4E342E] hover:underline">
+                    <Link href="/login" className="text-[#4E342E] hover:underline">
                         Login
-                    </a>
+                    </Link>
                 </div>
             </div>
         </div>
