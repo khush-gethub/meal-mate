@@ -40,51 +40,49 @@ const DisplayData = () => {
                 <div className="mb-6">
                     <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 px-4 md:px-10 md:mx-30">
                         {data.map((food, index) => (
-                            <div
-                                className="w-full p-6 rounded-md shadow-md dark:bg-gray-50 dark:text-gray-900 recipe-card"
-                                key={index}
+                            <Link to={`/recipe/:category/:id${food.id}`}
+                                state={{ recipe: food }}
                             >
-                                <div className="recipe-image">
-                                    <img
-                                        src={food.image}
-                                        alt=""
-                                        className="object-cover object-center w-full rounded-md h-72 dark:bg-gray-500"
-                                    />
-                                </div>
-                                <div className="mt-6 mb-2">
-                                    <h2 className="text-xl font-semibold tracking-wide">
-                                        <Link
-                                            to={`/recipe/:category/:id${food.id}`}
-                                            state={{ recipe: food }}
-                                            className="hover:text-orange-600 transition-colors"
-                                        >
+                                <div
+                                    className="w-full p-6 rounded-md shadow-md dark:bg-gray-50 dark:text-gray-900 recipe-card"
+                                    key={index}
+                                >
+                                    <div className="recipe-image">
+                                        <img
+                                            src={food.image}
+                                            alt=""
+                                            className="object-cover object-center w-full rounded-md h-72 dark:bg-gray-500"
+                                        />
+                                    </div>
+                                    <div className="mt-6 mb-2">
+                                        <h2 className="text-xl font-semibold tracking-wide">
                                             {food.title}
-                                        </Link>
-                                    </h2>
-                                </div>
-                                <p className="dark:text-gray-800">
-                                    {food.description}
-                                </p>
-                                <div className="flex justify-end">
-                                    <label
-                                        className="cursor-pointer relative"
-                                        onClick={() => handleLikeToggle(food.id)}
-                                    >
-                                        <svg
-                                            className={`w-6 h-6 fill-transparent stroke-[#FFA94D] ${likedCards.includes(food.id) ? 'fill-[#FFA94D]' : ''
-                                                } transition duration-200`}
-                                            viewBox="0 0 24 24"
+                                        </h2>
+                                    </div>
+                                    <p className="dark:text-gray-800">
+                                        {food.description}
+                                    </p>
+                                    <div className="flex justify-end">
+                                        <label
+                                            className="cursor-pointer relative"
+                                            onClick={() => handleLikeToggle(food.id)}
                                         >
-                                            <path
-                                                d="M12 21C12 21 4 13.5455 4 8.72727C4 6.10048 6.01472 4 8.5 4C10.0706 4 11.5 5.09091 12 6.18182C12.5 5.09091 13.9294 4 15.5 4C17.9853 4 20 6.10048 20 8.72727C20 13.5455 12 21 12 21Z"
-                                                strokeWidth="2"
-                                                strokeLinecap="round"
-                                                strokeLinejoin="round"
-                                            />
-                                        </svg>
-                                    </label>
+                                            <svg
+                                                className={`w-6 h-6 fill-transparent stroke-[#FFA94D] ${likedCards.includes(food.id) ? 'fill-[#FFA94D]' : ''
+                                                    } transition duration-200`}
+                                                viewBox="0 0 24 24"
+                                            >
+                                                <path
+                                                    d="M12 21C12 21 4 13.5455 4 8.72727C4 6.10048 6.01472 4 8.5 4C10.0706 4 11.5 5.09091 12 6.18182C12.5 5.09091 13.9294 4 15.5 4C17.9853 4 20 6.10048 20 8.72727C20 13.5455 12 21 12 21Z"
+                                                    strokeWidth="2"
+                                                    strokeLinecap="round"
+                                                    strokeLinejoin="round"
+                                                />
+                                            </svg>
+                                        </label>
+                                    </div>
                                 </div>
-                            </div>
+                            </Link>
                         ))}
                     </div>
                 </div>
