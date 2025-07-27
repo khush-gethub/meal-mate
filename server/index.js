@@ -1,36 +1,68 @@
-const mongoose = require('mongoose')
-const express = require('express')
-const cors = require('cors')
-
+const express = require('express');
+const cors = require('cors');
+const mongoose = require('mongoose');
 
 const app = express();
+
 app.use(cors());
 app.use(express.json());
 
-mongoose.connect('mongodb://127.0.0.1:27018/recipe-database');
-
-const { VegetarianRecipe,SeafoodRecipe,DessertRecipe,ChickenRecipe } = require('./model/recipeSchema');
-
-app.get('/chicken', async (req,res) => {
-    const recipe = await ChickenRecipe.find();
-    res.json(recipe);
+mongoose.connect('mongodb://127.0.0.1:27018/recipe-database', {
+    useNewUrlParser: true,
+    useUnifiedTopology: true,
+}).then(() => {
+    console.log('Connected to MongoDB');
+}).catch(err => {
+    console.error('MongoDB connection error:', err);
 })
 
-app.get('/veg', async (req,res) => {
-    const recipe = await VegetarianRecipe.find();
-    res.json(recipe);
-})
+const { VegetarianRecipe, SeafoodRecipe, DessertRecipe, ChickenRecipe, General } = require('./Model/schema');
 
-app.get('/dessert', async (req,res) => {
-    const recipe = await DessertRecipe.find();
-    res.json(recipe);
-})
+app.get('/vegetarian', async (req, res) => {
+    try {
+        const recipes = await VegetarianRecipe.find();
+        res.json(recipes);
+    } catch (err) {
+        res.status(500).json({ message: err.message });
+    }
+});
 
-app.get('/seafood', async (req,res) => {
-    const recipe = await SeafoodRecipe.find();
-    res.json(recipe);
-})
+app.get('/seafood', async (req, res) => {
+    try {
+        const recipes = await SeafoodRecipe.find();
+        res.json(recipes);
+    } catch (err) {
+        res.status(500).json({ message: err.message });
+    }
+});
 
-app.listen(8000 , ()=>{
-    'the server is running'
-})
+app.get('/dessert', async (req, res) => {
+    try {
+        const recipes = await DessertRecipe.find();
+        res.json(recipes);
+    } catch (err) {
+        res.status(500).json({ message: err.message });
+    }
+});
+
+app.get('/chicken', async (req, res) => {
+    try {
+        const recipes = await ChickenRecipe.find();
+        res.json(recipes);
+    } catch (err) {
+        res.status(500).json({ message: err.message });
+    }
+});
+
+app.get('/general', async (req, res) => {
+    try {
+        const recipes = await General.find();
+        res.json(recipes);
+    } catch (err) {
+        res.status(500).json({ message: err.message });
+    }
+});
+
+app.listen(8000, () => {
+    console.log('Server is running on http://localhost:8000');
+});

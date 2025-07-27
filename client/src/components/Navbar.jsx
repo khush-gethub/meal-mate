@@ -57,7 +57,7 @@ const Navbar = () => {
                                 <span className="flex w-full h-[1px] bg-black opacity-25 my-1"></span>
                             </MenuItem>
                             <MenuItem>
-                                <Link to="/menu/veg">Veg</Link>
+                                <Link to="/menu/vegetarian">Veg</Link>
                                 <span className="flex w-full h-[1px] bg-black opacity-25 my-1"></span>
                             </MenuItem>
                             <MenuItem>

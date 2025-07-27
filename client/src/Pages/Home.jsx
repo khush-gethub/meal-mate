@@ -1,17 +1,18 @@
 import React from 'react'
 import Navbar from '../components/Navbar'
 import Hero from '../components/Hero'
-import Cards from '../components/Cards'
 import DessertHero from '../components/DessertHero'
 import Category from '../components/Category'
 import Footer from '../components/Footer'
+import GeneralData from '../components/GeneralData'
+
 
 const Home = () => {
     return (
         <>
             <Navbar />
             <Hero />
-            <Cards />
+            <GeneralData />
             <Category />
             <DessertHero />
             <Footer />

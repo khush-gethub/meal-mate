@@ -1,10 +1,12 @@
-import React, { useContext } from 'react'
+import React, { useContext, useEffect, useState } from 'react'
 import { Link } from 'react-router-dom'
-import rdata from '../Data/recipe-data.json'
+// import rdata from '../Data/recipe-data.json'
 import LikeContext from '../context/LikeContext'
+import axios from 'axios'
 
 const Cards = () => {
     const { likedCards, addLike, removeLike } = useContext(LikeContext)
+    const [recipes, setRecipes] = useState([]);
 
     const handleLikeToggle = (id) => {
         if (likedCards.includes(id)) {
@@ -14,6 +16,19 @@ const Cards = () => {
         }
     }
 
+     useEffect(() => {
+        const fetchRecipes = async () => {
+            try {
+                const response = await axios.get(`http://localhost:8000/general`);
+                setRecipes(response.data);
+            } catch (error) {
+                console.error(`Error fetching  recipes:`, error);
+            }
+        };
+
+        fetchRecipes();
+    }, []);
+
     return (
         <div className="p-4 md:px-42 bg-[#FFF6F0] text-[#4E342E] min-h-screen">
             <h1 className="text-4xl md:text-6xl font-semibold mb-8 font-poppins text-center md:text-left">
@@ -21,14 +36,14 @@ const Cards = () => {
             </h1>
 
             <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
-                {rdata.map((food, index) => (
+                {recipes.map((food, index) => (
 
                     <div
                         key={index}
                         className="bg-white rounded-lg shadow-md overflow-hidden hover:shadow-lg transition-shadow duration-300 recipe-card"
                     >
                         <div className="grid-span-8 select-none">
-                            <Link to={`/recipe/${food.id}`}>
+                            <Link to={`/recipe/${food.id}/general`} key={food._id}>
                                 <div className="recipe-image">
                                     <img
                                         src={food.image}

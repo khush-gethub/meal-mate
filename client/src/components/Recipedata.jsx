@@ -1,12 +1,27 @@
-import React from 'react'
-import { useParams, useLocation } from 'react-router-dom'
-import Navbar from './Navbar'
-import Footer from './Footer'
+import React, { useState, useEffect } from 'react';
+import { useParams } from 'react-router-dom';
+import axios from 'axios';
+import Navbar from './Navbar';
+import Footer from './Footer';
 
 const Recipedata = () => {
-    const { id } = useParams()
-    const { state } = useLocation()
-    const recipe = state?.recipe
+    const { id, type } = useParams();
+    const [recipe, setRecipe] = useState(null);
+
+    useEffect(() => {
+        const fetchRecipe = async () => {
+            try {
+                const response = await axios.get(`http://127.0.0.1:8000/${type}`);
+                const recipes = response.data;
+                const selectedRecipe = recipes.find(r => r._id === id);
+                setRecipe(selectedRecipe);
+            } catch (error) {
+                console.error('Error fetching recipe:', error);
+            }
+        };
+
+        fetchRecipe();
+    }, [id, type]);
 
     if (!recipe) {
         return (

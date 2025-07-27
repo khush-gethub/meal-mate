@@ -1,6 +1,5 @@
 import React from 'react'
 import { useParams } from 'react-router-dom'
-import recipeData from '../Data/recipe-data.json'
 import Navbar from './Navbar';
 import Footer from './Footer';
 

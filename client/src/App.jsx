@@ -5,8 +5,8 @@ import Recipe from './Pages/Recipe'
 import About from './Pages/About'
 import DisplayData from './components/DisplayData'
 import Login from './components/Login'
-import Recipeimage from './components/Recipeimage'
 import Signup from './components/Signup'
+import Recipeimage from './components/Recipeimage'
 import ErrorPage from './Pages/ErrorPage'
 import Recipedata from './components/Recipedata'
 import { LikeProvider } from './context/LikeContext'
@@ -26,7 +26,7 @@ const App = () => {
             <Route path='/signup' element={<Signup />} />
             <Route path='/recipeimage' element={<Recipeimage />} />
             <Route path="/recipe/:id" element={<Recipeimage />} />
-            <Route path="/recipe/:category/:id" element={<Recipedata />} />
+            <Route path="/recipe/:id/:type" element={<Recipedata />} />
             <Route path='/favorite' element={<FavoriteRecipePage />} />
             <Route path="*" element={<ErrorPage />} />
           </Routes>

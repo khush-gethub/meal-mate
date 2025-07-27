@@ -1,20 +1,48 @@
-import React, { useContext } from 'react'
-import { Link } from 'react-router-dom'
-import LikeContext from '../context/LikeContext'
-import chicken from '../Data/chickenRecipes.json'
-import seafood from '../Data/seafood-recipes.json'
-import veg from '../Data/vegetarian-recipes.json'
-import dessert from '../Data/dessert-recipes.json'
-import rdata from '../Data/recipe-data.json'
-import Navbar from '../components/Navbar'
-import Footer from '../components/Footer'
+import React, { useContext, useState, useEffect } from 'react';
+import { Link } from 'react-router-dom';
+import LikeContext from '../context/LikeContext';
+import Navbar from '../components/Navbar';
+import Footer from '../components/Footer';
+import axios from 'axios';
 
-const allData = [...chicken, ...seafood, ...veg, ...dessert, ...rdata]
+const FavoriteRecipePage = ({ type }) => {
+  const { likedCards, removeLike } = useContext(LikeContext);
+  const [favoriteRecipes, setFavoriteRecipes] = useState([]);
 
-const FavoriteRecipePage = () => {
-  const { likedCards, removeLike } = useContext(LikeContext)
+  useEffect(() => {
+    const fetchFavoriteRecipes = async () => {
+      try {
+        const [generalRes, chickenRes, vegRes, seafoodRes, dessertRes] = await Promise.all([
+          axios.get(`http://127.0.0.1:8000/general`),
+          axios.get(`http://127.0.0.1:8000/chicken`),
+          axios.get(`http://127.0.0.1:8000/vegetarian`),
+          axios.get(`http://127.0.0.1:8000/seafood`),
+          axios.get(`http://127.0.0.1:8000/dessert`),
+        ]);
 
-  const favoriteRecipes = allData.filter((recipe) => likedCards.includes(recipe.id))
+        const allData = [
+          ...(chickenRes.data.map(item => ({ ...item, type: 'chicken' })) || []),
+          ...(seafoodRes.data.map(item => ({ ...item, type: 'seafood' })) || []),
+          ...(vegRes.data.map(item => ({ ...item, type: 'vegetarian' })) || []),
+          ...(dessertRes.data.map(item => ({ ...item, type: 'dessert' })) || []),
+          ...(generalRes.data.map(item => ({ ...item, type: 'general' })) || []),
+        ];
+
+        const favoriteItems = allData.filter((recipe) =>
+          likedCards.includes(recipe.id)
+        );
+        setFavoriteRecipes(favoriteItems);
+      } catch (error) {
+        console.error("Error fetching favorite recipes:", error);
+      }
+    };
+
+    if (likedCards.length > 0) {
+      fetchFavoriteRecipes();
+    } else {
+      setFavoriteRecipes([]);
+    }
+  }, [likedCards]);
 
   return (
     <>
@@ -43,21 +71,22 @@ const FavoriteRecipePage = () => {
                 className="bg-white rounded-lg shadow-md overflow-hidden hover:shadow-lg transition-shadow duration-300 recipe-card"
               >
                 <div className="select-none">
-                  <div className="recipe-image">
-                    <img
-                      src={recipe.image}
-                      alt={recipe.title}
-                      className="w-full h-64 object-cover"
-                    />
-                  </div>
+                  <Link to={`/recipe/${recipe._id}/${recipe.type}`} key={recipe._id}
+                    className="hover:text-orange-600 transition-colors">
+                    <div className="recipe-image">
+
+                      <img
+                        src={recipe.image}
+                        alt={recipe.title}
+                        className="w-full h-64 object-cover"
+                      />
+                    </div>
+
+                  </Link>
                   <div className="p-6">
                     <h2 className="text-2xl font-bold mb-2">
-                      <Link
-                        to={`/recipe/${recipe.id}`}
-                        className="hover:text-orange-600 transition-colors"
-                      >
-                        {recipe.title}
-                      </Link>
+
+                      {recipe.title}
                     </h2>
                     <p className="text-gray-700">{recipe.description}</p>
                     <div className="flex justify-end">

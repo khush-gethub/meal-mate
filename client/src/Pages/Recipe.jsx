@@ -1,9 +1,10 @@
 import React from 'react'
 import Navbar from '../components/Navbar'
 import BackgroundCarousel from '../components/BackgroundCarousel'
-import Cards from '../components/Cards'
 import Footer from '../components/Footer'
 import Higthretting from '../components/Higthretting'
+import GeneralData from '../components/GeneralData'
+
 
 
 const Recipe = () => {
@@ -11,7 +12,7 @@ const Recipe = () => {
         <>
             <Navbar/>
             <BackgroundCarousel/>
-            <Cards/>
+            <GeneralData/>
             <Higthretting/>
             <Footer/>
         </>
