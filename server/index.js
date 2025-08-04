@@ -1,6 +1,7 @@
 const express = require('express');
 const cors = require('cors');
 const mongoose = require('mongoose');
+const userModule = require('./Model/userSchema')
 
 const app = express();
 
@@ -61,6 +62,12 @@ app.get('/general', async (req, res) => {
     } catch (err) {
         res.status(500).json({ message: err.message });
     }
+});
+
+app.post('/Signup', async (req, res) => {
+    const { rname, email, password, conpass } = req.body;
+    const newUser = await userModule.create({ rname, email, password, conpass });
+    res.status(201).json(newUser);
 });
 
 app.listen(8000, () => {

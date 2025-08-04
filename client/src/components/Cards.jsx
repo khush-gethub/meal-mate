@@ -4,7 +4,7 @@ import { Link } from 'react-router-dom'
 import LikeContext from '../context/LikeContext'
 import axios from 'axios'
 
-const Cards = () => {
+const Cards = ({type}) => {
     const { likedCards, addLike, removeLike } = useContext(LikeContext)
     const [recipes, setRecipes] = useState([]);
 
@@ -19,7 +19,7 @@ const Cards = () => {
      useEffect(() => {
         const fetchRecipes = async () => {
             try {
-                const response = await axios.get(`http://localhost:8000/general`);
+                const response = await axios.get(`http://localhost:8000/${type}`);
                 setRecipes(response.data);
             } catch (error) {
                 console.error(`Error fetching  recipes:`, error);
@@ -43,7 +43,7 @@ const Cards = () => {
                         className="bg-white rounded-lg shadow-md overflow-hidden hover:shadow-lg transition-shadow duration-300 recipe-card"
                     >
                         <div className="grid-span-8 select-none">
-                            <Link to={`/recipe/${food.id}/general`} key={food._id}>
+                            <Link to={`/recipe/${food._id}/${type}`} key={food._id}>
                                 <div className="recipe-image">
                                     <img
                                         src={food.image}

@@ -36,12 +36,13 @@ const GeneralData = () => {
 
             <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
                 {recipes.map((food, index) => (
-                    <Link to={`/recipe/${food._id}/general`} key={food._id}>
+                   
                         <div
                             key={index}
                             className="bg-white rounded-lg shadow-md overflow-hidden hover:shadow-lg transition-shadow duration-300 recipe-card"
                         >
                             <div className="grid-span-8 select-none">
+                                 <Link to={`/recipe/${food._id}/general`} key={food._id}>
                                 <div className="recipe-image">
                                     <img
                                         src={food.image}
@@ -49,6 +50,7 @@ const GeneralData = () => {
                                         className="w-full h-64 object-cover"
                                     />
                                 </div>
+                                </Link>
                                 <div className="p-6">
                                     <h2 className="text-2xl font-bold mb-2">
 
@@ -78,7 +80,6 @@ const GeneralData = () => {
                                 </div>
                             </div>
                         </div>
-                    </Link>
                 ))}
             </div>
         </div>

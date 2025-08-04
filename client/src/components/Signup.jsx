@@ -1,9 +1,30 @@
-import React from 'react';
-import Google from '../assets/google.png';
-import Facebook from '../assets/facebook.png';
+import axios from 'axios';
+import React, { useState } from 'react';
 import { Link } from 'react-router-dom';
 
 const Signup = () => {
+
+    const [formData, setFormData] = useState({
+        rname: '',
+        email: '',
+        password: '',
+        conpass: ''
+    });
+
+    const handleChange = (e) => {
+        setFormData(prev => ({
+            ...prev,
+            [e.target.name]: e.target.value
+        }));
+    };
+
+    const handleSubmit = async (e) => {
+        e.preventDefault();
+        const res = await axios.post('http://127.0.0.1:8000/Signup', formData);
+        console.log('Form Submitted:', res.data);
+        // You can handle API submission here
+    };
+
     return (
         <div className="min-h-screen flex items-center justify-center bg-[#F5F5F5] p-4 xl:h-[36rem]">
             <div className="w-full max-w-md bg-white rounded-xl shadow-2xl p-8">
@@ -12,20 +33,6 @@ const Signup = () => {
                 </h2>
 
                 {/* Google Signup Button */}
-                <div className="mb-6 flex gap-10">
-                    <button
-                        className="w-full flex items-center justify-center border rounded-lg py-2 hover:bg-gray-100 transition"
-                    >
-                        <img src={Google} alt="Google" className="w-6 h-6 mr-2" />
-                        Google
-                    </button>
-                    <button
-                        className="w-full flex items-center justify-center border rounded-lg py-2 hover:bg-gray-100 transition"
-                    >
-                        <img src={Facebook} alt="Google" className="w-6 h-6 mr-2" />
-                        Fackbook
-                    </button>
-                </div>
 
                 {/* Divider */}
                 <div className="flex items-center justify-center my-4">
@@ -34,12 +41,15 @@ const Signup = () => {
                     <hr className="border-t w-full ml-3" />
                 </div>
 
-                <form className="space-y-4">
+                <form className="space-y-4" onSubmit={handleSubmit}>
                     {/* Full Name Input */}
                     <input
                         required
                         type="text"
                         placeholder="Full Name"
+                        name='rname'
+                        value={formData.rname}
+                        onChange={handleChange}
                         className="w-full border rounded-lg px-4 py-2 focus:outline-none focus:ring-2 focus:ring-[#FFF3C4]"
                     />
 
@@ -47,7 +57,10 @@ const Signup = () => {
                     <input
                         required
                         type="email"
+                        name='email'
+                        value={formData.email}
                         placeholder="Email Address"
+                        onChange={handleChange}
                         className="w-full border rounded-lg px-4 py-2 focus:outline-none focus:ring-2 focus:ring-[#FFF3C4]"
                     />
 
@@ -55,7 +68,10 @@ const Signup = () => {
                     <input
                         required
                         type="password"
+                        name='password'
+                        value={formData.password}
                         placeholder="Password"
+                        onChange={handleChange}
                         className="w-full border rounded-lg px-4 py-2 focus:outline-none focus:ring-2 focus:ring-[#FFF3C4]"
                     />
 
@@ -64,6 +80,9 @@ const Signup = () => {
                         required
                         type="password"
                         placeholder="Confirm Password"
+                        onChange={handleChange}
+                        name='conpass'
+                        value={formData.conpass}
                         className="w-full border rounded-lg px-4 py-2 focus:outline-none focus:ring-2 focus:ring-[#FFF3C4]"
                     />
 

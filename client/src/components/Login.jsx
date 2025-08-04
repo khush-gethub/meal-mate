@@ -22,21 +22,11 @@ const Login = () => {
           <h2 className="text-4xl font-bold text-[#4E342E] mb-8 text-center">Welcome Back</h2>
 
           {/* Social Login Options */}
-          <div className="flex justify-center space-x-4 mb-6">
-            <button className="flex items-center border rounded-lg px-4 py-2 hover:bg-gray-100 transition">
-              <img src={Google} alt="Google" className="w-6 h-6 mr-2" />
-              Google
-            </button>
-            <button className="flex items-center border rounded-lg px-4 py-2 hover:bg-gray-100 transition">
-              <img src={Facebook} alt="Facebook" className="w-6 h-6 mr-2" />
-              Facebook
-            </button>
-          </div>
 
           {/* Divider */}
           <div className="flex items-center justify-center my-4">
             <hr className="border-t w-full mr-3" />
-            <span className="text-gray-500">or</span>
+            <span className="text-gray-500"></span>
             <hr className="border-t w-full ml-3" />
           </div>
 
@@ -48,12 +38,7 @@ const Login = () => {
               placeholder="Username"
               className="w-full border rounded-lg px-4 py-2 focus:outline-none focus:ring-2 focus:ring-[#FFF3C4]"
             />
-            <input
-              required
-              type="email"
-              placeholder="Email Address"
-              className="w-full border rounded-lg px-4 py-2 focus:outline-none focus:ring-2 focus:ring-[#FFF3C4]"
-            />
+            
             <input
               required
               type="password"
