@@ -1,9 +1,26 @@
-import React from 'react';
-import Facebook from '../assets/facebook.png';
-import Google from '../assets/google.png';
-import { Link } from 'react-router-dom';
+import React, { useState } from 'react';
+import { Link, useNavigate } from 'react-router-dom';
+import axios from 'axios';
 
 const Login = () => {
+  const [email, setEmail] = useState('');
+  const [password, setPassword] = useState('');
+  const navigate = useNavigate();
+
+  const handleSubmit = async (e) => {
+    e.preventDefault();
+    try {
+      const response = await axios.post('http://localhost:8000/login', { email, password });
+      if (response.data.success) {
+        navigate('/');
+      } else {
+        navigate('/signup');
+      }
+    } catch (error) {
+      console.error('Login error:', error);
+    }
+  };
+
   return (
     <div className="flex justify-center items-center min-h-screen bg-[#F5F5F5] mx-6">
       <div className="flex md:w-[1100px] shadow-2xl rounded-2xl overflow-hidden w-full">
@@ -21,8 +38,6 @@ const Login = () => {
         <div className="md:w-1/2 w-full bg-white p-8 flex flex-col justify-center">
           <h2 className="text-4xl font-bold text-[#4E342E] mb-8 text-center">Welcome Back</h2>
 
-          {/* Social Login Options */}
-
           {/* Divider */}
           <div className="flex items-center justify-center my-4">
             <hr className="border-t w-full mr-3" />
@@ -31,12 +46,14 @@ const Login = () => {
           </div>
 
           {/* Login Form */}
-          <form className="space-y-4">
+          <form className="space-y-4" onSubmit={handleSubmit}>
             <input
               required
-              type="text"
-              placeholder="Username"
+              type="email"
+              placeholder="Email"
               className="w-full border rounded-lg px-4 py-2 focus:outline-none focus:ring-2 focus:ring-[#FFF3C4]"
+              value={email}
+              onChange={(e) => setEmail(e.target.value)}
             />
             
             <input
@@ -44,12 +61,13 @@ const Login = () => {
               type="password"
               placeholder="Password"
               className="w-full border rounded-lg px-4 py-2 focus:outline-none focus:ring-2 focus:ring-[#FFF3C4]"
+              value={password}
+              onChange={(e) => setPassword(e.target.value)}
             />
 
             <div className="flex justify-between items-center">
               <label className="flex items-center select-none">
                 <input
-                  required
                   type="checkbox"
                   className="mr-2"
                 />
@@ -59,6 +77,7 @@ const Login = () => {
             </div>
 
             <button
+              type="submit"
               className="w-full bg-[#FFF3C4] hover:bg-[#FFE082] transition rounded-lg py-3 font-semibold"
             >
               Login

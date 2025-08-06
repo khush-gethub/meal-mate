@@ -65,9 +65,23 @@ app.get('/general', async (req, res) => {
 });
 
 app.post('/Signup', async (req, res) => {
-    const { rname, email, password, conpass } = req.body;
-    const newUser = await userModule.create({ rname, email, password, conpass });
+    const { rname, email, password, conformPassword } = req.body;
+    const newUser = await userModule.create({ rname, email, password, conformPassword });
     res.status(201).json(newUser);
+});
+
+app.post('/login', async (req, res) => {
+    const { email, password } = req.body;
+    try {
+        const user = await userModule.findOne({ email, password });
+        if (user) {
+            res.json({ success: true, message: 'Login successful' });
+        } else {
+            res.json({ success: false, message: 'Invalid credentials' });
+        }
+    } catch (error) {
+        res.status(500).json({ success: false, message: 'Server error' });
+    }
 });
 
 app.listen(8000, () => {

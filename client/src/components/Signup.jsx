@@ -1,14 +1,14 @@
 import axios from 'axios';
 import React, { useState } from 'react';
-import { Link } from 'react-router-dom';
+import { Link, useNavigate } from 'react-router-dom';
 
 const Signup = () => {
-
+    const navigate = useNavigate();
     const [formData, setFormData] = useState({
         rname: '',
         email: '',
         password: '',
-        conpass: ''
+        conformPassword: ''
     });
 
     const handleChange = (e) => {
@@ -20,9 +20,15 @@ const Signup = () => {
 
     const handleSubmit = async (e) => {
         e.preventDefault();
-        const res = await axios.post('http://127.0.0.1:8000/Signup', formData);
-        console.log('Form Submitted:', res.data);
-        // You can handle API submission here
+        try {
+            const res = await axios.post('http://127.0.0.1:8000/Signup', formData);
+            console.log('Form Submitted:', res.data);
+            if (res.status === 201) {
+                navigate('/login');
+            }
+        } catch (error) {
+            console.error("Signup failed:", error);
+        }
     };
 
     return (
@@ -81,8 +87,8 @@ const Signup = () => {
                         type="password"
                         placeholder="Confirm Password"
                         onChange={handleChange}
-                        name='conpass'
-                        value={formData.conpass}
+                        name='conformPassword'
+                        value={formData.conformPassword}
                         className="w-full border rounded-lg px-4 py-2 focus:outline-none focus:ring-2 focus:ring-[#FFF3C4]"
                     />
 

@@ -43,7 +43,7 @@ const Cards = ({type}) => {
                         className="bg-white rounded-lg shadow-md overflow-hidden hover:shadow-lg transition-shadow duration-300 recipe-card"
                     >
                         <div className="grid-span-8 select-none">
-                            <Link to={`/recipe/${food._id}/${type}`} key={food._id}>
+                            <Link to={`/recipe/${food.id}/${type}`} key={food._id}>
                                 <div className="recipe-image">
                                     <img
                                         src={food.image}
