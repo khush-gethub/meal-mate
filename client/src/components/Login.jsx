@@ -17,6 +17,7 @@ const Login = () => {
       const response = await axios.post('http://localhost:8000/login', { email, password });
       if (response.data.success) {
         login({ role: response.data.role }); // Call login from AuthContext
+        alert('Login successful!');
         navigate('/');
       } else {
         setErrorMessage(response.data.message || 'Login failed. Please check your credentials.'); // Set error message

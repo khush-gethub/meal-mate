@@ -1,4 +1,5 @@
 import React from 'react'
+import { Link } from 'react-router-dom'
 
 const Hero = () => {
     return (
@@ -17,7 +18,7 @@ const Hero = () => {
                                    font-poppins font-semibold 
                                    text-[#4E342E] 
                                    mb-4 md:mb-6 lg:mb-2">
-                        The Title Recipe
+                        The Top Recipe
                     </h1>
                     <p className="text-base sm:text-lg md:text-xl lg:text-xl 
                                   text-[#4E342E] 
@@ -32,7 +33,7 @@ const Hero = () => {
                                            px-6 sm:px-8 md:px-10 
                                            py-2 sm:py-3 
                                            text-base sm:text-xl md:text-xl">
-                            <a href="./Recipe">Get Recipes</a>
+                            <Link to="./Recipe">Get Recipes</Link>
                         </button>
                     </div>
                 </div>
