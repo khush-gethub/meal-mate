@@ -1,0 +1,37 @@
+[{
+  "_id": {
+    "$oid": "68b09d3088e10ed6067c23cf"
+  },
+  "title": "Spinach and Feta Stuffed Mushroom",
+  "image": "https://www.appetizeraddiction.com/wp-content/uploads/2018/11/spinach-feta-stuffed-mushrooms-picture.jpg",
+  "description": "A delicious and easy vegetarian appetizer.",
+  "ingredients": [
+    "12 large cremini mushrooms",
+    "1 tbsp olive oil",
+    "1/2 cup chopped onion",
+    "2 cloves garlic",
+    "minced",
+    "5 oz fresh spinach",
+    "4 oz crumbled feta cheese",
+    "1/4 cup breadcrumbs",
+    "1/4 cup grated Parmesan cheese",
+    "Salt and pepper to taste"
+  ],
+  "steps": [
+    "Preheat oven to 375°F (190°C).",
+    "Gently clean mushrooms and remove stems.",
+    "Chop mushroom stems and set aside.",
+    "In a large skillet",
+    "heat olive oil over medium heat.",
+    "Add onion and chopped mushroom stems and cook until softened.",
+    "Add garlic and cook for 1 minute more.",
+    "Add spinach and cook until wilted.",
+    "Remove from heat and stir in feta cheese",
+    "breadcrumbs",
+    "and Parmesan cheese.",
+    "Season with salt and pepper to taste.",
+    "Fill mushroom caps with the spinach mixture.",
+    "Bake for 15-20 minutes",
+    "or until mushrooms are tender and filling is golden brown."
+  ]
+}]

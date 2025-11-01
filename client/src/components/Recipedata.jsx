@@ -13,7 +13,7 @@ const Recipedata = () => {
             try {
                 const response = await axios.get(`http://127.0.0.1:8000/${type}`);
                 const recipes = response.data;
-                const selectedRecipe = recipes.find(r => r._id === id);
+                const selectedRecipe = recipes.find(r => r.id === id);
                 setRecipe(selectedRecipe);
             } catch (error) {
                 console.error('Error fetching recipe:', error);

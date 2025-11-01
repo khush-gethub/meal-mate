@@ -1,0 +1,1 @@
+scan the project and write all tables with all field or document of this project.

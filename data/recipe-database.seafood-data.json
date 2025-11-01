@@ -1,0 +1,35 @@
+[{
+  "_id": {
+    "$oid": "68b09d1e88e10ed6067c23c9"
+  },
+  "title": "Garlic Shrimp Scampi",
+  "image": "https://cafedelites.com/wp-content/uploads/2018/03/Garlic-Butter-Shrimp-IMAGE-15.jpg",
+  "description": "A classic and flavorful seafood dish.",
+  "ingredients": [
+    "1 lb large shrimp",
+    "peeled and deveined",
+    "1/4 cup butter",
+    "4 cloves garlic",
+    "minced",
+    "1/2 cup dry white wine",
+    "1/4 cup chopped fresh parsley",
+    "1/2 tsp red pepper flakes",
+    "Salt and pepper to taste",
+    "Cooked pasta",
+    "for serving"
+  ],
+  "steps": [
+    "In a large skillet",
+    "melt butter over medium-high heat.",
+    "Add garlic and red pepper flakes and cook for 1 minute until fragrant.",
+    "Add shrimp and cook for 2-3 minutes per side",
+    "until pink and cooked through.",
+    "Remove shrimp from skillet and set aside.",
+    "Pour white wine into the skillet and bring to a simmer.",
+    "Cook for 2-3 minutes",
+    "until the wine has reduced by about half.",
+    "Stir in parsley and season with salt and pepper to taste.",
+    "Return the shrimp to the skillet and toss to combine.",
+    "Serve immediately over cooked pasta."
+  ]
+}]

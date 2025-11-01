@@ -1,6 +1,7 @@
 import axios from 'axios';
 import React, { useState } from 'react';
 import { Link, useNavigate } from 'react-router-dom';
+import Popup from './Popup';
 
 const Signup = () => {
     const navigate = useNavigate();
@@ -10,6 +11,8 @@ const Signup = () => {
         password: '',
         conformPassword: ''
     });
+    const [popupMessage, setPopupMessage] = useState(null);
+    const [popupType, setPopupType] = useState(null);
 
     const handleChange = (e) => {
         setFormData(prev => ({
@@ -21,14 +24,25 @@ const Signup = () => {
     const handleSubmit = async (e) => {
         e.preventDefault();
         try {
-            const res = await axios.post('http://127.0.0.1:8000/Signup', formData);
+            const res = await axios.post('http://127.0.0.1:8000/register', formData, { withCredentials: true });
             console.log('Form Submitted:', res.data);
             if (res.status === 201) {
-                navigate('/login');
+                setPopupMessage('Registration successful!');
+                setPopupType('success');
+                setTimeout(() => {
+                    navigate('/login');
+                }, 2000);
             }
         } catch (error) {
             console.error("Signup failed:", error);
+            setPopupMessage('Registration failed. Please try again.');
+            setPopupType('error');
         }
+    };
+
+    const handleClosePopup = () => {
+        setPopupMessage(null);
+        setPopupType(null);
     };
 
     return (
@@ -132,6 +146,7 @@ const Signup = () => {
                     </Link>
                 </div>
             </div>
+            <Popup message={popupMessage} type={popupType} onClose={handleClosePopup} />
         </div>
     );
 };

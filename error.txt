@@ -1,0 +1,1 @@
+App.jsx:16 Uncaught SyntaxError: The requested module '/src/components/AdminRoute.jsx?t=1756412497944' does not provide an export named 'default' (at App.jsx:16:8)

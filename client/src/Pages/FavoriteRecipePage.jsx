@@ -1,12 +1,17 @@
 import React, { useContext, useState, useEffect } from 'react';
-import { Link } from 'react-router-dom';
+import { Link, useNavigate } from 'react-router-dom';
 import LikeContext from '../context/LikeContext';
 import Navbar from '../components/Navbar';
 import Footer from '../components/Footer';
 import axios from 'axios';
+import { useAuth } from '../context/AuthContext';
+import { toast } from 'react-toastify';
+import 'react-toastify/dist/ReactToastify.css';
 
 const FavoriteRecipePage = ({ type }) => {
   const { likedCards, removeLike } = useContext(LikeContext);
+  const { user } = useAuth();
+  const navigate = useNavigate();
   const [favoriteRecipes, setFavoriteRecipes] = useState([]);
 
   useEffect(() => {
@@ -44,6 +49,15 @@ const FavoriteRecipePage = ({ type }) => {
     }
   }, [likedCards]);
 
+  const handleCardClick = (id, type) => {
+    if (user) {
+      navigate(`/recipe/${id}/${type}`);
+    } else {
+      toast.error('Please login to view recipe details.');
+      navigate('/login');
+    }
+  };
+
   return (
     <>
       <Navbar />
@@ -71,8 +85,7 @@ const FavoriteRecipePage = ({ type }) => {
                 className="bg-white rounded-lg shadow-md overflow-hidden hover:shadow-lg transition-shadow duration-300 recipe-card"
               >
                 <div className="select-none">
-                  <Link to={`/recipe/${recipe._id}/${recipe.type}`} key={recipe._id}
-                    className="hover:text-orange-600 transition-colors">
+                  <div onClick={() => handleCardClick(recipe._id, recipe.type)} style={{ cursor: 'pointer' }}>
                     <div className="recipe-image">
 
                       <img
@@ -82,7 +95,7 @@ const FavoriteRecipePage = ({ type }) => {
                       />
                     </div>
 
-                  </Link>
+                  </div>
                   <div className="p-6">
                     <h2 className="text-2xl font-bold mb-2">
 

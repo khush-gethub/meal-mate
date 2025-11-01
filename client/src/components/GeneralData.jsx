@@ -1,11 +1,16 @@
 import React, { useState, useEffect, useContext } from 'react';
-import { Link } from 'react-router-dom';
+import { Link, useNavigate } from 'react-router-dom';
 import axios from 'axios';
 import LikeContext from '../context/LikeContext';
+import { useAuth } from '../context/AuthContext';
+import { toast } from 'react-toastify';
+import 'react-toastify/dist/ReactToastify.css';
 
 const GeneralData = () => {
     const [recipes, setRecipes] = useState([]);
     const { likedCards, addLike, removeLike } = useContext(LikeContext);
+    const { user } = useAuth();
+    const navigate = useNavigate();
 
     useEffect(() => {
         const fetchRecipes = async () => {
@@ -20,7 +25,21 @@ const GeneralData = () => {
         fetchRecipes();
     }, []);
 
+    const handleCardClick = (id, type) => {
+        if (user) {
+            navigate(`/recipe/${id}/${type}`);
+        } else {
+            toast.error('Please login to view recipe details.');
+            navigate('/login');
+        }
+    };
+
     const handleLikeToggle = (id) => {
+        if (!user) {
+            toast.error('Please login to add to favorites.');
+            navigate('/login');
+            return;
+        }
         if (likedCards.includes(id)) {
             removeLike(id)
         } else {
@@ -42,7 +61,7 @@ const GeneralData = () => {
                             className="bg-white rounded-lg shadow-md overflow-hidden hover:shadow-lg transition-shadow duration-300 recipe-card"
                         >
                             <div className="grid-span-8 select-none">
-                                 <Link to={`/recipe/${food._id}/general`} key={food._id}>
+                                <div onClick={() => handleCardClick(food._id, 'general')} style={{ cursor: 'pointer' }}>
                                 <div className="recipe-image">
                                     <img
                                         src={food.image}
@@ -50,7 +69,7 @@ const GeneralData = () => {
                                         className="w-full h-64 object-cover"
                                     />
                                 </div>
-                                </Link>
+                                </div>
                                 <div className="p-6">
                                     <h2 className="text-2xl font-bold mb-2">
 

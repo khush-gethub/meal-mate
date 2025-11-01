@@ -1,23 +1,29 @@
 import React, { useState } from 'react';
 import { Link, useNavigate } from 'react-router-dom';
 import axios from 'axios';
+import { useAuth } from '../context/AuthContext';
 
 const Login = () => {
   const [email, setEmail] = useState('');
   const [password, setPassword] = useState('');
+  const [errorMessage, setErrorMessage] = useState(''); // New state for error message
   const navigate = useNavigate();
+  const { login } = useAuth(); // Use the useAuth hook
 
   const handleSubmit = async (e) => {
     e.preventDefault();
+    setErrorMessage(''); // Clear previous errors
     try {
       const response = await axios.post('http://localhost:8000/login', { email, password });
       if (response.data.success) {
+        login({ role: response.data.role }); // Call login from AuthContext
         navigate('/');
       } else {
-        navigate('/signup');
+        setErrorMessage(response.data.message || 'Login failed. Please check your credentials.'); // Set error message
       }
     } catch (error) {
       console.error('Login error:', error);
+      setErrorMessage('An error occurred during login. Please try again.'); // Generic error for network issues
     }
   };
 
@@ -46,6 +52,11 @@ const Login = () => {
           </div>
 
           {/* Login Form */}
+          {errorMessage && (
+            <div className="text-red-500 text-center mb-4">
+              {errorMessage}
+            </div>
+          )}
           <form className="space-y-4" onSubmit={handleSubmit}>
             <input
               required

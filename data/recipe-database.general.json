@@ -1,0 +1,27 @@
+[{
+  "_id": {
+    "$oid": "68b09d1588e10ed6067c23c7"
+  },
+  "title": "Caprese Salad",
+  "image": "https://food.fnr.sndimg.com/content/dam/images/food/fullset/2003/9/22/0/tm1a35_caprese_salad.jpg.rend.hgtvcom.1280.1280.suffix/1530799984231.webp",
+  "description": "A simple and refreshing Italian salad.",
+  "ingredients": [
+    "4 large ripe tomatoes",
+    "sliced",
+    "1 lb fresh mozzarella cheese",
+    "sliced",
+    "1/2 cup fresh basil leaves",
+    "1/4 cup extra-virgin olive oil",
+    "Balsamic glaze",
+    "for drizzling",
+    "Salt and pepper to taste"
+  ],
+  "steps": [
+    "Arrange the tomato and mozzarella slices on a platter",
+    "alternating them.",
+    "Tuck the basil leaves in between the tomato and mozzarella slices.",
+    "Drizzle with olive oil and balsamic glaze.",
+    "Season with salt and pepper to taste.",
+    "Serve immediately."
+  ]
+}]

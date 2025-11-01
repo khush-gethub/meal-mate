@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
 import { Link } from 'react-router-dom';
+import { useAuth } from '../context/AuthContext';
 
 import {
     Button,
@@ -13,6 +14,13 @@ import {
 const Navbar = () => {
     const [mobileOpen, setMobileOpen] = useState(false);
     const [mobileDropdownOpen, setMobileDropdownOpen] = useState(false);
+    const { isLoggedIn, user, logout } = useAuth();
+
+    console.log('Navbar - isLoggedIn:', isLoggedIn, 'User:', user);
+
+    const handleLogout = () => {
+        logout();
+    };
 
     return (
         <div className="bg-[#FFA94D] text-[#4E342E] px-5 py-5 relative z-20">
@@ -74,14 +82,26 @@ const Navbar = () => {
                     <Link to="/recipe">Recipe</Link>
                     <Link to="/favorite">Favorite</Link>
                     <Link to="/about">About</Link>
+                    {isLoggedIn && user && user.role === 'admin' && (
+                        <Link to="/admin/dashboard">Admin Dashboard</Link>
+                    )}
                 </div>
 
-                {/* Desktop Login Button */}
-                <Link to="/login">
-                    <button className="hidden md:block px-6 py-2 text-[1.2rem] bg-[#FFF3C4] rounded-lg hover:bg-[#ffeaa0] transition">
-                        Login
+                {/* Desktop Login/Logout Button */}
+                {isLoggedIn ? (
+                    <button
+                        onClick={handleLogout}
+                        className="hidden md:block px-6 py-2 text-[1.2rem] bg-[#FFF3C4] rounded-lg hover:bg-[#ffeaa0] transition"
+                    >
+                        Logout
                     </button>
-                </Link>
+                ) : (
+                    <Link to="/login">
+                        <button className="hidden md:block px-6 py-2 text-[1.2rem] bg-[#FFF3C4] rounded-lg hover:bg-[#ffeaa0] transition">
+                            Login
+                        </button>
+                    </Link>
+                )}
             </div>
 
             {/* Mobile Menu with Framer Motion */}
@@ -129,11 +149,23 @@ const Navbar = () => {
                         <Link to="/recipe">Recipe</Link>
                         <Link to="/favorite">Favorite</Link>
                         <Link to="/about">About</Link>
-                        <Link to="/login">
-                            <button className="w-full px-5 py-1 bg-[#FFF3C4] rounded hover:bg-[#ffeaa0] transition">
-                                Login
+                        {isLoggedIn && user && user.role === 'admin' && (
+                            <Link to="/admin/dashboard">Admin Dashboard</Link>
+                        )}
+                        {isLoggedIn ? (
+                            <button
+                                onClick={handleLogout}
+                                className="w-full px-5 py-1 bg-[#FFF3C4] rounded hover:bg-[#ffeaa0] transition"
+                            >
+                                Logout
                             </button>
-                        </Link>
+                        ) : (
+                            <Link to="/login">
+                                <button className="w-full px-5 py-1 bg-[#FFF3C4] rounded hover:bg-[#ffeaa0] transition">
+                                    Login
+                                </button>
+                            </Link>
+                        )}
                     </motion.div>
                 )}
             </AnimatePresence>
@@ -141,4 +173,4 @@ const Navbar = () => {
     );
 };
 
-export default Navbar
+export default Navbar;
