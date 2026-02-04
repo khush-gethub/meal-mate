@@ -1,7 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import axios from 'axios';
-// Added a comment to force re-compilation
-
+import { motion, AnimatePresence } from 'framer-motion';
 
 const UserManagement = () => {
   const [users, setUsers] = useState([]);
@@ -13,7 +12,7 @@ const UserManagement = () => {
     rname: '',
     email: '',
     role: '',
-    password: '', // Added password field
+    password: '',
   });
 
   useEffect(() => {
@@ -33,7 +32,7 @@ const UserManagement = () => {
   };
 
   const handleDeleteUser = async (userId) => {
-    if (window.confirm('Are you sure you want to delete this user?')) {
+    if (window.confirm('Are you sure you want to delete this user? This action is permanent.')) {
       try {
         await axios.delete(`http://localhost:8000/admin/users/${userId}`);
         setUsers(users.filter(user => user._id !== userId));
@@ -50,6 +49,7 @@ const UserManagement = () => {
       rname: user.rname,
       email: user.email,
       role: user.role,
+      password: '',
     });
     setIsModalOpen(true);
   };
@@ -57,11 +57,6 @@ const UserManagement = () => {
   const handleModalClose = () => {
     setIsModalOpen(false);
     setCurrentUser(null);
-    setEditFormData({
-      rname: '',
-      email: '',
-      role: '',
-    });
   };
 
   const handleFormChange = (e) => {
@@ -75,7 +70,7 @@ const UserManagement = () => {
     e.preventDefault();
     try {
       await axios.put(`http://localhost:8000/admin/users/${currentUser._id}`, editFormData);
-      fetchUsers(); // Refresh the user list
+      fetchUsers();
       handleModalClose();
     } catch (err) {
       setError('Failed to update user.');
@@ -84,45 +79,67 @@ const UserManagement = () => {
   };
 
   if (loading) {
-    return <div className="text-center text-[#4E342E]">Loading users...</div>;
-  }
-
-  if (error) {
-    return <div className="text-center text-red-500">{error}</div>;
+    return (
+      <div className="flex justify-center py-20">
+        <div className="w-10 h-10 border-4 border-[#FFA94D] border-t-transparent rounded-full animate-spin" />
+      </div>
+    );
   }
 
   return (
-    <div className="p-8 bg-[#F5F5F5] min-h-screen">
-      <h1 className="text-3xl font-bold text-[#4E342E] mb-6">User Management</h1>
-      <div className="bg-white rounded-lg shadow-md p-6">
-        <table className="min-w-full divide-y divide-gray-200">
-          <thead className="bg-[#FFF3C4]">
-            <tr>
-              <th scope="col" className="px-6 py-3 text-left text-xs font-medium text-gray-700 uppercase tracking-wider">Name</th>
-              <th scope="col" className="px-6 py-3 text-left text-xs font-medium text-gray-700 uppercase tracking-wider">Email</th>
-              <th scope="col" className="px-6 py-3 text-left text-xs font-medium text-gray-700 uppercase tracking-wider">Role</th>
-              <th scope="col" className="px-6 py-3 text-left text-xs font-medium text-gray-700 uppercase tracking-wider">Actions</th>
+    <motion.div initial={{ opacity: 0 }} animate={{ opacity: 1 }}>
+      <div className="flex justify-between items-center mb-10">
+        <div>
+          <h1 className="text-3xl font-black text-[#4E342E] mb-2">User Management</h1>
+          <p className="text-[#4E342E]/60 font-medium italic">Manage credentials and permissions for your community.</p>
+        </div>
+        <div className="px-6 py-3 bg-[#FFA94D]/10 rounded-2xl text-[#FFA94D] font-bold text-sm">
+          {users.length} Total Users
+        </div>
+      </div>
+
+      <div className="bg-white rounded-[2.5rem] premium-shadow border border-[#4E342E]/5 overflow-hidden">
+        <table className="w-full border-collapse">
+          <thead>
+            <tr className="bg-[#FFF6F0]">
+              <th className="px-8 py-6 text-left text-xs font-bold text-[#4E342E]/40 uppercase tracking-[0.2em]">Chef Name</th>
+              <th className="px-8 py-6 text-left text-xs font-bold text-[#4E342E]/40 uppercase tracking-[0.2em]">Contact Email</th>
+              <th className="px-8 py-6 text-left text-xs font-bold text-[#4E342E]/40 uppercase tracking-[0.2em]">Access Role</th>
+              <th className="px-8 py-6 text-right text-xs font-bold text-[#4E342E]/40 uppercase tracking-[0.2em]">Actions</th>
             </tr>
           </thead>
-          <tbody className="bg-white divide-y divide-gray-200">
+          <tbody className="divide-y divide-[#4E342E]/5">
             {users.map((user) => (
-              <tr key={user._id}>
-                <td className="px-6 py-4 whitespace-nowrap text-sm font-medium text-gray-900">{user.rname}</td>
-                <td className="px-6 py-4 whitespace-nowrap text-sm text-gray-500">{user.email}</td>
-                <td className="px-6 py-4 whitespace-nowrap text-sm text-gray-500">{user.role}</td>
-                <td className="px-6 py-4 whitespace-nowrap text-right text-sm font-medium">
-                  <button
-                    onClick={() => handleEditUser(user)}
-                    className="text-indigo-600 hover:text-indigo-900 mr-4"
-                  >
-                    Edit
-                  </button>
-                  <button
-                    onClick={() => handleDeleteUser(user._id)}
-                    className="text-red-600 hover:text-red-900 ml-4"
-                  >
-                    Delete
-                  </button>
+              <tr key={user._id} className="hover:bg-[#FFF6F0]/30 transition-colors group">
+                <td className="px-8 py-6">
+                  <div className="flex items-center gap-4">
+                    <div className="w-10 h-10 rounded-full bg-[#FFA94D] flex items-center justify-center text-white font-black">
+                      {user.rname.charAt(0)}
+                    </div>
+                    <span className="font-bold text-[#4E342E]">{user.rname}</span>
+                  </div>
+                </td>
+                <td className="px-8 py-6 text-[#4E342E]/60 font-medium">{user.email}</td>
+                <td className="px-8 py-6">
+                  <span className={`px-4 py-1.5 rounded-full text-xs font-black uppercase tracking-widest ${user.role === 'admin' ? 'bg-[#4E342E] text-white' : 'bg-[#FFA94D]/10 text-[#FFA94D]'}`}>
+                    {user.role}
+                  </span>
+                </td>
+                <td className="px-8 py-6 text-right">
+                  <div className="flex justify-end gap-3">
+                    <button
+                      onClick={() => handleEditUser(user)}
+                      className="w-10 h-10 rounded-xl bg-blue-500/10 text-blue-600 flex items-center justify-center hover:bg-blue-600 hover:text-white transition-all shadow-sm"
+                    >
+                      <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2.5" d="M11 5H6a2 2 0 00-2 2v11a2 2 0 002 2h11a2 2 0 002-2v-5m-1.414-9.414a2 2 0 112.828 2.828L11.828 15H9v-2.828l8.586-8.586z" /></svg>
+                    </button>
+                    <button
+                      onClick={() => handleDeleteUser(user._id)}
+                      className="w-10 h-10 rounded-xl bg-red-500/10 text-red-600 flex items-center justify-center hover:bg-red-600 hover:text-white transition-all shadow-sm"
+                    >
+                      <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2.5" d="M19 7l-.867 12.142A2 2 0 0116.138 21H7.862a2 2 0 01-1.995-1.858L5 7m5 4v6m4-6v6m1-10V4a1 1 0 00-1-1h-4a1 1 0 00-1 1v3M4 7h16" /></svg>
+                    </button>
+                  </div>
                 </td>
               </tr>
             ))}
@@ -130,86 +147,88 @@ const UserManagement = () => {
         </table>
       </div>
 
-      {isModalOpen && currentUser && (
-        <div className="fixed inset-0 bg-gray-600 bg-opacity-50 overflow-y-auto h-full w-full flex justify-center items-center">
-          <div className="bg-white p-8 rounded-lg shadow-xl w-11/12 md:w-1/2 lg:w-1/3">
-            <h2 className="text-2xl font-bold text-[#4E342E] mb-6">Edit User</h2>
-            <form onSubmit={handleUpdateUser}>
-              <div className="mb-4">
-                <label className="block text-gray-700 text-sm font-bold mb-2" htmlFor="rname">
-                  Name
-                </label>
-                <input
-                  type="text"
-                  id="rname"
-                  name="rname"
-                  value={editFormData.rname}
-                  onChange={handleFormChange}
-                  className="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"
-                />
-              </div>
-              <div className="mb-4">
-                <label className="block text-gray-700 text-sm font-bold mb-2" htmlFor="email">
-                  Email
-                </label>
-                <input
-                  type="email"
-                  id="email"
-                  name="email"
-                  value={editFormData.email}
-                  onChange={handleFormChange}
-                  className="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"
-                />
-              </div>
-              <div className="mb-4">
-                <label className="block text-gray-700 text-sm font-bold mb-2" htmlFor="password">
-                  Password
-                </label>
-                <input
-                  type="password"
-                  id="password"
-                  name="password"
-                  value={editFormData.password}
-                  onChange={handleFormChange}
-                  className="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"
-                  placeholder="Leave blank to keep current password"
-                />
-              </div>
-              <div className="mb-6">
-                <label className="block text-gray-700 text-sm font-bold mb-2" htmlFor="role">
-                  Role
-                </label>
-                <select
-                  id="role"
-                  name="role"
-                  value={editFormData.role}
-                  onChange={handleFormChange}
-                  className="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"
-                >
-                  <option value="user">user</option>
-                  <option value="admin">admin</option>
-                </select>
-              </div>
-              <div className="flex items-center justify-between">
-                <button
-                  type="submit"
-                  className="bg-[#FFA94D] hover:bg-[#FFE082] text-[#4E342E] font-bold py-2 px-4 rounded focus:outline-none focus:shadow-outline"
-                >
-                  Save Changes
-                </button>
-                <button
-                  type="button"
-                  onClick={handleModalClose}
-                  className="bg-gray-300 hover:bg-gray-400 text-gray-800 font-bold py-2 px-4 rounded focus:outline-none focus:shadow-outline"
-                >
-                  Cancel
-                </button>
-              </div>
-            </form>
+      <AnimatePresence>
+        {isModalOpen && currentUser && (
+          <div className="fixed inset-0 z-50 flex items-center justify-center p-6 sm:p-12">
+            <motion.div
+              initial={{ opacity: 0 }}
+              animate={{ opacity: 1 }}
+              exit={{ opacity: 0 }}
+              onClick={handleModalClose}
+              className="absolute inset-0 bg-[#4E342E]/20 backdrop-blur-sm"
+            />
+            <motion.div
+              initial={{ opacity: 0, scale: 0.9, y: 30 }}
+              animate={{ opacity: 1, scale: 1, y: 0 }}
+              exit={{ opacity: 0, scale: 0.9, y: 30 }}
+              className="relative bg-white p-10 md:p-14 rounded-[3rem] shadow-2xl w-full max-w-xl border border-[#4E342E]/5"
+            >
+              <h2 className="text-3xl font-black text-[#4E342E] mb-8">Edit Chef Profile</h2>
+              <form onSubmit={handleUpdateUser} className="space-y-6">
+                <div>
+                  <label className="block text-xs font-bold uppercase tracking-widest text-[#4E342E]/40 mb-3 ml-1">Full Name</label>
+                  <input
+                    type="text"
+                    name="rname"
+                    value={editFormData.rname}
+                    onChange={handleFormChange}
+                    className="w-full bg-[#FFF6F0]/50 border border-[#4E342E]/10 rounded-2xl px-6 py-4 focus:outline-none focus:ring-2 focus:ring-[#FFA94D]/30 focus:border-[#FFA94D] transition-all"
+                  />
+                </div>
+                <div>
+                  <label className="block text-xs font-bold uppercase tracking-widest text-[#4E342E]/40 mb-3 ml-1">Email Address</label>
+                  <input
+                    type="email"
+                    name="email"
+                    value={editFormData.email}
+                    onChange={handleFormChange}
+                    className="w-full bg-[#FFF6F0]/50 border border-[#4E342E]/10 rounded-2xl px-6 py-4 focus:outline-none focus:ring-2 focus:ring-[#FFA94D]/30 focus:border-[#FFA94D] transition-all"
+                  />
+                </div>
+                <div>
+                  <label className="block text-xs font-bold uppercase tracking-widest text-[#4E342E]/40 mb-3 ml-1">New Password</label>
+                  <input
+                    type="password"
+                    name="password"
+                    value={editFormData.password}
+                    onChange={handleFormChange}
+                    className="w-full bg-[#FFF6F0]/50 border border-[#4E342E]/10 rounded-2xl px-6 py-4 focus:outline-none focus:ring-2 focus:ring-[#FFA94D]/30 focus:border-[#FFA94D] transition-all"
+                    placeholder="Leave blank to keep current"
+                  />
+                </div>
+                <div>
+                  <label className="block text-xs font-bold uppercase tracking-widest text-[#4E342E]/40 mb-3 ml-1">Access Role</label>
+                  <select
+                    name="role"
+                    value={editFormData.role}
+                    onChange={handleFormChange}
+                    className="w-full bg-[#FFF6F0]/50 border border-[#4E342E]/10 rounded-2xl px-6 py-4 focus:outline-none focus:ring-2 focus:ring-[#FFA94D]/30 focus:border-[#FFA94D] transition-all font-bold"
+                  >
+                    <option value="user">USER</option>
+                    <option value="admin">ADMIN</option>
+                  </select>
+                </div>
+                <div className="flex gap-4 pt-6">
+                  <button
+                    type="submit"
+                    className="flex-1 premium-gradient text-white font-black py-4 rounded-2xl shadow-lg shadow-[#FFA94D]/20 hover:scale-[1.02] transition-all"
+                  >
+                    Save Changes
+                  </button>
+                  <button
+                    type="button"
+                    onClick={handleModalClose}
+                    className="px-8 bg-[#4E342E]/5 text-[#4E342E] font-bold py-4 rounded-2xl hover:bg-[#4E342E]/10 transition-all font-bold"
+                  >
+                    Cancel
+                  </button>
+                </div>
+              </form>
+            </motion.div>
           </div>
-        </div>
-      )}
-    </div>
+        )}
+      </AnimatePresence>
+    </motion.div>
   );
 };
 

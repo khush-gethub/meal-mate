@@ -1,32 +1,62 @@
-import AnimatedSection from "./AnimatedSection";
-import { motion } from "framer-motion";
+import React from 'react';
+import { motion } from 'framer-motion';
 
 const History = () => (
-  <AnimatedSection>
-    <div className="container mx-auto px-4 py-16 grid md:grid-cols-2 gap-12 items-center">
-      <div>
-        <h2 className="text-3xl md:text-4xl font-bold text-[#4E342E] mb-6">
-          Our Culinary Journey
-        </h2>
-        <p className="text-xl text-[#6D4C41] leading-relaxed">
-          MealMate began with a simple passion: making cooking accessible, enjoyable, 
-          and inspiring for everyone. Born from countless kitchen adventures and a love 
-          for sharing delicious meals, we're more than just a recipe site — we're a 
-          community of food lovers bringing joy through cooking.
-        </p>
-      </div>
+  <div className="container mx-auto px-6 lg:px-24 py-24">
+    <div className="grid md:grid-cols-2 gap-16 items-center">
       <motion.div
-        whileHover={{ scale: 1.03 }}
-        transition={{ type: "spring", stiffness: 100 }}
-        className="rounded-xl overflow-hidden shadow-lg"
+        initial={{ opacity: 0, x: -30 }}
+        whileInView={{ opacity: 1, x: 0 }}
+        transition={{ duration: 0.8 }}
       >
-        <img 
-          src="https://images.unsplash.com/photo-1577106263724-2c8e03bfe9cf?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
-          alt="Our Kitchen Story" 
-          className="w-full h-full object-cover"
-        />
+        <motion.span
+          initial={{ opacity: 0 }}
+          whileInView={{ opacity: 1 }}
+          className="text-[#FFA94D] font-bold tracking-[0.3em] uppercase text-xs mb-4 block"
+        >
+          Our Roots
+        </motion.span>
+        <h2 className="text-4xl md:text-5xl font-poppins font-black text-[#4E342E] mb-8 leading-tight">
+          A Passion for <br />
+          <span className="text-gradient">Culinary Excellence</span>
+        </h2>
+        <div className="space-y-6">
+          <p className="text-lg text-[#4E342E]/70 leading-relaxed">
+            MealMate began with a simple passion: making cooking accessible, enjoyable, and inspiring for everyone. What started as a small collection of family favorites has evolved into a global platform for culinary discovery.
+          </p>
+          <p className="text-lg text-[#4E342E]/70 leading-relaxed font-medium italic border-l-4 border-[#FFA94D] pl-6">
+            "We believe that every meal is an opportunity to create a memory. Our mission is to provide the tools and inspiration to make those memories extraordinary."
+          </p>
+        </div>
+      </motion.div>
+
+      <motion.div
+        initial={{ opacity: 0, scale: 0.9 }}
+        whileInView={{ opacity: 1, scale: 1 }}
+        transition={{ duration: 0.8 }}
+        className="relative"
+      >
+        <div className="absolute -inset-4 bg-[#FFA94D]/10 rounded-[3rem] blur-2xl" />
+        <motion.div
+          whileHover={{ scale: 1.02 }}
+          className="relative rounded-[2.5rem] overflow-hidden premium-shadow"
+        >
+          <img
+            src="https://images.unsplash.com/photo-1577106263724-2c8e03bfe9cf?q=80&w=2070&auto=format&fit=crop"
+            alt="Our Kitchen Story"
+            className="w-full h-full object-cover aspect-[4/5] md:aspect-auto"
+          />
+          <div className="absolute inset-0 bg-gradient-to-t from-[#4E342E]/40 to-transparent" />
+        </motion.div>
+
+        {/* Floating Badge */}
+        <div className="absolute -bottom-10 -right-10 glass-effect p-8 rounded-[2rem] premium-shadow hidden lg:block border-white/20">
+          <div className="text-4xl font-black text-[#4E342E] mb-1">10+</div>
+          <p className="text-[#4E342E]/60 font-bold uppercase tracking-widest text-xs">Years of Flavor</p>
+        </div>
       </motion.div>
     </div>
-  </AnimatedSection>
+  </div>
 );
+
 export default History;

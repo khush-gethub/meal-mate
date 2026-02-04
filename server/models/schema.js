@@ -20,6 +20,13 @@ const recipeSchema = new mongoose.Schema({
   steps: {
     type: [String],
     required: true
+  },
+  createdBy: {
+    type: mongoose.Schema.Types.ObjectId,
+    ref: 'userModel'
+  },
+  authorName: {
+    type: String
   }
 });
 

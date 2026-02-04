@@ -2,6 +2,7 @@ import axios from 'axios';
 import React, { useState } from 'react';
 import { Link, useNavigate } from 'react-router-dom';
 import Popup from './Popup';
+import { motion } from 'framer-motion';
 
 const Signup = () => {
     const navigate = useNavigate();
@@ -25,7 +26,6 @@ const Signup = () => {
         e.preventDefault();
         try {
             const res = await axios.post('http://127.0.0.1:8000/register', formData, { withCredentials: true });
-            console.log('Form Submitted:', res.data);
             if (res.status === 201) {
                 setPopupMessage('Registration successful!');
                 setPopupType('success');
@@ -46,106 +46,122 @@ const Signup = () => {
     };
 
     return (
-        <div className="min-h-screen flex items-center justify-center bg-[#F5F5F5] p-4 xl:h-[36rem]">
-            <div className="w-full max-w-md bg-white rounded-xl shadow-2xl p-8">
-                <h2 className="text-3xl font-bold text-center mb-6 text-[#4E342E]">
-                    Create Your Account or Join Cookings Today!
-                </h2>
+        <div className="relative min-h-screen flex items-center justify-center overflow-hidden bg-[#FFF6F0] py-12">
+            {/* Decorative Circles */}
+            <div className="absolute top-[-10%] left-[-10%] w-[50%] h-[50%] bg-[#FFA94D] opacity-10 rounded-full blur-[120px]" />
+            <div className="absolute bottom-[-10%] right-[-10%] w-[40%] h-[40%] bg-[#FFF3C4] opacity-40 rounded-full blur-[100px]" />
 
-                {/* Google Signup Button */}
-
-                {/* Divider */}
-                <div className="flex items-center justify-center my-4">
-                    <hr className="border-t w-full mr-3" />
-                    <span className="text-gray-500">or</span>
-                    <hr className="border-t w-full ml-3" />
+            <motion.div
+                initial={{ opacity: 0, y: 30 }}
+                animate={{ opacity: 1, y: 0 }}
+                className="relative z-10 w-full max-w-5xl mx-6 flex flex-col md:flex-row rounded-[2.5rem] overflow-hidden premium-shadow bg-white"
+            >
+                {/* Image Section */}
+                <div className="hidden md:block w-5/12 relative bg-[#4E342E]">
+                    <img
+                        src="https://images.unsplash.com/photo-1547592166-23ac45744acd?w=800&auto=format&fit=crop&q=80"
+                        alt="Cookware and ingredients"
+                        className="w-full h-full object-cover opacity-60"
+                    />
+                    <div className="absolute inset-0 flex flex-col justify-end p-12 bg-gradient-to-t from-[#4E342E] via-transparent to-transparent">
+                        <h3 className="text-4xl font-poppins font-black text-white mb-4">Start Your Culinary <br /><span className="text-[#FFA94D]">Adventure.</span></h3>
+                        <p className="text-white/70 text-lg leading-relaxed">
+                            Access premium recipes, save your favorites, and become part of our elite chef community.
+                        </p>
+                    </div>
+                    <div className="absolute top-8 left-8">
+                        <Link to="/" className="text-3xl lobster text-white">MealMate</Link>
+                    </div>
                 </div>
 
-                <form className="space-y-4" onSubmit={handleSubmit}>
-                    {/* Full Name Input */}
-                    <input
-                        required
-                        type="text"
-                        placeholder="Full Name"
-                        name='rname'
-                        value={formData.rname}
-                        onChange={handleChange}
-                        className="w-full border rounded-lg px-4 py-2 focus:outline-none focus:ring-2 focus:ring-[#FFF3C4]"
-                    />
-
-                    {/* Email Input */}
-                    <input
-                        required
-                        type="email"
-                        name='email'
-                        value={formData.email}
-                        placeholder="Email Address"
-                        onChange={handleChange}
-                        className="w-full border rounded-lg px-4 py-2 focus:outline-none focus:ring-2 focus:ring-[#FFF3C4]"
-                    />
-
-                    {/* Password Input */}
-                    <input
-                        required
-                        type="password"
-                        name='password'
-                        value={formData.password}
-                        placeholder="Password"
-                        onChange={handleChange}
-                        className="w-full border rounded-lg px-4 py-2 focus:outline-none focus:ring-2 focus:ring-[#FFF3C4]"
-                    />
-
-                    {/* Confirm Password Input */}
-                    <input
-                        required
-                        type="password"
-                        placeholder="Confirm Password"
-                        onChange={handleChange}
-                        name='conformPassword'
-                        value={formData.conformPassword}
-                        className="w-full border rounded-lg px-4 py-2 focus:outline-none focus:ring-2 focus:ring-[#FFF3C4]"
-                    />
-
-                    {/* Profile Picture Upload */}
-                    <div>
-                        <label className="block text-gray-700 mb-2">Profile Picture (Optional)</label>
-                        <input
-                            required
-                            type="file"
-                            accept="image/*"
-                            className="w-full border rounded-lg px-4 py-2"
-                        />
+                {/* Form Section */}
+                <div className="w-full md:w-7/12 p-10 md:p-14">
+                    <div className="mb-10 text-center md:text-left">
+                        <h2 className="text-4xl font-poppins font-black text-[#4E342E] mb-2">Create Account</h2>
+                        <p className="text-[#4E342E]/60 font-medium">Join our global community of culinary experts.</p>
                     </div>
 
-                    {/* Terms and Conditions Checkbox */}
-                    <div className="flex items-center">
-                        <label className="text-sm select-none flex items-center">
+                    <form className="grid grid-cols-1 md:grid-cols-2 gap-6" onSubmit={handleSubmit}>
+                        <div className="md:col-span-2">
+                            <label className="block text-xs font-bold uppercase tracking-widest text-[#4E342E]/50 mb-2 ml-1">Full Name</label>
+                            <input
+                                required
+                                type="text"
+                                name="rname"
+                                placeholder="Chef Gordon Ramsay"
+                                value={formData.rname}
+                                onChange={handleChange}
+                                className="w-full bg-[#FFF6F0]/50 border border-[#4E342E]/10 rounded-2xl px-6 py-4 focus:outline-none focus:ring-2 focus:ring-[#FFA94D]/30 focus:border-[#FFA94D] transition-all"
+                            />
+                        </div>
+
+                        <div className="md:col-span-2">
+                            <label className="block text-xs font-bold uppercase tracking-widest text-[#4E342E]/50 mb-2 ml-1">Email Address</label>
+                            <input
+                                required
+                                type="email"
+                                name="email"
+                                placeholder="chef@mealmate.com"
+                                value={formData.email}
+                                onChange={handleChange}
+                                className="w-full bg-[#FFF6F0]/50 border border-[#4E342E]/10 rounded-2xl px-6 py-4 focus:outline-none focus:ring-2 focus:ring-[#FFA94D]/30 focus:border-[#FFA94D] transition-all"
+                            />
+                        </div>
+
+                        <div>
+                            <label className="block text-xs font-bold uppercase tracking-widest text-[#4E342E]/50 mb-2 ml-1">Password</label>
+                            <input
+                                required
+                                type="password"
+                                name="password"
+                                placeholder="••••••••"
+                                value={formData.password}
+                                onChange={handleChange}
+                                className="w-full bg-[#FFF6F0]/50 border border-[#4E342E]/10 rounded-2xl px-6 py-4 focus:outline-none focus:ring-2 focus:ring-[#FFA94D]/30 focus:border-[#FFA94D] transition-all"
+                            />
+                        </div>
+
+                        <div>
+                            <label className="block text-xs font-bold uppercase tracking-widest text-[#4E342E]/50 mb-2 ml-1">Confirm Password</label>
+                            <input
+                                required
+                                type="password"
+                                name="conformPassword"
+                                placeholder="••••••••"
+                                value={formData.conformPassword}
+                                onChange={handleChange}
+                                className="w-full bg-[#FFF6F0]/50 border border-[#4E342E]/10 rounded-2xl px-6 py-4 focus:outline-none focus:ring-2 focus:ring-[#FFA94D]/30 focus:border-[#FFA94D] transition-all"
+                            />
+                        </div>
+
+                        <div className="md:col-span-2 flex items-center gap-3 select-none ml-1 mt-2">
                             <input
                                 required
                                 type="checkbox"
-                                className="mr-2"
+                                id="terms"
+                                className="w-5 h-5 rounded border-gray-300 accent-[#FFA94D]"
                             />
-                            I agree to the Terms & Conditions
-                        </label>
+                            <label htmlFor="terms" className="text-sm font-medium text-[#4E342E]/70">
+                                I agree to the <a href="#" className="text-[#FFA94D] font-bold hover:underline">Terms & Conditions</a>
+                            </label>
+                        </div>
+
+                        <div className="md:col-span-2 mt-4">
+                            <button
+                                type="submit"
+                                className="w-full premium-gradient hover:shadow-xl hover:scale-[1.02] transition-all rounded-2xl py-4 font-black text-white text-lg shadow-lg shadow-[#FFA94D]/30"
+                            >
+                                Create Account
+                            </button>
+                        </div>
+                    </form>
+
+                    <div className="text-center mt-10">
+                        <span className="text-[#4E342E]/60 font-medium">Already have an account?</span>
+                        <Link to="/login" className="text-[#FFA94D] font-black ml-2 hover:underline tracking-tight">Sign In Instead</Link>
                     </div>
-
-                    {/* Submit Button */}
-                    <button
-                        type="submit"
-                        className="w-full bg-[#FFF3C4] hover:bg-[#FFE082] transition rounded-lg py-3 font-semibold"
-                    >
-                        Sign Up
-                    </button>
-                </form>
-
-                {/* Login Link */}
-                <div className="text-center mt-4">
-                    Already have an account?{' '}
-                    <Link to="/login" className="text-[#4E342E] hover:underline">
-                        Login
-                    </Link>
                 </div>
-            </div>
+            </motion.div>
             <Popup message={popupMessage} type={popupType} onClose={handleClosePopup} />
         </div>
     );

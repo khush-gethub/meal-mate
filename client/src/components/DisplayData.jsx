@@ -10,7 +10,7 @@ const DisplayData = () => {
     return (
         <>
             <Navbar />
-            <div className="p-1 bg-[#FFF6F0] text-[#4E342E] mb-16">
+            <div className="pt-40 min-h-screen bg-[#FFF6F0] text-[#4E342E] pb-10">
                 <Cards type={category} />
             </div>
             <Footer />
