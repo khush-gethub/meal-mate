@@ -7,6 +7,7 @@ import 'react-toastify/dist/ReactToastify.css'
 import axios from 'axios'
 import { motion } from 'framer-motion'
 import Navbar from '../components/Navbar'
+import { generateRecipePDF } from '../utils/pdfUtils'
 
 const SearchResultsPage = () => {
     const { likedCards, addLike, removeLike } = useContext(LikeContext)
@@ -79,58 +80,85 @@ const SearchResultsPage = () => {
                         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-10">
                             {recipes.map((food, index) => (
                                 <motion.div
-                                    key={food.id}
-                                    initial={{ opacity: 0, y: 20 }}
+                                    key={food.id || index}
+                                    initial={{ opacity: 0, y: 30 }}
                                     whileInView={{ opacity: 1, y: 0 }}
-                                    transition={{ delay: index * 0.1 }}
+                                    transition={{ delay: index * 0.1, duration: 0.5, ease: "easeOut" }}
                                     viewport={{ once: true }}
                                     onClick={() => handleCardClick(food.id, food.type)}
-                                    className="group bg-white rounded-[2.5rem] premium-shadow overflow-hidden cursor-pointer hover:-translate-y-2 transition-all duration-500 border border-[#4E342E]/5"
+                                    className="group bg-white rounded-3xl overflow-hidden premium-shadow recipe-card cursor-pointer border border-[#4E342E]/5"
                                 >
-                                    <div className="relative overflow-hidden aspect-[4/5]">
+                                    {/* Image Container */}
+                                    <div className="relative h-72 overflow-hidden">
                                         <img
                                             src={food.image}
                                             alt={food.title}
-                                            className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700"
+                                            className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110"
                                         />
-                                        <div className="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500" />
+                                        <div className="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
 
-                                        <button
-                                            onClick={(e) => handleLikeToggle(e, food.id)}
-                                            className="absolute top-6 right-6 w-12 h-12 glass-effect rounded-2xl flex items-center justify-center shadow-lg hover:scale-110 transition-all z-10"
-                                        >
-                                            <svg
-                                                className={`w-6 h-6 transition-colors duration-300 ${likedCards.includes(food.id) ? 'fill-[#FFA94D] stroke-[#FFA94D]' : 'fill-transparent stroke-white'}`}
-                                                viewBox="0 0 24 24"
-                                            >
-                                                <path
-                                                    d="M12 21C12 21 4 13.5455 4 8.72727C4 6.10048 6.01472 4 8.5 4C10.0706 4 11.5 5.09091 12 6.18182C12.5 5.09091 13.9294 4 15.5 4C17.9853 4 20 6.10048 20 8.72727C20 13.5455 12 21 12 21Z"
-                                                    strokeWidth="2"
-                                                    strokeLinecap="round"
-                                                    strokeLinejoin="round"
-                                                />
-                                            </svg>
-                                        </button>
-
-                                        <div className="absolute bottom-8 left-8 right-8">
-                                            <span className="inline-block px-4 py-1.5 bg-[#FFA94D] text-white text-[10px] font-black uppercase tracking-[0.2em] rounded-full mb-3 shadow-lg">
+                                        {/* Category Badge */}
+                                        <div className="absolute top-4 left-4">
+                                            <span className="px-4 py-1.5 rounded-full glass-effect text-[#4E342E] text-xs font-bold uppercase tracking-wider backdrop-blur-md">
                                                 {food.type}
                                             </span>
-                                            <h2 className="text-2xl font-black text-white leading-tight drop-shadow-md group-hover:text-[#FFA94D] transition-colors">
-                                                {food.title}
-                                            </h2>
+                                        </div>
+
+                                        {/* Like & Download Buttons */}
+                                        <div className="absolute top-4 right-4 flex flex-col gap-2">
+                                            <button
+                                                onClick={(e) => handleLikeToggle(e, food.id)}
+                                                className="w-10 h-10 rounded-full glass-effect flex items-center justify-center hover:bg-white transition-colors duration-300 shadow-lg"
+                                            >
+                                                <svg
+                                                    className={`w-5 h-5 ${likedCards.includes(food.id) ? 'fill-[#FFA94D] stroke-[#FFA94D]' : 'fill-transparent stroke-[#4E342E]'} transition-all duration-300`}
+                                                    viewBox="0 0 24 24"
+                                                >
+                                                    <path
+                                                        d="M12 21C12 21 4 13.5455 4 8.72727C4 6.10048 6.01472 4 8.5 4C10.0706 4 11.5 5.09091 12 6.18182C12.5 5.09091 13.9294 4 15.5 4C17.9853 4 20 6.10048 20 8.72727C20 13.5455 12 21 12 21Z"
+                                                        strokeWidth="2.5"
+                                                        strokeLinecap="round"
+                                                        strokeLinejoin="round"
+                                                    />
+                                                </svg>
+                                            </button>
+                                            <button
+                                                onClick={(e) => {
+                                                    e.stopPropagation();
+                                                    generateRecipePDF(food);
+                                                }}
+                                                className="w-10 h-10 rounded-full glass-effect flex items-center justify-center hover:bg-white transition-colors duration-300 shadow-lg text-[#4E342E] hover:text-[#FFA94D]"
+                                                title="Download PDF"
+                                            >
+                                                <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2.5" d="M4 16v1a3 3 0 003 3h10a3 3 0 003-3v-1m-4-4l-4 4m0 0l-4-4m4 4V4" />
+                                                </svg>
+                                            </button>
                                         </div>
                                     </div>
+
+                                    {/* Content */}
                                     <div className="p-8">
-                                        <p className="text-[#4E342E]/60 font-medium line-clamp-2 text-sm leading-relaxed">
+                                        <h3 className="text-2xl font-poppins font-bold text-[#4E342E] mb-3 group-hover:text-[#FFA94D] transition-colors line-clamp-1">
+                                            {food.title}
+                                        </h3>
+                                        <p className="text-[#4E342E]/70 line-clamp-2 text-sm leading-relaxed mb-6">
                                             {food.description}
                                         </p>
 
-                                        <div className="flex items-center gap-2 mt-4">
-                                            <div className="w-6 h-6 rounded-full bg-[#FFA94D]/80 flex items-center justify-center text-white text-[8px] font-bold">
-                                                {food.authorName ? food.authorName.substring(0, 2).toUpperCase() : 'CH'}
+                                        <div className="flex items-center justify-between pt-6 border-t border-[#4E342E]/5">
+                                            <div className="flex items-center gap-2">
+                                                <div className="w-8 h-8 rounded-full premium-gradient flex items-center justify-center text-white text-[10px] font-bold">
+                                                    {food.authorName ? food.authorName.substring(0, 2).toUpperCase() : 'CH'}
+                                                </div>
+                                                <span className="text-xs font-bold text-[#4E342E]/60 uppercase tracking-wider">By {food.authorName || 'Chef'}</span>
                                             </div>
-                                            <span className="text-xs font-bold text-[#4E342E]/50 uppercase tracking-wider">By {food.authorName || 'Chef'}</span>
+                                            <div className="flex items-center gap-1 text-[#FFA94D]">
+                                                <span className="text-sm font-bold">View</span>
+                                                <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2.5" d="M14 5l7 7m0 0l-7 7m7-7H3" />
+                                                </svg>
+                                            </div>
                                         </div>
                                     </div>
                                 </motion.div>

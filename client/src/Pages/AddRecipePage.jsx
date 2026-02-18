@@ -54,7 +54,7 @@ const AddRecipePage = () => {
     return (
         <>
             <Navbar />
-            <div className="py-24 px-6 md:px-12 lg:px-24 bg-[#FFF6F0] min-h-screen">
+            <div className="pt-36 pb-24 px-6 md:px-12 lg:px-24 bg-[#FFF6F0] min-h-screen">
                 <div className="max-w-4xl mx-auto">
                     <div className="text-center mb-12">
                         <span className="text-[#FFA94D] font-bold tracking-widest uppercase text-sm">Contribute to the Community</span>

@@ -133,8 +133,8 @@ const Navbar = () => {
                             <MenuHandler>
                                 <Button variant="text" className="text-sm text-[#4E342E] flex items-center gap-1 p-0 hover:text-[#FFA94D] transition-colors font-semibold capitalize font-sans tracking-wide uppercase">
                                     Meal
-                                    <svg xmlns="http://www.w3.org/2000/svg" fill="currentColor" className="size-3 opacity-70">
-                                        <path fillRule="evenodd" d="M12.53 16.28a.75.75 0 0 1-1.06 0l-7.5-7.5a.75.75 0 0 1 1.06-1.06L12 14.69l6.97-6.97a.75.75 0 1 1 1.06 1.06l-7.5 7.5Z" clipRule="evenodd" />
+                                    <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth={2.5} stroke="currentColor" className="w-3.5 h-3.5 opacity-70">
+                                        <path strokeLinecap="round" strokeLinejoin="round" d="m19.5 8.25-7.5 7.5-7.5-7.5" />
                                     </svg>
                                 </Button>
                             </MenuHandler>
@@ -186,8 +186,8 @@ const Navbar = () => {
                                     className="flex items-center justify-between w-full text-lg font-bold px-2 py-1"
                                 >
                                     Meals
-                                    <svg xmlns="http://www.w3.org/2000/svg" fill="currentColor" className={`size-5 transition-transform ${mobileDropdownOpen ? 'rotate-180' : ''}`}>
-                                        <path fillRule="evenodd" d="M12.53 16.28a.75.75 0 0 1-1.06 0l-7.5-7.5a.75.75 0 0 1 1.06-1.06L12 14.69l6.97-6.97a.75.75 0 1 1 1.06 1.06l-7.5 7.5Z" clipRule="evenodd" />
+                                    <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth={2.5} stroke="currentColor" className={`w-5 h-5 transition-transform ${mobileDropdownOpen ? 'rotate-180' : ''}`}>
+                                        <path strokeLinecap="round" strokeLinejoin="round" d="m19.5 8.25-7.5 7.5-7.5-7.5" />
                                     </svg>
                                 </button>
                                 <AnimatePresence>

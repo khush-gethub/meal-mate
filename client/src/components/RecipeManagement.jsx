@@ -9,6 +9,7 @@ const RecipeManagement = () => {
   const [error, setError] = useState(null);
   const [showAddForm, setShowAddForm] = useState(false);
   const [currentRecipe, setCurrentRecipe] = useState(null);
+  const [activeCategory, setActiveCategory] = useState('all');
   const navigate = useNavigate();
 
   const [formData, setFormData] = useState({
@@ -191,50 +192,86 @@ const RecipeManagement = () => {
         )}
       </AnimatePresence>
 
-      <div className="bg-white rounded-[2.5rem] premium-shadow border border-[#4E342E]/5 overflow-hidden">
-        <table className="w-full border-collapse">
-          <thead>
-            <tr className="bg-[#FFF6F0]">
-              <th className="px-8 py-6 text-left text-xs font-bold text-[#4E342E]/40 uppercase tracking-[0.2em]">Recipe</th>
-              <th className="px-8 py-6 text-left text-xs font-bold text-[#4E342E]/40 uppercase tracking-[0.2em]">Category</th>
-              <th className="px-8 py-6 text-left text-xs font-bold text-[#4E342E]/40 uppercase tracking-[0.2em]">Preview</th>
-              <th className="px-8 py-6 text-right text-xs font-bold text-[#4E342E]/40 uppercase tracking-[0.2em]">Actions</th>
-            </tr>
-          </thead>
-          <tbody className="divide-y divide-[#4E342E]/5">
-            {recipes.map((recipe) => (
-              <tr key={recipe._id} className="hover:bg-[#FFF6F0]/30 transition-colors group">
-                <td className="px-8 py-6">
-                  <div className="flex items-center gap-4">
-                    <img src={recipe.image} className="w-12 h-12 rounded-xl object-cover shadow-sm" alt="" />
-                    <span className="font-bold text-[#4E342E]">{recipe.title}</span>
-                  </div>
-                </td>
-                <td className="px-8 py-6">
-                  <span className="px-4 py-1.5 rounded-full text-[10px] font-black uppercase tracking-[0.1em] bg-[#4E342E]/5 text-[#4E342E]">
-                    {recipe.type}
-                  </span>
-                </td>
-                <td className="px-8 py-6 text-[#4E342E]/60 font-medium text-sm line-clamp-1 truncate max-w-[200px]">
-                  {recipe.description}
-                </td>
-                <td className="px-8 py-6 text-right">
-                  <div className="flex justify-end gap-3">
-                    <button onClick={() => handleViewClick(recipe._id, recipe.type)} className="w-10 h-10 rounded-xl bg-[#FFA94D]/10 text-[#FFA94D] flex items-center justify-center hover:bg-[#FFA94D] hover:text-white transition-all">
-                      <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2.5" d="M15 12a3 3 0 11-6 0 3 3 0 016 0z" /><path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2.5" d="M2.458 12C3.732 7.943 7.523 5 12 5c4.478 0 8.268 2.943 9.542 7-1.274 4.057-5.064 7-9.542 7-4.477 0-8.268-2.943-9.542-7z" /></svg>
-                    </button>
-                    <button onClick={() => handleEditClick(recipe)} className="w-10 h-10 rounded-xl bg-blue-500/10 text-blue-600 flex items-center justify-center hover:bg-blue-600 hover:text-white transition-all">
-                      <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2.5" d="M11 5H6a2 2 0 00-2 2v11a2 2 0 002 2h11a2 2 0 002-2v-5m-1.414-9.414a2 2 0 112.828 2.828L11.828 15H9v-2.828l8.586-8.586z" /></svg>
-                    </button>
-                    <button onClick={() => handleDeleteRecipe(recipe._id, recipe.type)} className="w-10 h-10 rounded-xl bg-red-500/10 text-red-600 flex items-center justify-center hover:bg-red-600 hover:text-white transition-all">
-                      <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2.5" d="M19 7l-.867 12.142A2 2 0 0116.138 21H7.862a2 2 0 01-1.995-1.858L5 7m5 4v6m4-6v6m1-10V4a1 1 0 00-1-1h-4a1 1 0 00-1 1v3M4 7h16" /></svg>
-                    </button>
-                  </div>
-                </td>
-              </tr>
-            ))}
-          </tbody>
-        </table>
+      <div className="flex flex-wrap gap-4 mb-8">
+        {['all', 'vegetarian', 'seafood', 'dessert', 'chicken', 'general'].map((category) => (
+          <button
+            key={category}
+            onClick={() => setActiveCategory(category)}
+            className={`px-6 py-2 rounded-full font-bold text-sm uppercase tracking-wider transition-all ${activeCategory === category
+              ? 'bg-[#FFA94D] text-white shadow-lg shadow-[#FFA94D]/30'
+              : 'bg-white text-[#4E342E]/60 hover:bg-[#FFA94D]/10 hover:text-[#FFA94D]'
+              }`}
+          >
+            {category}
+          </button>
+        ))}
+      </div>
+
+      <div className="space-y-12">
+        {['vegetarian', 'seafood', 'dessert', 'chicken', 'general'].map((category) => {
+          if (activeCategory !== 'all' && activeCategory !== category) return null;
+
+          const categoryRecipes = recipes.filter(r => r.type === category);
+
+          if (categoryRecipes.length === 0) return null;
+
+          return (
+            <div key={category} className="bg-white rounded-[2.5rem] premium-shadow border border-[#4E342E]/5 overflow-hidden">
+              <div className="px-8 py-6 bg-[#FFF6F0] border-b border-[#4E342E]/5 flex justify-between items-center">
+                <h2 className="text-xl font-black text-[#4E342E] capitalize flex items-center gap-3">
+                  <span className="w-3 h-3 rounded-full bg-[#FFA94D]" />
+                  {category} Recipes
+                </h2>
+                <span className="px-3 py-1 bg-[#4E342E]/5 rounded-full text-xs font-bold text-[#4E342E]/60">
+                  {categoryRecipes.length} Items
+                </span>
+              </div>
+              <table className="w-full border-collapse">
+                <thead>
+                  <tr className="bg-[#FFF6F0]/50">
+                    <th className="px-8 py-4 text-left text-xs font-bold text-[#4E342E]/40 uppercase tracking-[0.2em]">Recipe</th>
+                    <th className="px-8 py-4 text-left text-xs font-bold text-[#4E342E]/40 uppercase tracking-[0.2em]">Category</th>
+                    <th className="px-8 py-4 text-left text-xs font-bold text-[#4E342E]/40 uppercase tracking-[0.2em]">Preview</th>
+                    <th className="px-8 py-4 text-right text-xs font-bold text-[#4E342E]/40 uppercase tracking-[0.2em]">Actions</th>
+                  </tr>
+                </thead>
+                <tbody className="divide-y divide-[#4E342E]/5">
+                  {categoryRecipes.map((recipe) => (
+                    <tr key={recipe._id} className="hover:bg-[#FFF6F0]/30 transition-colors group">
+                      <td className="px-8 py-6">
+                        <div className="flex items-center gap-4">
+                          <img src={recipe.image} className="w-12 h-12 rounded-xl object-cover shadow-sm" alt="" />
+                          <span className="font-bold text-[#4E342E]">{recipe.title}</span>
+                        </div>
+                      </td>
+                      <td className="px-8 py-6">
+                        <span className="px-4 py-1.5 rounded-full text-[10px] font-black uppercase tracking-[0.1em] bg-[#4E342E]/5 text-[#4E342E]">
+                          {recipe.type}
+                        </span>
+                      </td>
+                      <td className="px-8 py-6 text-[#4E342E]/60 font-medium text-sm line-clamp-1 truncate max-w-[200px]">
+                        {recipe.description}
+                      </td>
+                      <td className="px-8 py-6 text-right">
+                        <div className="flex justify-end gap-3">
+                          <button onClick={() => handleViewClick(recipe._id, recipe.type)} className="w-10 h-10 rounded-xl bg-[#FFA94D]/10 text-[#FFA94D] flex items-center justify-center hover:bg-[#FFA94D] hover:text-white transition-all">
+                            <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2.5" d="M15 12a3 3 0 11-6 0 3 3 0 016 0z" /><path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2.5" d="M2.458 12C3.732 7.943 7.523 5 12 5c4.478 0 8.268 2.943 9.542 7-1.274 4.057-5.064 7-9.542 7-4.477 0-8.268-2.943-9.542-7z" /></svg>
+                          </button>
+                          <button onClick={() => handleEditClick(recipe)} className="w-10 h-10 rounded-xl bg-blue-500/10 text-blue-600 flex items-center justify-center hover:bg-blue-600 hover:text-white transition-all">
+                            <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2.5" d="M11 5H6a2 2 0 00-2 2v11a2 2 0 002 2h11a2 2 0 002-2v-5m-1.414-9.414a2 2 0 112.828 2.828L11.828 15H9v-2.828l8.586-8.586z" /></svg>
+                          </button>
+                          <button onClick={() => handleDeleteRecipe(recipe._id, recipe.type)} className="w-10 h-10 rounded-xl bg-red-500/10 text-red-600 flex items-center justify-center hover:bg-red-600 hover:text-white transition-all">
+                            <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2.5" d="M19 7l-.867 12.142A2 2 0 0116.138 21H7.862a2 2 0 01-1.995-1.858L5 7m5 4v6m4-6v6m1-10V4a1 1 0 00-1-1h-4a1 1 0 00-1 1v3M4 7h16" /></svg>
+                          </button>
+                        </div>
+                      </td>
+                    </tr>
+                  ))}
+                </tbody>
+              </table>
+            </div>
+          );
+        })}
       </div>
     </motion.div>
   );

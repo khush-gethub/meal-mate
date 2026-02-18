@@ -40,7 +40,7 @@ const AdminDashboard = () => {
   return (
     <div className="min-h-screen bg-[#FFF6F0] flex flex-col md:flex-row">
       {/* Sidebar */}
-      <div className="w-full md:w-80 bg-[#4E342E] p-8 flex flex-col min-h-screen">
+      <div className="w-full md:w-80 bg-[#4E342E] p-8 flex flex-col min-h-screen md:h-screen md:sticky md:top-0 overflow-y-auto">
         <div className="mb-12">
           <Link to="/" className="text-4xl lobster text-white">MealMate <span className="text-[#FFA94D] text-sm lobster block tracking-widest uppercase">Admin Panel</span></Link>
         </div>

@@ -2,6 +2,7 @@ import React, { useState, useEffect } from 'react';
 import { useParams, useNavigate } from 'react-router-dom';
 import axios from 'axios';
 import { motion } from 'framer-motion';
+import { generateRecipePDF } from '../utils/pdfUtils';
 
 const RecipeDetailsPage = () => {
   const { id, type } = useParams();
@@ -69,6 +70,15 @@ const RecipeDetailsPage = () => {
             <h3 className="text-xs font-black text-[#4E342E]/40 uppercase tracking-[0.2em] mb-4">Recipe Summary</h3>
             <p className="text-lg text-[#4E342E] font-medium leading-relaxed italic">"{recipe.description}"</p>
           </div>
+          <button
+            onClick={() => generateRecipePDF(recipe)}
+            className="w-full bg-white border-2 border-[#FFA94D] text-[#FFA94D] py-4 rounded-3xl font-black text-lg hover:bg-[#FFA94D] hover:text-white transition-all flex items-center justify-center gap-3 shadow-lg"
+          >
+            <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2.5" d="M4 16v1a3 3 0 003 3h10a3 3 0 003-3v-1m-4-4l-4 4m0 0l-4-4m4 4V4" />
+            </svg>
+            Download Recipe PDF
+          </button>
         </div>
 
         <div className="space-y-12">

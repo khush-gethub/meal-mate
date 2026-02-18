@@ -4,6 +4,7 @@ import axios from 'axios';
 import Navbar from './Navbar';
 import Footer from './Footer';
 import { motion } from 'framer-motion';
+import { generateRecipePDF } from '../utils/pdfUtils';
 
 const Recipedata = () => {
     const { id, type } = useParams();
@@ -140,7 +141,16 @@ const Recipedata = () => {
                                     </li>
                                 ))}
                             </ul>
-                            <button className="w-full mt-10 premium-gradient text-white py-5 rounded-3xl font-black text-lg shadow-xl shadow-[#FFA94D]/20 hover:scale-[1.02] transition-all">
+                            <button
+                                onClick={() => generateRecipePDF(recipe)}
+                                className="w-full mb-4 bg-white border-2 border-[#FFA94D] text-[#FFA94D] py-5 rounded-3xl font-black text-lg hover:bg-[#FFA94D] hover:text-white transition-all flex items-center justify-center gap-3"
+                            >
+                                <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2.5" d="M4 16v1a3 3 0 003 3h10a3 3 0 003-3v-1m-4-4l-4 4m0 0l-4-4m4 4V4" />
+                                </svg>
+                                Download Recipe PDF
+                            </button>
+                            <button className="w-full premium-gradient text-white py-5 rounded-3xl font-black text-lg shadow-xl shadow-[#FFA94D]/20 hover:scale-[1.02] transition-all">
                                 Add to Shopping List
                             </button>
                         </div>
