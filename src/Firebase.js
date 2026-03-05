@@ -4,13 +4,13 @@ import { getDatabase } from "firebase/database";
 
 // Your web app's Firebase configuration
 const firebaseConfig = {
-    apiKey: "AIzaSyBw33h3XENM8EUiLTm22En9NcnX7FbZECU",
-    authDomain: "meal-mate-805c4.firebaseapp.com",
-    databaseURL: "https://meal-mate-805c4-default-rtdb.firebaseio.com",
-    projectId: "meal-mate-805c4",
-    storageBucket: "meal-mate-805c4.firebasestorage.app",
-    messagingSenderId: "661508893300",
-    appId: "1:661508893300:web:b22b61f4191e672596ff21"
+    apiKey: import.meta.env.VITE_FIREBASE_API_KEY,
+    authDomain: import.meta.env.VITE_FIREBASE_AUTH_DOMAIN,
+    databaseURL: import.meta.env.VITE_FIREBASE_DATABASE_URL,
+    projectId: import.meta.env.VITE_FIREBASE_PROJECT_ID,
+    storageBucket: import.meta.env.VITE_FIREBASE_STORAGE_BUCKET,
+    messagingSenderId: import.meta.env.VITE_FIREBASE_MESSAGING_SENDER_ID,
+    appId: import.meta.env.VITE_FIREBASE_APP_ID
 };
 
 // Initialize Firebase
